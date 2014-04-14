@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- prevent cache -->
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="pragma" content="no-cache">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="format-detection" content="telephone=no">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        
+        <title>Galaxy Sim</title>
+<meta name="robots" content="noindex" />
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js" type="text/javascript"></script>
+        <script type="text/javascript" src="GalaxiesStable.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" type="text/css" href="GalaxiesStable.css">
+    </head>
+    
+    <body class="claro" id="body">
+        <div id="buttonContainer">
+            <div id="centerButtonContainer"><div id="centerButton"></div></div>
+            <div id="infoButton" ></div>
+            <div id="closeLayerContainer"><div id="closeLayer"></div></div>
+        </div>
+        
+        <div id="unscrollable">
+            <canvas id="myCanvas"></canvas>
+            
+            <img id="g0" src="Galaxy1.gif" alt="@">
+            <img id="g1" src="Galaxy1.gif" alt="@">
+            <img id="g2" src="Galaxy1.gif" alt="@">
+            <img id="g3" src="Galaxy1.gif" alt="@">
+            <img id="g4" src="Galaxy1.gif" alt="@">
+            <img id="g5" src="Galaxy1.gif" alt="@">
+            <img id="g6" src="Galaxy1.gif" alt="@">
+            <img id="g7" src="Galaxy1.gif" alt="@">
+            <img id="g8" src="Galaxy1.gif" alt="@">
+            <img id="g9" src="Galaxy1.gif" alt="@">
+            <img id="g10" src="Galaxy1.gif" alt="@">
+            <img id="g11" src="Galaxy1.gif" alt="@">
+            <img id="g12" src="Galaxy1.gif" alt="@">
+            <img id="g13" src="Galaxy1.gif" alt="@">
+            <img id="g14" src="Galaxy1.gif" alt="@">
+            <img id="g15" src="Galaxy1.gif" alt="@">
+            <img id="g16" src="Galaxy1.gif" alt="@">
+            <img id="g17" src="Galaxy1.gif" alt="@">
+            <img id="g18" src="Galaxy1.gif" alt="@">
+            <img id="g19" src="Galaxy1.gif" alt="@">
+            <img id="g20" src="Galaxy1.gif" alt="@">
+            <img id="g21" src="Galaxy1.gif" alt="@">
+            <img id="g22" src="Galaxy1.gif" alt="@">
+            <img id="g23" src="Galaxy1.gif" alt="@">
+            <img id="g24" src="Galaxy1.gif" alt="@">
+            <img id="g25" src="Galaxy1.gif" alt="@">
+            <img id="g26" src="Galaxy1.gif" alt="@">
+            <img id="g27" src="Galaxy1.gif" alt="@">
+            <img id="g28" src="Galaxy1.gif" alt="@">
+            <img id="g29" src="Galaxy1.gif" alt="@">
+            <img id="g30" src="Galaxy1.gif" alt="@">
+            <img id="g31" src="Galaxy1.gif" alt="@">
+            <img id="g32" src="Galaxy1.gif" alt="@">
+            <img id="g33" src="Galaxy1.gif" alt="@">
+            <img id="g34" src="Galaxy1.gif" alt="@">
+            <img id="g35" src="Galaxy1.gif" alt="@">
+            <img id="g36" src="Galaxy1.gif" alt="@">
+            <img id="g37" src="Galaxy1.gif" alt="@">
+            <img id="g38" src="Galaxy1.gif" alt="@">
+            <img id="g39" src="Galaxy1.gif" alt="@">
+            <img id="g40" src="Galaxy1.gif" alt="@">
+            <img id="g41" src="Galaxy1.gif" alt="@">
+            <img id="g42" src="Galaxy1.gif" alt="@">
+            <img id="g43" src="Galaxy1.gif" alt="@">
+            <img id="g44" src="Galaxy1.gif" alt="@">
+            <img id="g45" src="Galaxy1.gif" alt="@">
+            <img id="g46" src="Galaxy1.gif" alt="@">
+            <img id="g47" src="Galaxy1.gif" alt="@">
+            <img id="g48" src="Galaxy1.gif" alt="@">
+            <img id="g49" src="Galaxy1.gif" alt="@">
+            <img id="selected" src="Galaxy1.gif" alt="@">
+        </div>
+        
+        <div id="objectives">
+            <h2>Learning Objectives</h2>
+            <p>After reading the background information and working through all exercises of the Hubble's Law Simulator, the student will understand that...</p>
+            <ul>
+                <li>all galaxies are moving away us</li>
+                <li>the velocity v with which a galaxy is moving away from us is proportional to its distance d</li>
+                <li>v ~ d is  known as Hubble's Law</li>
+                <li>observers in every galaxy see themselves at the center of a similar expansion (they observe Hubble's Law)</li>
+                <li>there is no center to the universe (every observer sees themselves at the center of the expansion)</li>
+            </ul>
+        </div>
+        <div id="background">
+            <h2>Background Information</h2>
+            <p>In the 1920's, Edwin Hubble was studying galaxies.  He took spectra and from the redshifts of the spectral lines determined the velocities of the galaxies.  He then found pulsating variable stars (stars that periodically vary in brightness) known as Cepheid variables in the galaxies.  Cepheids obey a period-luminosity relation meaning that larger brighter Cepheids pulsate with larger periods while smaller fainter Cepheids have smaller periods.  Thus, observing the pulsation periods of the Cepheids allowed him to estimate their luminosities and ultimately the distances to the galaxies.</p>
+            <p>When he graphed the galaxy's velocities versus distance he found two interesting things:</p>
+            <ol>
+                <li>All galaxies (except a few of the closest galaxies moving around our local group's center of mass) are moving away from us.  <strong>The universe is expanding.</strong></li>
+                <li>The velocities of recession are correlated with distance.  The farther away a galaxy is from us, the faster it is moving away from us.   We express this as <strong>Hubble’s Law</strong>.</li>
+            </ol>
+            <img src="HubblesLawPlotPic.gif" class="info" alt="correlated scatter plot of distance vs. speed">
+            <p>Velocity v is equal to a constant H<sub>0</sub> (pronounced H-naught) times distance D.  H<sub>0</sub> is known to have a value of about 70 km/sec/Mpc.  So for each Mpc a galaxy is away from us, its velocity of recession increases by 70 km/s.  A galaxy 1 Mpc away has a velocity of 70/km/s, a galaxy 2 Mpc away has a velocity of 140 km/s, and so on.</p>
+            <p>Note that we often talk about galaxies moving away from us, but what is really happening is that space itself is being created which pushes the galaxies away from us.  There is more space between us and a distant galaxy than a nearby galaxy.  Thus, when space itself expands, it pushes the distant galaxy away from us by a greater amount.</p>
+        </div>
+        <div id="exercises">
+            <h2>Exercises</h2>
+            <ol>
+                <li>Zoom out until you can see a bunch of galaxies.  The galaxy with the red circle around it represents your location (the Milky Way).  The red arrows represent the galaxies’ velocities.  Can you find a galaxy that is moving toward you?</li>
+                <li>The arrow lengths convey how fast galaxies are moving.
+                    <ol class="a">
+                        <li>Describe the velocities of galaxies nearby your location.</li>
+                        <li>Now describe the velocities of galaxies that are far away.</li>
+                        <li>Is it true in every direction?  Do you see yourself at the center of the expansion?</li>
+                        <li>State Hubble’s Law in your own words.</li>
+                    </ol>
+                </li>
+                <li>Click on a different galaxy to make it the observation point.  Is Hubble’s Law still in effect?  Do you still see yourself at the center of the expansion?  Repeat for several other galaxies.</li>
+                <li>Pick out a pair of galaxies both visible on the screen at the same time. Select one galaxy as the observation point and then switch to the other.  Repeat this operation switching back and forth between the two galaxies.  How would you describe the relationship of the two vectors that appear on those galaxies?</li>
+                <li>What will the universe look like a long time in the future?</li>
+            </ol>
+        </div>
+        <div id="about">
+            <h2>About</h2>
+            <p>This astronomy "Little Big Picture" was programmed by REU student Nick Robe. It is an early effort of the UNL Astronomy Education Group to provide materials for mobile devices. More astronomy teaching materials can be found on the web at <a href="http://astro.unl.edu">astro.unl.edu</a>.</p>
+            <p>This simulation makes use of the Dojo tooklit available at <a href="http://dojotoolkit.org/index.html">dojotoolkit.org</a>.</p>
+        </div>
+    </body>
+</html>
