@@ -1,0 +1,247 @@
+qu.1.topic=Seasonal Points@
+
+qu.1.1.mode=Non Permuting Multiple Choice@
+qu.1.1.name=Coordinate of a seasonal point@
+qu.1.1.editing=useHTML@
+qu.1.1.question=
+<div style="text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/flatsky_assessment.swf"
+width="400" height="207" id="flatsky">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/flatsky_assessment.swf"/>
+  <param name="FlashVars" value="mark=1&r=$ra&d=$dec"/>
+</object><br/>
+(Shift-click to shift map.)
+</div><br/>
+What is the Seasonal Point shown above?<br/>@
+qu.1.1.algorithm=
+$num = rint(5);
+$answer = $num+1;
+
+$num2 = rint(4);
+$temp1 = switch($num2,"0","6","12","18");
+$temp2 = switch($num2,switch(rint(2),"23.5","-23.5"), switch(rint(2),"0","-23.5"),switch(rint(2),"23.5","-23.5"),switch(rint(2),"23.5","0") );
+
+$ra = switch($num,"0","6","12","18",$temp1);
+$dec = switch($num,"0","23.5","0","-23.5",$temp2);
+
+@
+qu.1.1.answer= $answer@
+qu.1.1.choice.1= Vernal Equinox@
+qu.1.1.choice.2= Summer Solstice@
+qu.1.1.choice.3= Autumnal Equinox@
+qu.1.1.choice.4= Winter Solstice@
+qu.1.1.choice.5= None of the Above@
+
+
+qu.1.2.mode=Non Permuting Multiple Choice@
+qu.1.2.name=Seasonal point on globe@
+qu.1.2.editing=useHTML@
+qu.1.2.question=
+<div style="text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/cec_assessment.swf"
+width="240" height="225" id="skymap">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/cec_assessment.swf"/>
+  <param name="FlashVars" value="mode=season&ver=$ver"/>
+</object><br/>
+(Click to shift globe.)
+</div><br/>
+What is the Seasonal Point shown above?<br/>@
+qu.1.2.algorithm=
+$num = rint(5);
+$answer = $num+1;
+$ver = switch($num,'ve','ss','ae','ws');
+
+@
+qu.1.2.answer= $answer@
+qu.1.2.choice.1= Vernal Equinox@
+qu.1.2.choice.2= Summer Solstice@
+qu.1.2.choice.3= Autumnal Equinox@
+qu.1.2.choice.4= Winter Solstice@
+qu.1.2.choice.5= None of the Above@
+
+
+
+
+
+qu.2.topic=Ecliptic@
+
+qu.2.1.mode=Multiple Selection@
+qu.2.1.name=Definition of the ecliptic@
+qu.2.1.editing=useHTML@
+qu.2.1.question=Select <em>all</em> of the following that are a description applicable to the ecliptic.@
+
+qu.2.1.answer= 1,2@
+qu.2.1.choice.1= The plane in which the earth orbits the sun@
+qu.2.1.choice.2= The path the sun travels in the celestial sphere@
+qu.2.1.choice.3= The plane extending to infinity from the earth's equator@
+qu.2.1.choice.4= The plane tangent to the earth's surface at the point of the observer@
+qu.2.1.choice.5= The plane which the solar system orbits in the Milky Way@
+
+qu.2.2.mode=Multiple Selection@
+qu.2.2.name=Obliquity@
+qu.2.2.editing=useHTML@
+qu.2.2.question=Select <em>all</em> of the following to which the number 23.5 has relevance.@
+
+qu.2.2.answer= 1,2,3@
+qu.2.2.choice.1= The angle between the celestial equator and the ecliptic@
+qu.2.2.choice.2= The angle between the north celestial pole and the axis of the earth's rotating about the sun@
+qu.2.2.choice.3= The maximum declination of the sun@
+qu.2.2.choice.4= The angle between the north celestial pole and the earth's north pole@
+qu.2.2.choice.5= The declination of the north celestial pole@
+
+
+
+
+
+qu.3.topic=Sun's altitude and length of day@
+
+qu.3.1.mode=Non Permuting Multiple Choice@
+qu.3.1.name=Length of day@
+qu.3.1.editing=useHTML@
+qu.3.1.question=If the sun $rs $ns of $ew for an observer in the $hemi hemisphere, which of the following is true?@
+qu.3.1.algorithm=
+$num1 = rint(2);
+$num2 = rint(2);
+$num3 = rint(2);
+$rs = switch($num3,"rises","sets");
+$ns = switch($num1,"north","south");
+$ew = switch($num3,"east","west");
+$hemi = switch($num2,"northern","southern");
+
+$answer=switch($num1+$num2,1,2,1);
+@
+qu.3.1.answer=$answer@
+qu.3.1.choice.1=The sun will be in the sky longer than 12 hours.@
+qu.3.1.choice.2=The sun will be in the sky less than 12 hours.@
+qu.3.1.choice.3=The sun will be in the sky for (almost exactly) 12 hours.@
+
+qu.3.2.mode=Non Permuting Multiple Choice@
+qu.3.2.name=Location of the most direct rays@
+qu.3.2.editing=useHTML@
+qu.3.2.question=A particular observer sees almost no shadow from a stick in the ground at noon on $date. Where is the observer?@
+qu.3.2.algorithm=
+$num = rint(8);
+$date = switch($num,"March 20","May 1","June 21","July 30","September 22","November 15","December 21","February 29");
+
+$answer=switch($num,3,2,1,2,3,4,5,4);
+@
+qu.3.2.answer=$answer@
+qu.3.2.choice.1=Very near the Tropic of Cancer@
+qu.3.2.choice.2=Somewhere between the Tropic of Cancer and the Equator@
+qu.3.2.choice.3=Very near the equator@
+qu.3.2.choice.4=Somewhere between the Equator and the Tropic of Capricorn@
+qu.3.2.choice.5=Very near the Tropic of Capricorn@
+
+
+
+
+qu.4.topic=Angle of incidence@
+
+qu.4.1.mode=Non Permuting Multiple Choice@
+qu.4.1.name=Three beam views@
+qu.4.1.editing=useHTML@
+qu.4.1.question=
+<div style="text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/threeBeamViews.swf"
+width="450" height="150" id="threeviews">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/threeBeamViews.swf"/>
+  <param name="FlashVars" value="angleA=$a&angleB=$b&angleC=$c"/>
+</object>
+</div><br/>
+Which surface is most efficiently receiving energy from the sun?<br/>@
+qu.4.1.algorithm=
+$num = rint(6);
+$x = rint(5,26)*switch(rint(2),1,-1);
+$y = rint(35,56)*switch(rint(2),1,-1);
+$z = rint(65,90)*switch(rint(2),1,-1);
+$a = switch($num,$x,$y,$z,$x,$y,$z);
+$b = switch($num,$y,$z,$x,$z,$x,$y);
+$c = switch($num,$z,$x,$y,$y,$z,$x);
+$answer = switch($num,1,3,2,1,2,3);
+@
+qu.4.1.answer= $answer@
+qu.4.1.choice.1= A@
+qu.4.1.choice.2= B@
+qu.4.1.choice.3= C@
+qu.4.1.choice.4= They are all equal@
+
+
+qu.4.2.mode=Non Permuting Multiple Selection@
+qu.4.2.name=Beam spread and latitude@
+qu.4.2.editing=useHTML@
+qu.4.2.question=
+<div style="text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/eduBeamSpread.swf"
+width="200" height="200" id="spread">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/eduBeamSpread.swf"/>
+  <param name="FlashVars" value="dec=$dec&lat=$lat"/>
+</object>
+</div><br/>
+The ray of light shown above is consistent with which of the following observers during late <em>$date</em>. Check all that apply.<br/>@
+qu.4.2.algorithm=
+$num1 = rint(4);
+$dec = switch($num1,0,20,0,-20);
+$date = switch($num1,"March","June","September","December");
+
+$num2 = rint(3);
+$lat = switch($num2,60,0,-60);
+
+$ans = switch($num2, switch($num1,3,0,3,0), switch($num1,1,1,1,1), switch($num1,3,2,3,2));
+
+$answer = switch($ans,"1","2","3","1,3");
+
+@
+qu.4.2.answer= $answer@
+qu.4.2.choice.1= An upper northern hemisphere observer@
+qu.4.2.choice.2= An observer in the tropics@
+qu.4.2.choice.3= A lower southern hemisphere observer@
+
+
+qu.4.3.mode=Non Permuting Multiple Selection@
+qu.4.3.name=Latitude and time of year@
+qu.4.3.editing=useHTML@
+qu.4.3.question=
+<div style="text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/eduSideBeamView.swf"
+width="200" height="200" id="spread">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/eduSideBeamView.swf"/>
+  <param name="FlashVars" value="dec=$dec&lat=$lat"/>
+</object>
+</div><br/>
+An observer is located at <em>$lat1$lat2</em>. Light rays at noon are shown above. What time or times of year can it be?<br/>@
+qu.4.3.algorithm=
+$num1 = rint(4);
+$dec = switch($num1,0,20,0,-20);
+
+$num2 = rint(3);
+$lat = switch($num2,50,0,-50);
+$lat1 = abs($lat);
+$lat2 = switch($num2,"&deg; N","&deg; N","&deg; S");
+
+$answer = switch($num1,"1,3",2,"1,3",4);
+
+@
+qu.4.3.answer= $answer@
+qu.4.3.choice.1= March@
+qu.4.3.choice.2= June@
+qu.4.3.choice.3= September@
+qu.4.3.choice.4= December@
+
+
+
+
+
+qu.5.topic=Reasons for the seasons@
+
+qu.5.1.mode=Multiple Selection@
+qu.5.1.name=Reasons for the seasons@
+qu.5.1.editing=useHTML@
+qu.5.1.question=Select all of the following which are a significant factor in the summer months being hotter (for the northern hemisphere).@
+
+qu.5.1.answer= 1,2,3@
+qu.5.1.choice.1= The sun rays are more direct and thus felt more intensely@
+qu.5.1.choice.2= The northern hemisphere of the earth is tilted towards the sun@
+qu.5.1.choice.3= The length of time the sun in the sky is longer than average@
+qu.5.1.choice.4= The earth is closer to the sun during the summer@
+qu.5.1.choice.5= The earth slows down in its orbit during the summer@
+qu.5.1.choice.6= The sun is more actively magnetically during the summer@

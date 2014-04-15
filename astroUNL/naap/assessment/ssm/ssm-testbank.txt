@@ -1,0 +1,242 @@
+qu.1.topic=Configurations@
+
+qu.1.1.mode=Non Permuting Multiple Choice@
+qu.1.1.name=Inferior Configurations@
+qu.1.1.editing=useHTML@
+qu.1.1.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/ssm/configurations.swf"
+width="300" height="300" id="globe3">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/ssm/configurations.swf"/>
+  <param name="FlashVars" value="theta=$angle1&mode=$mode"/>
+  </object></div>
+What is the configuration shown above?@
+
+qu.1.1.algorithm=
+
+$num1 = rint(12);
+$angle1 = $num1*30;
+
+$num2 = rint(3);
+$mode = switch($num2,switch(rint(2),"e1","e2"),"ic","sc");
+
+$answer = $num2+1;
+@
+qu.1.1.answer= $answer@
+qu.1.1.choice.1= Greatest Elongation@
+qu.1.1.choice.2= Inferior Conjunction@
+qu.1.1.choice.3= Superior Conjunction@
+
+qu.1.2.mode=Non Permuting Multiple Choice@
+qu.1.2.name=Superior Configurations@
+qu.1.2.editing=useHTML@
+qu.1.2.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/ssm/configurations.swf"
+width="300" height="300" id="globe3">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/ssm/configurations.swf"/>
+  <param name="FlashVars" value="theta=$angle1&mode=$mode"/>
+  </object></div>
+What is the configuration shown above?@
+
+qu.1.2.algorithm=
+
+$num1 = rint(12);
+$angle1 = $num1*30;
+
+$num2 = rint(3);
+$mode = switch($num2,switch(rint(2),"q1","q2"),"co","op");
+
+$answer = $num2+1;
+@
+qu.1.2.answer= $answer@
+qu.1.2.choice.1= Quadrature@
+qu.1.2.choice.2= Conjunction@
+qu.1.2.choice.3= Opposition@
+
+
+qu.2.topic=Historical Questions@
+
+qu.2.1.mode=Multiple Choice@
+qu.2.1.name=Persons@
+qu.2.1.editing=useHTML@
+qu.2.1.question=<p>What kind of cosmos did $person believe in?</p>@
+qu.2.1.algorithm=
+$num = rint(2);
+$person = switch($num,"Ptolemy","Copernicus");
+$answer = $num+1;
+@
+qu.2.1.answer= $answer@
+qu.2.1.choice.1=Geocentric@
+qu.2.1.choice.2=Heliocentric@
+
+qu.2.2.mode=Multiple Choice@
+qu.2.2.name=Persons@
+qu.2.2.editing=useHTML@
+qu.2.2.question=<p>What kind of planet is a $type planet?</p>@
+qu.2.2.algorithm=
+$num = rint(2);
+$type = switch($num,"inferior","superior");
+$answer = $num+1;
+@
+qu.2.2.answer= $answer@
+qu.2.2.choice.1=Those planets closer to the sun than the earth.@
+qu.2.2.choice.2=Those planets farther from the sun than the earth.@
+
+qu.3.topic= Sidereal vs. Synodic@
+
+qu.3.1.mode=Multiple Choice@
+qu.3.1.name=Sidearl - Text@
+qu.3.1.editing=useHTML@
+qu.3.1.question=<p>What defines an $motion period?</p>@
+qu.3.1.algorithm=
+$num = rint(2);
+$motion = switch($num,"synodic","sidereal");
+$answer = $num+1;
+@
+qu.3.1.answer= $answer@
+qu.3.1.choice.1=The time it takes for the planet to come back to the same configuration with respect to the sun.@
+qu.3.1.choice.2=The time it takes for the planet to complete one 360&deg; orbit.@
+
+
+
+qu.4.topic=Relationships and Orbits@
+
+qu.4.1.mode=Multiple Choice@
+qu.4.1.name=Speed@
+qu.4.1.editing=useHTML@
+qu.4.1.question=<p>How fast does a planet orbit the sun compared to earth if it is <i>$distance</i> the sun than the earth?</p>@
+qu.4.1.algorithm=
+$num = rint(2);
+$distance = switch($num,"closer to","farther from");
+$answer = $num+1;
+@
+qu.4.1.answer= $answer@
+qu.4.1.choice.1=It orbits faster than the earth.@
+qu.4.1.choice.2=It orbits slower than the earth.@
+qu.4.1.choice.3=It orbits at the same speed as the earth.@
+
+qu.4.2.mode=Multiple Choice@
+qu.4.2.name=Synodic@
+qu.4.2.editing=useHTML@
+qu.4.2.question=<p>What happens to the <i>synodic</i> period of a planet if it is moved <i>$distance</i> the earth?</p>@
+qu.4.2.algorithm=
+$num = rint(2);
+$distance = switch($num,"closer to","farther from");
+$answer = $num+1;
+@
+qu.4.2.answer= $answer@
+qu.4.2.choice.1=The synodic period would be longer.@
+qu.4.2.choice.2=The synodic period would be shorter.@
+qu.4.2.choice.3=The synodic period would remain unchanged.@
+
+qu.4.3.mode=Multiple Choice@
+qu.4.3.name=Sidereal@
+qu.4.3.editing=useHTML@
+qu.4.3.question=<p>How does the <i>sidereal</i> period of a planet that is $distance the sun than the earth compare to the earth&rsquo;s sidereal period?</p>@
+qu.4.3.algorithm=
+$num = rint(2);
+$distance = switch($num,"closer to","farther from");
+$answer = $num+1;
+@
+qu.4.3.answer= 3@
+qu.4.3.choice.1=The sidereal period would be longer.@
+qu.4.3.choice.2=The sidereal period would be shorter.@
+qu.4.3.choice.3=The sidereal period would remain unchanged.@
+
+qu.4.4.mode=Multiple Choice@
+qu.4.4.name=Speed 2@
+qu.4.4.editing=useHTML@
+qu.4.4.question=<p>Based solely on the order of the planets, which planet has a <i>shorter</i> sidereal period, $planet1 or $planet2?</p>@
+qu.4.4.algorithm=
+
+$num1 = rint(5);
+$num2 = rint(5);
+$planet1 = switch($num1,"Mercury","Venus","Earth","Mars","Jupiter");
+$planet2 = switch($num2,"Mercury","Venus","Earth","Mars","Jupiter");
+
+condition:not(eq($num1,$num2));
+$answer = if(gt($num1,$num2),2,1);
+
+@
+qu.4.4.answer= $answer@
+qu.4.4.choice.1=$planet1@
+qu.4.4.choice.2=$planet2@
+
+qu.5.topic= Retrograde@
+
+qu.5.1.mode=Multiple Choice@
+qu.5.1.name=Retrograde@
+qu.5.1.editing=useHTML@
+qu.5.1.question=<p>The stars take 23 hours 56 minutes make one complete circuit around the earth. How long does it take a planet to move around the sky when the planet is in $motion motion?</p>@
+qu.5.1.algorithm=
+$num = rint(2);
+$motion = switch($num,"prograde","retrograde");
+$answer = switch($num,3,1);
+@
+qu.5.1.answer= $answer@
+qu.5.1.choice.1=Less than 23 hours and 56 minutes@
+qu.5.1.choice.2=23 hours and 56 minutes@
+qu.5.1.choice.3=More than 23 hours and 56 minutes@
+
+qu.5.2.mode=Multiple Choice@
+qu.5.2.name=Retrograde@
+qu.5.2.editing=useHTML@
+qu.5.2.question=<p>Stars rise in the east and set in the west. If a planet undergoing $motion motion is near certain star, where will the planet be the following evening?</p>@
+qu.5.2.algorithm=
+$num = rint(2);
+$motion = switch($num,"prograde","retrograde");
+$answer = switch($num,1,3);
+@
+qu.5.2.answer= $answer@
+qu.5.2.choice.1=A small bit east of that star.@
+qu.5.2.choice.2=It will remain in the same spot with respect to that star.@
+qu.5.2.choice.3=A small bit west of that star.@
+
+qu.6.topic=Inferior Planet Period Questions@
+
+qu.6.1.mode=Non Permuting Multiple Choice@
+qu.6.1.name=Inferior Planets - Period Animation@
+qu.6.1.editing=useHTML@
+qu.6.1.algorithm=$num1=rint(0,3);
+        $time=switch($num1,"224.70","583.92","365.25");
+        $angle= rint(0,360);
+        $answer=($num1+1);@
+qu.6.1.question=The animation below illustrates the motion of the Earth and Venus orbiting the sun.
+What is the name of the time interval illustrated?
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/ssm/InferiorPeriods.swf"
+width="300" height="320">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/ssm/InferiorPeriods.swf"/>
+  <param name="FlashVars" value="startangle=$angle&sim_time=$time"/>
+  </object></div>@
+qu.6.1.answer=$answer@
+qu.6.1.choice.1=The sidereal period of Venus.@
+qu.6.1.choice.2=The synodic period of Venus.@
+qu.6.1.choice.3=The sidereal period of the Earth.@
+qu.6.1.choice.4=The synodic period of the Earth.@
+
+
+
+qu.7.topic=Superior Planet Period Questions@
+
+qu.7.1.mode=Non Permuting Multiple Choice@
+qu.7.1.name=Superior Planets - Period Animation@
+qu.7.1.editing=useHTML@
+qu.7.1.algorithm=$num1=rint(0,3);
+        $time=switch($num1,"688.67","779.94","365.25");
+        $angle= rint(0,360);
+        $answer=($num1+1);@
+qu.7.1.question=The animation below illustrates the motion of the Earth and Mars orbiting the sun.
+What is the name of the time interval illustrated?
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/ssm/SuperiorPeriods.swf"
+width="300" height="320" id="">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/ssm/SuperiorPeriods.swf"/>
+  <param name="FlashVars" value="startangle=$angle&sim_time=$time"/>
+  </object></div>@
+qu.7.1.answer=$answer@
+qu.7.1.choice.1=The sidereal period of Mars.@
+qu.7.1.choice.2=The synodic period of Mars.@
+qu.7.1.choice.3=The sidereal period of the Earth.@
+qu.7.1.choice.4=The synodic period of the Earth.@ 

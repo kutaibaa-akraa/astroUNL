@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<title>Distance Modulus - Cosmic Distance Ladder - NAAP</title>
+<meta name="robots" content="noindex" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="../../common/main091120.css" />
+<link rel="stylesheet" type="text/css" href="../naap.css" />
+
+<script type="text/javascript" src="../../common/main090113.js"></script>
+<script type="text/javascript" src="../naap.js"></script>
+
+<!-- begin custom -->
+
+<style type="text/css">
+table { width: 100%; border-collapse: collapse;  }
+th,td { text-align: center; border: 1px solid black; }
+th { border-right: 3px double black; width: 12em; }
+</style>
+
+<script type='text/ecmascript'>
+function iratio(option) {
+	if( option == 1 ) {
+		var mdiff = document.getElementById('mdiff').value;
+	  var iratio = Math.pow(10,0.4*mdiff);
+	  document.getElementById('iratio').value = iratio.toPrecision(3);
+	}
+	else if( option == 2 ) {
+	  var iratio = document.getElementById('iratio').value;
+	  var mdiff = 2.5*Math.log(iratio)/Math.LN10;
+	  document.getElementById('mdiff').value = mdiff.toPrecision(2);
+	}
+}
+
+function modulus(option) {
+	if( option == 1 ) {
+	  var modulus = document.getElementById('modulus').value;
+	  modulus = modulus*1.0;
+	  var distance = Math.pow(10,modulus/5+1);
+	  document.getElementById('distance').value = distance.toPrecision(4);
+	}
+	else if( option == 2 ) {
+	  var distance = document.getElementById('distance').value;
+	  distance = distance*1.0;
+	  var modulus = -5+5*Math.log(distance)/Math.LN10;
+		document.getElementById('modulus').value = modulus.toPrecision(3);
+	}
+}
+
+</script>
+
+<!-- end custom -->
+
+
+</head>
+<body>
+
+<div id="headerSide"></div>
+<div id="header"></div>
+<!--[if !IE]>-->
+<div id="headerShade"></div>
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<div id="headerShade"></div>
+<![endif]-->
+
+<!-- begin navbar -->
+<!-- 14 oct 09 - zip -->
+
+<ul class="navbar">
+
+<li class="navbar-nodrop">
+<div class="navbar-title">
+	<a href="../../index.html">Home</a>
+</div>
+</li>
+
+<li id="navbar_ClassAction" onmouseover="navOnMouseOver('navbar_ClassAction')" onmouseout="navOnMouseOut()">
+<div class="navbar-title">
+	<a href="../../classaction/index.html">ClassAction</a>
+</div>
+<div class="navbar-pane">
+<!--[if !IE]>-->
+<div class="navbar-pane-bs-group">
+	<div class="navbar-pane-bls"></div>
+	<div class="navbar-pane-bs"></div>
+	<div class="navbar-pane-brs"></div>
+</div>
+<div class="navbar-pane-ls"></div>
+<div class="navbar-pane-rs"></div>
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<div class="navbar-pane-bs-group">
+	<div class="navbar-pane-bls"></div>
+	<div class="navbar-pane-bs"></div>
+	<div class="navbar-pane-brs"></div>
+</div>
+<div class="navbar-pane-ls"></div>
+<div class="navbar-pane-rs"></div>
+<![endif]-->
+<div class="navbar-pane-inner">
+	<a href="../../classaction/index.html">Modules List</a>
+	<hr/>
+	<div class="navbar-sub-title">Resources</div>
+	<div class="navbar-sub">
+		<a href="../../classaction/questionsList.html">Questions</a>
+		<a href="../../animationsLinks.html">Simulations</a>
+		<a href="../../classaction/imagesList.html">Images</a>
+		<a href="../../classaction/tablesList.html">Tables</a>
+		<a href="../../classaction/outlinesList.html">Outlines</a>
+	</div>
+	<hr/>
+	<a href="../../classaction/mainfiles/overview.html">Overview</a>	
+	<a href="../../classaction/mainfiles/pedagogy.html">Pedagogy</a>	
+	<a href="../../classaction/mainfiles/usage.html">How to Use</a>
+	<a href="../../classaction/mainfiles/ppoint.html">Using in Powerpoint</a>
+</div>
+</div>
+</li>
+
+<li id="navbar_NAAP" onmouseover="navOnMouseOver('navbar_NAAP')" onmouseout="navOnMouseOut()">
+<div class="navbar-title">
+	<a href="../../naap/index.html">NAAP Labs</a>
+</div>
+<div class="navbar-pane">
+<!--[if !IE]>-->
+<div class="navbar-pane-bs-group">
+	<div class="navbar-pane-bls"></div>
+	<div class="navbar-pane-bs"></div>
+	<div class="navbar-pane-brs"></div>
+</div>
+<div class="navbar-pane-ls"></div>
+<div class="navbar-pane-rs"></div>
+<!--<![endif]-->
+<!--[if gte IE 7]>
+<div class="navbar-pane-bs-group">
+	<div class="navbar-pane-bls"></div>
+	<div class="navbar-pane-bs"></div>
+	<div class="navbar-pane-brs"></div>
+</div>
+<div class="navbar-pane-ls"></div>
+<div class="navbar-pane-rs"></div>
+<![endif]-->
+<div class="navbar-pane-inner">
+	<a href="../../naap/index.html">NAAP Home</a>
+	<a href="../../naap/help/descriptions.html">Lab Descriptions</a>
+	<div class="navbar-sub-title">Labs</div>
+	<div class="navbar-sub">
+		<a href="../../naap/ssm/ssm.html">Solar System Models</a>
+		<a href="../../naap/motion1/motion1.html">Basic Coordinates and Seasons</a>
+		<a href="../../naap/motion2/motion2.html">The Rotating Sky</a>
+		<a href="../../naap/motion3/motion3.html">Motions of the Sun</a>
+		<a href="../../naap/pos/pos.html">Planetary Orbit Simulator</a>
+		<a href="../../naap/lps/lps.html">Lunar Phase Simulator</a>
+		<a href="../../naap/blackbody/blackbody.html">Blackbody Curves &amp; UBV Filters</a>
+		<a href="../../naap/hydrogen/hydrogen.html">Hydrogen Energy Levels</a>
+		<a href="../../naap/hr/hr.html">Hertzsprung-Russel Diagram</a>
+		<a href="../../naap/ebs/ebs.html">Eclipsing Binary Simulator</a>
+		<a href="../../naap/atmosphere/atmosphere.html">Atmospheric Retention</a>
+		<a href="../../naap/esp/esp.html">Extrasolar Planets</a>
+		<a href="../../naap/vsp/vsp.html">Variable Star Photometry</a>
+		<a href="../../naap/habitablezones/habitablezones.html">Habitable Zones</a>
+	</div>
+	<a href="../../naap/help/general_overview.html">General Overview</a>
+	<a href="../../naap/help/instructor_overview.html">Instructor Overview</a>
+</div>
+</div>
+</li>
+
+<li class="navbar-nodrop">
+<div class="navbar-title">
+	<a href="../../interactives/index.html">Interactives</a>
+</div>
+</li>
+
+<li class="navbar-nodrop" style="float: right;">
+<div class="navbar-title">
+	<a href="../../about.html">Contact</a>
+</div>
+</li>
+
+</ul>
+<!-- end navbar -->
+
+<!-- begin main block -->
+<div id="mainBlock">
+
+<div id="locationLine">
+<a href="../../index.html">Home</a> &#0155; <a href="../../naap/index.html">NAAP Labs</a> &#0155; <a href="distance.html">Cosmic Distance Ladder</a> &#0155; Distance Modulus
+</div>
+<!--[if !IE]>-->
+<hr id="locationLineHR"/>
+<!--<![endif]-->
+<!--[if gt IE 7]>
+<hr id="locationLineHR"/>
+<![endif]-->
+<!--[if lte IE 7]>
+<hr id="locationLineHR" style="margin: -7px auto;" />
+<![endif]-->
+
+<!-- page content goes below -->
+
+<div class="contentBlock">
+
+
+<h1>Distance Modulus</h1>
+<hr/>
+<br/>
+<br/>
+<p>Today  parallaxes can only be measured for stars out to distances of 500 light-years. Since our galaxy is approximately 100,000 light-years in diameter, this only includes a small fraction of the total number of stars in the galaxy. How can the distances to stars even farther away  be determined? One method that can be used is to compare their apparent  brightness and luminosity.</p>
+
+<div class="figureright">
+<img src="graphics/InverseSquareLaw.png" alt="inverse sequare law"/>
+<div class="figurecaption">Diagram of the inverse square law and light.</div>
+<!-- http://commons.wikimedia.org/wiki/Image:InverseSquareLaw.png -->
+</div>
+
+<p>Suppose a friend in the distance is carrying a powered 100W light bulb. The further away the friend is, the dimmer the light bulb will appear. The closer the friend is, the brighter the light bulb will appear. So, by comparing how bright the bulb appears to how bright the light bulb is intrinsically, the distance can be determined. This is possible because of the <i>inverse square law</i>.</p>
+
+<p>The diagram to the right visually depicts the inverse square law and light. The number of photons/rays going through each square is different depending on the distance of the square. Like parallax, this is a purely geometric effect.</p>
+
+<p>Astronomers express the inverse square law effect with the <i>distance modulus</i> which is expressed in terms of magnitudes. The difference between the <i>apparent magnitude</i> (<span class="var">m</span>) and the <i>absolute magnitude</i> (<span class="var">M</span>) defines the distance to the object in parsecs. That is: <span class="var">m</span> &minus; <span class="var">M</span> = &minus;5 + 5 log<sub>10</sub> <span class="var">d</span>.</p>
+
+
+<div class="figurecenter" style="width: 40em; clear: both;">
+<p style="font-size: 1.5em; padding: 10px; background-color: white; text-align: center; border: 1px solid black;" ><b>Try it:</b>
+<span class="var">m</span> &minus; <span class="var">M</span> = <input id='modulus' value='0.0' onkeyup='modulus(1)' style='width: 4.5em; text-align: center; font-size: 1em;'/> &rarr;
+<i>d</i> = <input id='distance' value='10.0' onkeyup='modulus(2)' style='width: 4.5em; text-align: center; font-size: 1em;'/></p>
+</div>
+
+<p>Additionally, the table below can be used for a quick check. Note that the 10, 16, 25, 40, 63 pattern repeats (with an increasing number of zeroes) and may be used to calculate values not contained in the table.. </p>
+
+<div class="figurecenter" style="width: 60em;">
+<table style="background-color: white;">
+<tr>
+<th><i>m</i> &minus; <i>M</i></th>
+<td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+<td>7</td><td>8</td><td>9</td><td>10</td><td>15</td><td>20</td><td>25</td>
+</tr>
+<tr>
+<th>distance (pc)</th>
+<td>10</td><td>16</td><td>25</td><td>40</td><td>63</td><td>100</td><td>160</td>
+<td>250</td><td>400</td><td>630</td><td>10<sup>3</sup></td><td>10<sup>4</sup></td><td>10<sup>5</sup></td><td>10<sup>6</sup></td>
+</tr>
+</table>
+</div>
+
+<p>One of the best known distance indicators are RR Lyrae Stars. These are pulsating variable stars &ndash; stars that change in brightness over time because they are periodically growing larger and smaller much like breathing. These stars pulsate because the release of energy from the outer layers of the star varies over time (due to a layer of partially ionized helium). When this ionized layer is close to the center of the star and hot &ndash; it becomes very opaque to the flow of radiation and the radiation pressure pushes it outward. When the ionized layer gets far from the star, it cools off and its opacity decreases. Radiation can now stream through and the layer falls back toward the center of the star.</p>
+
+<div class="figureleft" style="width: 435px;">
+<img src="graphics/rrlyrae_period.jpg" alt="Periodicity of an RR Lyrae Variable Star"/>
+<div class="figurecaption">Figure 2: Periodicity of an RR Lyrae variable star.</div>
+<!--<div class="figurecredit">Internal NAAP Image</div>-->
+</div>
+
+<p>RR Lyrae stars are very good &ldquo;standard candles&rdquo;. These are objects where have a pretty good idea how intrinsically bright they are. It turns out that all RR Lyrae stars have absolute magnitudes very near M<sub>V</sub> = 0.5.  However, since they are small, faint stars, they cannot be seen at large distances.</p>
+
+<p>The figure to the right shows the variation in the apparent magnitude of the RR Lyrae star <b>VX Her</b>. Note that the average apparent magnitude is about 10.5.  Thus, the distance modulus for this stars is (m - M) = 10.5 - 0.5 = 10, which corresponds to a distance of 1000 pc.</p>
+
+<p>There are many other objects that astronomers use with the distance modulus to obtain distance.  They all involve some method by which the astronomer uncovers the value of absolute magnitude M for an object and there are many different approaches used. The apparent magnitude m is then observed to obtain the distance. </p>
+<br class="pagebreak"/>
+<hr/>
+<br/>
+
+
+
+</div>
+
+<!-- page content goes above -->
+
+<div style="width: 100%; text-align: center; margin-top: 3em; font-size: 75%; color: #a8a8a8;">this page is mirrored from <a href="http://astro.unl.edu">astro.unl.edu</a> &mdash; 26 May 2013</div>
+</div>
+<!-- end main block -->
+
+
+
+
+</body>
+</html>

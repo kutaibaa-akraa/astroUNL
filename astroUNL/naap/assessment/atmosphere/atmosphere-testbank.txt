@@ -1,0 +1,198 @@
+qu.1.topic=Escape Velocity@
+
+qu.1.1.mode=Multiple Choice@
+qu.1.1.editing=useHTML@
+qu.1.1.question=If a particle is launched from the surface of the earth with a velocity of $vel km/s, what happens to the particle?@
+qu.1.1.algorithm=
+$num = rint(2);
+$vel = switch($num,rint(4,9),rint(14,19));
+$ans = switch($num,1,2);
+@
+qu.1.1.answer=$ans@
+qu.1.1.choice.1=It will go up, but must come down.@
+qu.1.1.choice.2=It will go up and keep on going, never coming back down.@
+qu.1.1.choice.3=It will go up with just enough speed to not come back down.@
+
+qu.2.topic=Escape Velocity Formula@
+
+qu.2.1.mode=Non Permuting Multiple Choice@
+qu.2.1.editing=useHTML@
+qu.2.1.question=Planet A has a mass <b>M</b> and radius <b>R</b>. Planet B has a mass <b style='color: blue;'>$mfactor M</b> and a radius <b style='color: red;'>$rfactor R</b>. How do the escape velocities of the two planets compare?@
+qu.2.1.algorithm=
+$mfactor = switch(rint(3),0.5,1,2);
+$rfactor = switch(rint(3),0.5,1,2);
+$ans = if(lt($mfactor,$rfactor),1,if($gt($mfactor,$rfactor),3,2));
+condition:not(eq($mfactor,$rfactor));
+@
+qu.2.1.answer=$ans@
+qu.2.1.choice.1=Planet B's escape velocity <b>is less than</b> planet A's escape velocity@
+qu.2.1.choice.2=Planet B's escape velocity <b>is equal to</b> planet A's escape velocity@
+qu.2.1.choice.3=Planet B's escape velocity <b>is greater than</b> planet A's escape velocity@
+
+
+qu.3.topic=Identify Distribution@
+
+qu.3.1.mode=Multiple Choice@
+qu.3.1.editing=useHTML@
+qu.3.1.question=Which of the following looks most like the distribution one would expect for the speeds of gases at a particular temperature?@
+qu.3.1.algorithm=
+$input1=rint(6)+1;
+$input2=rint(6)+1;
+$input3=rint(6)+1;
+condition:not(eq($input1,$input2));
+condition:not(eq($input2,$input3));
+condition:not(eq($input3,$input1));
+@
+qu.3.1.answer=1@
+qu.3.1.choice.1=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/atmosphere/eduDistribution.swf"
+width="100" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/atmosphere/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=7"/>
+</object>@
+qu.3.1.choice.2=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/atmosphere/eduDistribution.swf"
+width="100" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/atmosphere/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input1"/>
+</object>@
+qu.3.1.choice.3=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/atmosphere/eduDistribution.swf"
+width="100" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/atmosphere/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input2"/>
+</object>@
+qu.3.1.choice.4=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/atmosphere/eduDistribution.swf"
+width="100" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/atmosphere/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input3"/>
+</object>@
+
+
+qu.4.topic=Speeds@
+
+qu.4.1.mode=Multiple Choice@
+qu.4.1.editing=useHTML@
+qu.4.1.question=Of the speeds below, which one is <b>$value</b> the other two speeds?@
+qu.4.1.algorithm=
+$num = rint(3);
+$value = switch($num,"smaller than","larger than","in between");
+$ans = switch($num,2,1,3);
+@
+qu.4.1.answer=$ans@
+qu.4.1.choice.1=the root mean square velocity@
+qu.4.1.choice.2=the most probable speed@
+qu.4.1.choice.3=the average speed@
+
+qu.4.2.mode=Non Permuting Multiple Choice@
+qu.4.2.editing=useHTML@
+qu.4.2.question=What fraction of particles will have a speed <b>$compare than</b> the <i>$speed</i>?@
+qu.4.2.algorithm=
+$num1 = rint(2);
+$num2 = rint(2);
+$compare = switch($num1,"greater","less");
+$speed = switch($num2,"most probable speed","average speed");
+$ans = switch($num1,switch($num2,1,2),switch($num2,2,1));
+@
+qu.4.2.answer=$ans@
+qu.4.2.choice.1=more than half of the particles@
+qu.4.2.choice.2=less than half of the particles@
+qu.4.2.choice.3=exactly half of the particles@
+
+qu.5.topic=Kinetic Energy@
+
+qu.5.1.mode=Non Permuting Multiple Choice@
+qu.5.1.editing=useHTML@
+qu.5.1.question=How does the average kinetic energy depend on temperature?@
+qu.5.1.answer=2@
+qu.5.1.choice.1=K &prop; T<sup>2</sup>@
+qu.5.1.choice.2=K &prop; T@
+qu.5.1.choice.3=K &prop; 1/T@
+qu.5.1.choice.4=K &prop; 1/T<sup>2</sup>@
+
+qu.6.topic=Three Curves@
+
+qu.6.1.mode=Non Permuting Multiple Choice@
+qu.6.1.editing=useHTML@
+qu.6.1.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/atmosphere/eduMBD.swf"
+width="330" height="225" id="distribution">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/atmosphere/eduMBD.swf"/>
+  <param name="FlashVars" value="mass1=$mass1&mass2=$mass2&mass3=$mass3&temp1=$temp&temp2=$temp&temp3=$temp&maxSpeed=1500&defaultLabel=letter"/>
+</object></div>
+All three gases have the same temperature. Which gas is the <b style='color: red;'>$compare massive</b>?
+@
+qu.6.1.algorithm=
+$num = rint(2);
+$compare = switch($num,"most","least");
+$mass1 = (rint(6)+1)*10;
+$mass2 = (rint(6)+1)*10;
+$mass3 = (rint(6)+1)*10;
+$temp = rint(11)*10+100;
+$ans = switch($num,if(gt($mass1,$mass2),if(gt($mass1,$mass3),1,3),if(gt($mass2,$mass3),2,3)),if(lt($mass1,$mass2),if(lt($mass1,$mass3),1,3),if(lt($mass2,$mass3),2,3)));
+
+condition:not(eq($mass1,$mass2))*not(eq($mass1,$mass3))*not(eq($mass2,$mass3));
+@
+qu.6.1.answer=$ans@
+qu.6.1.choice.1=A@
+qu.6.1.choice.2=B@
+qu.6.1.choice.3=C@
+qu.6.1.choice.4=all have the same mass@
+
+
+qu.6.2.mode=Non Permuting Multiple Choice@
+qu.6.2.editing=useHTML@
+qu.6.2.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/atmosphere/eduMBD.swf"
+width="330" height="225" id="distribution">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/atmosphere/eduMBD.swf"/>
+  <param name="FlashVars" value="mass1=$mass&mass2=$mass&mass3=$mass&temp1=$temp1&temp2=$temp2&temp3=$temp3&maxSpeed=1500&defaultLabel=letter"/>
+</object></div>
+All three gases have the same mass. Which gas is has the <b style='color: blue;'>$compare temperature</b>?
+@
+qu.6.2.algorithm=
+$num = rint(2);
+$compare = switch($num,"highest","lowest");
+$temp1 = rint(6)*50+100;
+$temp2 = rint(6)*50+100;
+$temp3 = rint(6)*50+100;
+$mass = (rint(3)+1)*10;
+$ans = switch($num,if(gt($temp1,$temp2),if(gt($temp1,$temp3),1,3),if(gt($temp2,$temp3),2,3)),if(lt($temp1,$temp2),if(lt($temp1,$temp3),1,3),if(lt($temp2,$temp3),2,3)));
+
+condition:not(eq($temp1,$temp2))*not(eq($temp1,$temp3))*not(eq($temp2,$temp3));
+@
+qu.6.2.answer=$ans@
+qu.6.2.choice.1=A@
+qu.6.2.choice.2=B@
+qu.6.2.choice.3=C@
+qu.6.2.choice.4=all have the same temperature@
+
+qu.7.topic=Gas Retained@
+
+qu.7.1.mode=Multiple Choice@
+qu.7.1.editing=useHTML@
+qu.7.1.question=Which gas is most easily <b>$option</b>?
+(<a onclick="window.open('http://astro.unl.edu/naap/assessment/atmosphere/periodictable.gif','name','height=375,width=700');" style="cursor: pointer; color: blue; text-decoration: underline;">click for periodic table</a>)@
+qu.7.1.algorithm=
+$gas1 = switch(rint(3),"Xe","CO<sub>2</sub>","O<sub>2</sub>");
+$gas2 = switch(rint(3),"N<sub>2</sub>","H<sub>2</sub>O","NH<sub>3</sub>");
+$gas3 = switch(rint(3),"CH<sub>4</sub>","He","H<sub>2</sub>");
+
+$num = rint(2);
+$option = switch($num,"retained","lost");
+$ans = switch($num,1,3);
+@
+qu.7.1.answer=$ans@
+qu.7.1.choice.1=$gas1@
+qu.7.1.choice.2=$gas2@
+qu.7.1.choice.3=$gas3@
+
+qu.8.topic=Mercury, Moon, and Titan@
+
+qu.8.1.mode=Multiple Choice@
+qu.8.1.editing=useHTML@
+qu.8.1.question=All of the bodies below have reasonably close escape velocities. Which has an atmosphere?@
+qu.8.1.answer=1@
+qu.8.1.choice.1=Titan@
+qu.8.1.choice.2=Mercury@
+qu.8.1.choice.3=Moon@
+

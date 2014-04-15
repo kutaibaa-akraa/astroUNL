@@ -1,0 +1,195 @@
+qu.1.topic=Path of the sun - Given Latitude@
+
+qu.1.1.mode=Non Permuting Multiple Choice@
+qu.1.1.name=Path of the sun - Given Latitude@
+qu.1.1.editing=useHTML@
+qu.1.1.algorithm=$num=rint(5);
+$lat=switch($num,"15","30","45","60","75","90");
+$num2=rint(2);
+$dec=switch($num2,"23.5","0","-23.5");
+$answer=switch($num2,1,2,3);@
+qu.1.1.question=The horizon diagram below shows the path of the sun on the ____________ from a latitude of $lat&deg;N.
+<center><object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion3/sunPathDiagramII001.swf"
+width="320" height=320" id="sunPathDiagram">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion3/sunPathDiagramII001.swf"/>
+  <param name="FlashVars" value="lat=$lat&dec=$dec"/>
+</object></center>@
+qu.1.1.answer=$answer@
+qu.1.1.choice.1=summer solstice@
+qu.1.1.choice.2=autumnal equinox@
+qu.1.1.choice.3=winter solstice@
+
+
+
+qu.2.topic=Path of the sun - Given Declination@
+
+qu.2.1.mode=Non Permuting Multiple Choice@
+qu.2.1.name=Path of the sun - Given Declination@
+qu.2.1.editing=useHTML@
+qu.2.1.algorithm=$num=rint(3);
+$lat=switch($num,"0","30","60","90");
+$num2=rint(2);
+$dec=switch($num2,"23.5","0","-23.5");
+$date=switch($num2,"summer solstice", "autumnal equinox", "winter solstice");
+$answer=switch($num,1,2,3,4);@
+qu.2.1.question=The horizon diagram below shows the path of the sun on the $date from a latitude of _____________.
+<center><object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion3/sunPathDiagramII001.swf"
+width="320" height=320" id="sunPathDiagram">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion3/sunPathDiagramII001.swf"/>
+  <param name="FlashVars" value="lat=$lat&dec=$dec"/>
+</object></center>@
+qu.2.1.answer=$answer@
+qu.2.1.choice.1=0&deg;@
+qu.2.1.choice.2=30&deg;N@
+qu.2.1.choice.3=60&deg;N@
+qu.2.1.choice.4=90&deg;N@
+
+
+
+qu.3.topic=Meridinal Altitude of Sun@
+
+qu.3.1.mode=Multiple Choice@
+qu.3.1.editing=useHTML@
+qu.3.1.algorithm=$num=rint(4);
+$lat=switch($num,"41", "28", "52", "58");
+$location=switch($num,"Lincoln, NE", "Tampa, FL", "Saskatoon, Canada", "Juneau, Alaska");
+$num2=rint(2);
+$date=switch($num2,"summer solstice", "autumnal equinox", "winter solstice");
+$answer=switch($num2,4,3,2);
+$ans2=90-$lat-23.5;
+$ans3=90-$lat;
+$ans4=90-$lat+23.5;@
+qu.3.1.question=From $location, (lat=$lat&deg;N), the meridinal altitude of the sun on the $date is ...@
+qu.3.1.answer=$answer@
+qu.3.1.choice.1=0&deg;@
+qu.3.1.choice.2=$ans2&deg;@
+qu.3.1.choice.3=$ans3&deg;@
+qu.3.1.choice.4=$ans4&deg;@
+qu.3.1.choice.5=90&deg;@
+
+
+
+qu.4.topic=Meridinal Altitude of Star@
+
+qu.4.1.mode=Non Permuting Multiple Choice@
+qu.4.1.editing=useHTML@
+qu.4.1.algorithm=$num=rint(4);
+$lat=switch($num,"41", "28", "52", "58");
+$location=switch($num,"Lincoln, NE", "Tampa, FL", "Saskatoon, Canada", "Juneau, Alaska");
+$num2=rint(2);
+$star=switch($num2,"Sirius","Betelguese");
+$dec=switch($num2,"-16","7");
+$ans1=$lat-$dec;
+$ans2=90-$lat-$dec;
+$ans3=90-$lat;
+$ans4=90-$lat+$dec;
+$ans5=$lat+$dec;@
+qu.4.1.question=From $location (lat = $lat&deg;N), the meridinal altitude of the star $star (dec=$dec&deg;) is ...@
+qu.4.1.answer=4@
+qu.4.1.choice.1=$ans1&deg;@
+qu.4.1.choice.2=$ans2&deg;@
+qu.4.1.choice.3=$ans3&deg;@
+qu.4.1.choice.4=$ans4&deg;@
+qu.4.1.choice.5=$ans5&deg;@
+
+
+
+qu.5.topic=Azimuth of the Rising Sun@
+
+qu.5.1.mode=Non Permuting Multiple Choice@
+qu.5.1.editing=useHTML@
+qu.5.1.algorithm=$num=rint(2);
+$date=switch($num,"vernal equinox","autumnal equinox");
+$num2=rint(2);
+$action=switch($num2,"rises","sets");
+$action2=switch($num2,"rise","set");
+$direction=switch($num2,"east","west");
+$answer=switch($num,1,2);@
+qu.5.1.question=On the $date the sun $action directly $direction. Where will the sun $action2 two weeks later?@
+qu.5.1.answer=$answer@
+qu.5.1.choice.1=north of $direction@
+qu.5.1.choice.2=south of $direction@
+
+
+
+qu.6.topic=Sun at Zenith@
+
+qu.6.1.mode=Non Permuting Multiple Choice@
+qu.6.1.editing=useHTML@
+qu.6.1.algorithm=$num=rint(7);
+$date=switch($num,"May 20","April 15","July 22","August 26","October 18","November 20","January 20","February 22");
+$answer=switch($num,1,2,1,2,4,5,5,4);@
+qu.6.1.question=At which of the following latitudes can an observer see the sun at their zenith on $date?@
+qu.6.1.answer=$answer@
+qu.6.1.choice.1=20&deg;N@
+qu.6.1.choice.2=10&deg;N@
+qu.6.1.choice.3=0&deg;@
+qu.6.1.choice.4=10&deg;S@
+qu.6.1.choice.5=20&deg;S@
+
+
+
+qu.7.topic=Midnight Sun Effects@
+
+qu.7.1.mode=Non Permuting Multiple Choice@
+qu.7.1.editing=useHTML@
+qu.7.1.algorithm=$num2=rint(6);
+$lat=switch($num2,"85&deg;S","75&deg;S","65&deg;S","70&deg;N","80&deg;N","85&deg;N");
+$answer=switch($num2,1,1,3,2,2,2);@
+qu.7.1.question=On which of the following dates will an observer at $lat not see the sun above the horizon all day?@
+qu.7.1.answer=$answer@
+qu.7.1.choice.1=June 21@
+qu.7.1.choice.2=December 21@
+qu.7.1.choice.3=The sun will rise & set everyday of the year at this latitude.@
+
+qu.7.2.mode=Non Permuting Multiple Choice@
+qu.7.2.editing=useHTML@
+qu.7.2.algorithm=$num2=rint(6);
+$lat=switch($num2,"85&deg;S","75&deg;S","65&deg;S","70&deg;N","80&deg;N","85&deg;N");
+$answer=switch($num2,2,2,3,1,1,1);@
+qu.7.2.question=On which of the following dates will an observer at $lat see the sun above the horizon all day long?@
+qu.7.2.answer=$answer@
+qu.7.2.choice.1=June 21@
+qu.7.2.choice.2=December 21@
+qu.7.2.choice.3=The sun will rise and set everyday of the year at this latitude.@
+
+
+
+qu.8.topic=Sun at Zenith@
+
+qu.8.1.mode=Multiple Choice@
+qu.8.1.editing=useHTML@
+qu.8.1.algorithm=$num=rint(2);
+$height=switch($num,"highest","lowest");
+$extent=switcy($num,"largest","smallest");
+$answer=switch($num,3,2);@
+qu.8.1.question=The sun rises lowest ( its maximum altitude during the day is smallest) in our sky (assume a mid United States latitude) on ..@
+qu.8.1.answer=2@
+qu.8.1.choice.1=September 21@
+qu.8.1.choice.2=December 21@
+qu.8.1.choice.3=June 21@
+qu.8.1.choice.4=March 21@
+
+
+qu.9.topic=Sidereal and Synodic@
+
+qu.9.1.mode=Multiple Choice@
+qu.9.1.editing=useHTML@
+qu.9.1.question=<p>When the animate button is pressed what kind of motion is displayed?
+<center><object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion3/synodic_lag_edu.swf"
+width="300" height=300" id="sunPathDiagram">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion3/synodic_lag_edu.swf"/>
+  <param name="FlashVars" value="mode=$mode"/>
+</object></center>
+@
+qu.9.1.algorithm=
+$num = rint(2);
+$mode = switch($num,1,2);
+$answer = $mode;
+@
+qu.9.1.answer=$answer@
+qu.9.1.choice.1=Sidereal Day@
+qu.9.1.choice.2=Synodic or Solar Day@
+qu.9.1.choice.3=Neither@
+
+
