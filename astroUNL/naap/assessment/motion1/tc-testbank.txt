@@ -1,0 +1,415 @@
+qu.1.topic=Longitude and Latitude Basics@
+
+qu.1.1.mode=Non Permuting Multiple Choice@
+qu.1.1.name=Lines of Latitude and Longitude@
+qu.1.1.editing=useHTML@
+qu.1.1.question=The image below shows lines that all have the same value of what coordinate?
+<div style="width: 100%; text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/coord.swf"
+width="150" height=150" id="flatmap">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/coord.swf"/>
+  <param name="FlashVars" value="numLat=$lat&numLon=$lon"/>
+</object></div>@
+qu.1.1.algorithm=
+$num=rint(2);
+$lon=switch($num,'11','0');
+$lat=switch($num,'0','9');
+$answer=switch($num,1,2);
+@
+qu.1.1.answer=$answer@
+qu.1.1.choice.1=longitude@
+qu.1.1.choice.2=latitude@
+
+qu.1.2.mode=Non Permuting Multiple Choice@
+qu.1.2.name=Coordinate Zero Points@
+qu.1.2.editing=useHTML@
+qu.1.2.question=What is the zero point or line for $coord?@
+qu.1.2.algorithm=
+$num=rint(2);
+$coord=switch($num,'longitude','latitude');
+$answer=switch($num,1,3);
+@
+qu.1.2.answer=$answer@
+qu.1.2.choice.1=Prime Meridian@
+qu.1.2.choice.2=International Date Line@
+qu.1.2.choice.3=Equator@
+qu.1.2.choice.4=North Pole@
+qu.1.2.choice.5=South Pole@
+qu.1.2.choice.6=Observer's current location@
+
+qu.1.3.mode=Multiple Choice@
+qu.1.3.name=Bad decimal coordinate@
+qu.1.3.editing=useHTML@
+qu.1.3.question=Which of the following coordinates is not a good terrestrial coordinate?@
+qu.1.3.algorithm=
+
+$num = rint(2);
+$bad1 = switch($num,rand(180.1,359.9,4),rand(1,179.9,3));
+$bad2 = switch($num,rand(1,89.9,4),rand(90.1,179.9,3));
+
+$ans1 = strcat($bad1,'&deg; ',switch(rint(2),'E','W'),', ',$bad2,'&deg; ',switch(rint(2),'N','S'));
+$ans2 = strcat(rand(1,179.9,2),'&deg; ',switch(rint(2),'E','W'),', ',rand(1,89.9,3),'&deg; ',switch(rint(2),'N','S'));
+
+$ew3 = switch(rint(2),'E','W');
+$ew4 = switch(rint(2),'E','W');
+$ns3 = switch(rint(2),'N','S');
+$ns4 = switch(rint(2),'N','S');
+
+$x3a = rint(1,180);
+$x3b = rint(1,90);
+$y3a = rint(1,60);
+$y3b = rint(1,60);
+$z3a = rint(1,60);
+$z3b = rint(1,60);
+
+$x4a = rint(1,180);
+$x4b = rint(1,90);
+$y4a = rint(1,60);
+$y4b = rint(1,60);
+$z4a = rint(1,60);
+$z4b = rint(1,60);
+
+$answer = 1;
+
+@
+qu.1.3.answer=$answer@
+qu.1.3.choice.1=$ans1@
+qu.1.3.choice.2=$ans2@
+qu.1.3.choice.3=$x3a&deg; $y3a&#8217; $z3a&#8221; $ew3,  $x3b&deg; $y3b&#8217; $z3b&#8221; $ns3@
+qu.1.3.choice.4=$x4a&deg; $y4a&#8217; $z4a&#8221; $ew4,  $x4b&deg; $y4b&#8217; $z4b&#8221; $ns4@
+
+
+qu.1.4.mode=Multiple Choice@
+qu.1.4.name=Bad sexagesimal coordinate@
+qu.1.4.editing=useHTML@
+qu.1.4.question=Which of the following coordinates is not a good terrestrial coordinate?@
+qu.1.4.algorithm=
+$bad = rint(6);
+
+$ew1 = switch(rint(2),'E','W');
+$ew2 = switch(rint(2),'E','W');
+$ns1 = switch(rint(2),'N','S');
+$ns2 = switch(rint(2),'N','S');
+
+$x1a = if(eq($bad,0),rint(181,360),rint(1,180));
+$x1b = if(eq($bad,1),rint(91,180),rint(1,90));
+$y1a = if(eq($bad,2),rint(61,90),rint(1,60));
+$y1b = if(eq($bad,3),rint(61,90),rint(1,60));
+$z1a = if(eq($bad,4),rint(61,90),rint(1,60));
+$z1b = if(eq($bad,5),rint(61,90),rint(1,60));
+
+$x2a = rint(1,180);
+$x2b = rint(1,90);
+$y2a = rint(1,60);
+$y2b = rint(1,60);
+$z2a = rint(1,60);
+$z2b = rint(1,60);
+
+$ans3 = strcat(rand(1,179.9,4),'&deg; ',switch(rint(3),'E','W'),', ',rand(1,89.9,2),'&deg; ',switch(rint(2),'N','S'));
+$ans4 = strcat(rand(1,179.9,4),'&deg; ',switch(rint(3),'E','W'),', ',rand(1,89.9,2),'&deg; ',switch(rint(2),'N','S'));
+
+$answer = 1;
+@
+qu.1.4.answer=$answer@
+qu.1.4.choice.1=$x1a&deg; $y1a&#8217; $z1a&#8221; $ew1,  $x1b&deg; $y1b&#8217; $z1b&#8221; $ns1@
+qu.1.4.choice.2=$x2a&deg; $y2a&#8217; $z2a&#8221; $ew2,  $x2b&deg; $y2b&#8217; $z2b&#8221; $ns2@
+qu.1.4.choice.3=$ans3@
+qu.1.4.choice.4=$ans4@
+
+
+
+
+
+qu.2.topic=Name Coordinate Lines@
+
+qu.2.1.mode=Multiple Choice@
+qu.2.1.name=Named parallels of latitude@
+qu.2.1.editing=useHTML@
+qu.2.1.question=What is the name of the line shown below?
+<div style="width: 100%; margin: 0 auto; text-align: center; margin-top: .5em; position: relative;">
+<object
+type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"
+width="350" height="180" id="flatmap">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"/>
+  <param name="FlashVars" value="offset=$offset&lineLat=$coord&lat&lineColor=ff0000"/>
+</object>
+</div>@
+qu.2.1.algorithm=
+$num=rint(5);
+$coord=switch($num,'66.5','23.5','0','-23.5','-66.5');
+$offset = -135;
+$answer=$num+1;
+@
+qu.2.1.answer=$answer@
+qu.2.1.choice.1=Arctic Circle@
+qu.2.1.choice.2=Tropic of Cancer@
+qu.2.1.choice.3=Equator@
+qu.2.1.choice.4=Tropic Capricorn@
+qu.2.1.choice.5=Antarctic Circle@
+
+qu.2.2.mode=Multiple Choice@
+qu.2.2.name=Named lines of longitude@
+qu.2.2.editing=useHTML@
+qu.2.2.question=What is the name of the line shown below?
+<div style="width: 100%; margin: 0 auto; text-align: center; margin-top: .5em; position: relative;">
+<object
+type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"
+width="350" height="180" id="flatmap">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"/>
+  <param name="FlashVars" value="offset=$offset&lineLon=$coord&lat&lineColor=ff0000&showIDL=true"/>
+</object>
+</div>@
+qu.2.2.algorithm=
+$num=rint(4);
+$coord=switch($num,'0','180','90','-90');
+$offset = -135;
+$answer=switch($num,1,2,3,3);
+@
+qu.2.2.answer=$answer@
+qu.2.2.choice.1=Prime Meridian@
+qu.2.2.choice.2=International Date Line@
+qu.2.2.choice.3=Not a named line@
+
+
+qu.3.topic=Read a Coordinate@
+
+qu.3.1.mode=Blanks@
+qu.3.1.name=Read longitude coordinate@
+qu.3.1.editing=useHTML@
+qu.3.1.question=
+<div style="width: 100%; margin: 0 auto; text-align: center; margin-top: .5em; position: relative;">
+<object
+type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"
+width="350" height="180" id="flatmap">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"/>
+  <param name="FlashVars" value="offset=$offset&showGrid=true&crossLon=$lon&crossLat=$lat&crossColor=ff0000"/>
+</object>
+<br/>(click on map to drap left or right)
+</div>
+The <img src="http://astro.unl.edu/naap/assessment/motion1/xmark.gif" alt="xmark"/> is at approximately what <b>longitude</b> coordinate? <1>&deg; <2>@
+qu.3.1.algorithm=
+$lon = rint(1,12)*15*switch(rint(2),-1,1);
+$lat = rint(1,6)*15*switch(rint(2),-1,1);
+$offset = if(eq($lon,-135),180,-135);
+
+$q = 15;
+$x0 = abs($lon);
+$x1 = 0;
+$x2 = if(gt($x0,$q*1),$q*1,$q*2);
+$x3 = if(gt($x0,$q*2),$q*2,$q*3);
+$x4 = if(gt($x0,$q*3),$q*3,$q*4);
+$x5 = if(gt($x0,$q*4),$q*4,$q*5);
+$x6 = if(gt($x0,$q*5),$q*5,$q*6);
+$x7 = if(gt($x0,$q*6),$q*6,$q*7);
+$x8 = if(gt($x0,$q*7),$q*7,$q*8);
+$x9 = if(gt($x0,$q*8),$q*8,$q*9);
+$x10 = if(gt($x0,$q*9),$q*9,$q*10);
+$x11 = if(gt($x0,$q*10),$q*10,$q*11);
+$x12 = if(gt($x0,$q*11),$q*11,$q*12);
+
+$d1 = switch(gt($lon,0),"W","E");
+$d2 = switch(gt($lon,0),"E","W");
+$d3 = "N";
+$d4 = "S";
+@
+qu.3.1.blank.1=$x0,$x1,$x2,$x3,$x4,$x5,$x6,$x7,$x8,$x9,$x10,$x11,$x12@
+qu.3.1.grader.1=menu@
+qu.3.1.blank.2=$d1,$d2,$d3,$d4@
+qu.3.1.grader.2=menu@
+
+
+qu.3.2.mode=Blanks@
+qu.3.2.name=Read latitude coordinate@
+qu.3.2.editing=useHTML@
+qu.3.2.question=
+<div style="width: 100%; margin: 0 auto; text-align: center; margin-top: .5em; position: relative;">
+<object
+type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"
+width="350" height="180" id="flatmap">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"/>
+  <param name="FlashVars" value="offset=$offset&showGrid=true&crossLon=$lon&crossLat=$lat&crossColor=ff0000"/>
+</object>
+<br/>(click on map to drap left or right)
+</div>
+The <img src="http://astro.unl.edu/naap/assessment/motion1/xmark.gif" alt="xmark"/> is at approximately what <b>latitude</b> coordinate? <1>&deg; <2>@
+qu.3.2.algorithm=
+$lon = rint(1,12)*15*switch(rint(2),-1,1);
+$lat = rint(1,6)*15*switch(rint(2),-1,1);
+$offset = if(eq($lon,-135),180,-135);
+
+$q = 15;
+$x0 = abs($lat);
+$x1 = 0;
+$x2 = if(gt($x0,$q*1),$q*1,$q*2);
+$x3 = if(gt($x0,$q*2),$q*2,$q*3);
+$x4 = if(gt($x0,$q*3),$q*3,$q*4);
+$x5 = if(gt($x0,$q*4),$q*4,$q*5);
+$x6 = if(gt($x0,$q*5),$q*5,$q*6);
+$x7 = if(gt($x0,$q*6),$q*6,$q*7);
+$x8 = if(gt($x0,$q*7),$q*7,$q*8);
+$x9 = if(gt($x0,$q*8),$q*8,$q*9);
+$x10 = if(gt($x0,$q*9),$q*9,$q*10);
+$x11 = if(gt($x0,$q*10),$q*10,$q*11);
+$x12 = if(gt($x0,$q*11),$q*11,$q*12);
+
+$d1 = switch(gt($lat,0),"S","N");
+$d2 = switch(gt($lat,0),"N","S");
+$d3 = "E";
+$d4 = "W";
+@
+qu.3.2.blank.1=$x0,$x1,$x2,$x3,$x4,$x5,$x6,$x7,$x8,$x9,$x10,$x11,$x12@
+qu.3.2.grader.1=menu@
+qu.3.2.blank.2=$d1,$d2,$d3,$d4@
+qu.3.2.grader.2=menu@
+
+
+
+
+
+
+
+qu.4.topic=Area@
+
+qu.4.1.mode=Non Permuting Multiple Choice@
+qu.4.1.name=Closest points@
+qu.4.1.editing=useHTML@
+qu.4.1.question=What point is closest to point $point?
+<div style="width: 100%; text-align: center; margin-top: .5em; position: relative;">
+<img src="http://astro.unl.edu/naap/assessment/motion1/flatmap_letters.png" alt="image"/>
+</div>@
+qu.4.1.algorithm=
+$num=rint(7);
+$point=switch($num,'A','B','C','D','E','F');
+$answer=switch($num,1,1,3,3,5,5);
+
+$ans1 = switch($num,'B','A','A','A','A','A');
+$ans2 = switch($num,'C','C','B','B','B','B');
+$ans3 = switch($num,'D','D','D','C','C','C');
+$ans4 = switch($num,'E','E','E','E','D','D');
+$ans5 = switch($num,'F','F','F','F','F','E');
+
+@
+qu.4.1.answer=$answer@
+qu.4.1.choice.1=$ans1@
+qu.4.1.choice.2=$ans2@
+qu.4.1.choice.3=$ans3@
+qu.4.1.choice.4=$ans4@
+qu.4.1.choice.5=$ans5@
+
+qu.4.2.mode=Non Permuting Multiple Choice@
+qu.4.2.name=Area on a flat map@
+qu.4.2.editing=useHTML@
+qu.4.2.question=Which circle covers the $text geographic area?
+<div style="width: 100%; margin: 0 auto; text-align: center; margin-top: .5em; position: relative;">
+<object
+type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"
+width="350" height="180" id="flatmap">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/edumap.swf"/>
+  <param name="FlashVars" value="offset=135&aDiscLat=$lata&aDiscLon=$lona&bDiscLat=$latb&bDiscLon=$lonb&cDiscLat=$latc&cDiscLon=$lonc"/>
+</object>
+</div>@
+qu.4.2.algorithm=
+$num = rint(2);
+$text=switch($num,'greatest','least');
+$num1 = rint(2);
+
+$lata = switch($num1 ,rint(30,60),rint(60,91));
+$lona = rint(0,180)*switch(rint(2),-1,1);
+$latb = rint(-25,25);
+$lonb = rint(0,180)*switch(rint(2),-1,1);
+$latc = switch($num1,rint(-91,-65),rint(-65,-30));
+$lonc = rint(0,180)*switch(rint(2),-1,1);
+
+$answer=switch($num,2,switch($num1,3,1));
+@
+qu.4.2.answer=$answer@
+qu.4.2.choice.1=A@
+qu.4.2.choice.2=B@
+qu.4.2.choice.3=C@
+qu.4.2.choice.4=they all have the essentially same area@
+
+qu.4.3.mode=Non Permuting Multiple Choice@
+qu.4.3.name=Area on a globe@
+qu.4.3.editing=useHTML@
+qu.4.3.question=Which circle covers the $text geographic area?
+<div style="width: 100%; margin: 0 auto; text-align: center; margin-top: .5em; position: relative;">
+<object
+type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/globe_discs.swf"
+width="350" height="180" id="flatmap">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/globe_discs.swf"/>
+  <param name="FlashVars" value="viewLat=$lat&viewLon=$lon&aLat=$lata&aLon=$lona&bLat=$latb&bLon=$lonb&cLat=$latc&cLon=$lonc"/>
+</object>
+<br/>(click and drag on globe to change perspective)
+</div>@
+qu.4.3.algorithm=
+$text=switch(rint(2),'greatest','least');
+$num1=rint(2);
+$lat=switch($num1,45,-45);
+$lata=switch($num1,90-rint(21),0-rint(21));
+$latb=switch($num1,60-rint(31),-30-rint(31));
+$latc=switch($num1,20-rint(21),-70-rint(21));
+
+$num2=rint(4);
+$lon=switch($num2,-135,-45,45,135);
+$lona=switch($num1,rint(0,181)*switch(rint(2),-1,1),$lon+rint(46)*switch(rint(2),-1,1));
+$lonb=$lon+rint(61)*switch(rint(2),-1,1);
+$lonc=switch($num1,$lon+rint(46)*switch(rint(2),-1,1),rint(0,181)*switch(rint(2),-1,1));
+
+$answer=4;
+@
+qu.4.3.answer=$answer@
+qu.4.3.choice.1=A@
+qu.4.3.choice.2=B@
+qu.4.3.choice.3=C@
+qu.4.3.choice.4=they all have essentially the same area@
+
+
+
+
+
+qu.5.topic=Conversion@
+
+qu.5.1.mode=Non Permuting Multiple Choice@
+qu.5.1.name=Conversion to sexagesimal@
+qu.5.1.editing=useHTML@
+qu.5.1.question=Which of the values below is equal to $value&deg;?@
+qu.5.1.algorithm=
+$num1 = rint(361);
+$num2 = rint(3);
+
+$value = $num1+0.25*($num2+1);
+
+$answer=switch($num2,1,3,4);
+@
+qu.5.1.answer=$answer@
+qu.5.1.choice.1=$num1&deg;15&#8217;@
+qu.5.1.choice.2=$num1&deg;25&#8217;@
+qu.5.1.choice.3=$num1&deg;30&#8217;@
+qu.5.1.choice.4=$num1&deg;45&#8217;@
+qu.5.1.choice.5=$num1&deg;50&#8217;@
+qu.5.1.choice.6=$num1&deg;60&#8217;@
+qu.5.1.choice.7=$num1&deg;75&#8217;@
+
+qu.5.2.mode=Non Permuting Multiple Choice@
+qu.5.2.name=Conversion to decimal@
+qu.5.2.editing=useHTML@
+qu.5.2.question=Which of the values below is equal to $degrees&deg;$minutes&#8217;?@
+qu.5.2.algorithm=
+$num1 = rint(1,90);
+$num2 = rint(3);
+
+$degrees = $num1;
+$minutes = switch($num2,'15','30','45');
+
+$answer=switch($num2,2,5,7);
+@
+qu.5.2.answer=$answer@
+qu.5.2.choice.1=$num1.15&deg;@
+qu.5.2.choice.2=$num1.25&deg;@
+qu.5.2.choice.3=$num1.30&deg;@
+qu.5.2.choice.4=$num1.45&deg;@
+qu.5.2.choice.5=$num1.50&deg;@
+qu.5.2.choice.6=$num1.60&deg;@
+qu.5.2.choice.7=$num1.75&deg;@
+
+

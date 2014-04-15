@@ -1,0 +1,184 @@
+qu.1.topic=Celestial Equatorial Coordinates Basics@
+
+qu.1.1.mode=Multiple Choice@
+qu.1.1.name=CEC coordinate members@
+qu.1.1.editing=useHTML@
+qu.1.1.question=Which of the following coordinates or coordinate feature does <em>NOT</em> belong to the Celestial Equatorial Coordinate System?@
+qu.1.1.answer= 5@
+qu.1.1.choice.1= Celestial Equator@
+qu.1.1.choice.2= North Celestial Pole@
+qu.1.1.choice.3= 0 hour circle@
+qu.1.1.choice.4= Right Ascension@
+qu.1.1.choice.5= Latitude@
+
+qu.1.2.mode=Non Permuting Multiple Choice@
+qu.1.2.name=Lines of declination or right ascension@
+qu.1.2.editing=useHTML@
+qu.1.2.question=
+<table><tr>
+<td>
+The image to the right shows a line that all have the same value of what coordinate?<br/>
+(Click and drag sphere for to change perspective.)</td>
+<td>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/cec_assessment.swf"
+width="225" height="240" id="coords">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/cec_assessment.swf"/>
+  <param name="FlashVars" value="mode=coord2&gS=$gs&gE=$ge&r=$ra&d=$dec&t=$tilt"/>
+</object></td></tr></table>@
+qu.1.2.algorithm=
+$num = rint(4);
+$answer = switch($num,1,2,3,3);
+
+$gs = switch($num,-90,0,0,-90);
+$ge = switch($num,90,360,360,90);
+$ra = switch($num,rint(110,275,5),0,0,180);
+$dec = switch($num,0,rint(-60,65,5),rint(-60,65,5),0);
+$tem = switch(rint(2),rint(30,65,5),rint(30,65,5));
+$tilt = switch($num,90,0,$tem,$tem);
+@
+qu.1.2.answer= $answer@
+qu.1.2.choice.1= Right Ascension@
+qu.1.2.choice.2= Declination@
+qu.1.2.choice.3= Neither@
+
+
+
+
+
+qu.2.topic=Named Coordinate Features@
+
+qu.2.1.mode=Multiple Choice@
+qu.2.1.name=Name a feature@
+qu.2.1.editing=useHTML@
+qu.2.1.question=
+<table><tr>
+<td>What is the name of the coordinate feature indicated in the figure to the right?<br/>
+(Click and drag sphere for to change perspective.  The arrow indicates the direction the earth rotates with with respect to the celestial sphere.)</td><td>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/cec_assessment.swf"
+width="225" height="240" id="coords">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/cec_assessment.swf"/>
+  <param name="FlashVars" value="mode=coord1&ver=$ver"/>
+</object></td></tr></table>@
+qu.2.1.algorithm=
+$num = rint(5);
+$answer = $num+1;
+$ver = switch($num,"ncp","scp","0h","ce","ecl");
+@
+qu.2.1.answer= $answer@
+qu.2.1.choice.1= North Celestial Pole@
+qu.2.1.choice.2= South Celestial Pole@
+qu.2.1.choice.3= 0 Hour Circle@
+qu.2.1.choice.4= Celestial Equator@
+qu.2.1.choice.5= Ecliptic@
+
+
+
+
+
+qu.3.topic=Flat Sky Map Coordinates@
+
+qu.3.1.mode=Blanks@
+qu.3.1.name=Read right ascension@
+qu.3.1.editing=useHTML@
+qu.3.1.question=
+<div style="text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/flatsky_assessment.swf"
+width="400" height="207" id="flatsky">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/flatsky_assessment.swf"/>
+  <param name="FlashVars" value="mark=1&r=$ra&d=$dec&eclip1=1&celeq=1&ticks=1"/>
+</object><br/>
+(Shift-click to shift map.)</div><br/>
+What is the <b>right ascension</b> of the coordinate above? <1>h@
+
+qu.3.1.algorithm=
+$dec = switch(rint(2),(rint(5)+1)*15,-1*rint(6)*15);
+$ra = rint(8)*3;
+
+$x0=$ra;
+$q=3;
+$x1=if(gt($ra,$q*0),$q*0,$q*1);
+$x2=if(gt($ra,$q*1),$q*1,$q*2);
+$x3=if(gt($ra,$q*2),$q*2,$q*3);
+$x4=if(gt($ra,$q*3),$q*3,$q*4);
+$x5=if(gt($ra,$q*4),$q*4,$q*5);
+$x6=if(gt($ra,$q*5),$q*5,$q*6);
+$x7=if(gt($ra,$q*6),$q*6,$q*7);
+
+$xa=if(eq($ra,0),0,$ra);
+@
+qu.3.1.blank.1=$xa,$x1,$x2,$x3,$x4,$x5,$x6,$x7@
+
+qu.3.2.mode=Blanks@
+qu.3.2.name=Read declination@
+qu.3.2.editing=useHTML@
+qu.3.2.question=
+<div style="text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/flatsky_assessment.swf"
+width="400" height="207" id="flatsky">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/flatsky_assessment.swf"/>
+  <param name="FlashVars" value="mark=1&r=$ra&d=$dec&eclip1=1&celeq=1&ticks=1"/>
+</object><br/>
+(Shift-click to shift map.)</div><br/>
+What is the <b>declination</b> of the coordinate above? <1>&deg;@
+
+qu.3.2.algorithm=
+$dec = switch(rint(2),(rint(5)+1)*15,-1*rint(6)*15);
+$ra = rint(8)*3;
+
+$x0=$dec;
+$q=15;
+$q0=-90;
+$x1=if(gt($dec,$q0+$q*0),$q0+$q*0,$q0+$q*1);
+$x2=if(gt($dec,$q0+$q*1),$q0+$q*1,$q0+$q*2);
+$x3=if(gt($dec,$q0+$q*2),$q0+$q*2,$q0+$q*3);
+$x4=if(gt($dec,$q0+$q*3),$q0+$q*3,$q0+$q*4);
+$x5=if(gt($dec,$q0+$q*4),$q0+$q*4,$q0+$q*5);
+$x6=if(gt($dec,$q0+$q*5),$q0+$q*5,$q0+$q*6);
+$x7=if(gt($dec,$q0+$q*6),$q0+$q*6,$q0+$q*7);
+$x8=if(gt($dec,$q0+$q*7),$q0+$q*7,$q0+$q*8);
+$x9=if(gt($dec,$q0+$q*8),$q0+$q*8,$q0+$q*9);
+$x10=if(gt($dec,$q0+$q*9),$q0+$q*9,$q0+$q*10);
+$x11=if(gt($dec,$q0+$q*10),$q0+$q*10,$q0+$q*11);
+$x12=if(gt($dec,$q0+$q*11),$q0+$q*11,$q0+$q*12);
+
+$xa=if(eq($x0,0),0,$x0);
+@
+qu.3.2.blank.1=$xa,$x1,$x2,$x3,$x4,$x5,$x6,$x7,$x8,$x9,$x10,$x11,$x12@
+
+
+
+
+qu.4.topic=Invariance of coordinate points@
+
+qu.4.1.mode=Blanks@
+qu.4.1.name=CEC with time@
+qu.4.1.editing=useHTML@
+qu.4.1.question=
+<div style="text-align: center; margin-top: .5em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion1/flatsky_assessment.swf"
+width="400" height="207" id="flatsky">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion1/flatsky_assessment.swf"/>
+  <param name="FlashVars" value="mark=1&r=$ra&d=$dec"/>
+</object><br/>
+(Shift-click to shift map.)</div><br/>
+A star is at $ra h, $dec&deg;. What will the coordinate of the star be $time hours from now? <1>h@
+
+qu.4.1.algorithm=
+$dec = switch(rint(2),rint(6)*15,-1*(rint(5)+1)*15);
+$ra = rint(8)*3;
+$time = switch($rint(3),6,12,18);
+
+$x0=$ra;
+$q=3;
+$x1=if(gt($ra,$q*0),$q*0,$q*1);
+$x2=if(gt($ra,$q*1),$q*1,$q*2);
+$x3=if(gt($ra,$q*2),$q*2,$q*3);
+$x4=if(gt($ra,$q*3),$q*3,$q*4);
+$x5=if(gt($ra,$q*4),$q*4,$q*5);
+$x6=if(gt($ra,$q*5),$q*5,$q*6);
+$x7=if(gt($ra,$q*6),$q*6,$q*7);
+$xa=if(eq($ra,0),0,$ra);
+@
+qu.4.1.blank.1=$xa,$x1,$x2,$x3,$x4,$x5,$x6,$x7@
+
+

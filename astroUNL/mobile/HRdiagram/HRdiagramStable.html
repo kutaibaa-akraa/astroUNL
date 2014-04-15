@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- prevent cache -->
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="pragma" content="no-cache">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        
+        <title>HR Diagram</title>
+<meta name="robots" content="noindex" />
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js" type="text/javascript"></script>
+        <script type="text/javascript" src="HRdiagramStable.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" type="text/css" href="HRdiagramStable.css">
+    </head>
+    
+    <body class="claro" id="body">
+        <div id="buttonContainer">
+            <div id="plotButton"></div>
+            <div id="infoButton" ></div>
+            <div id="closeLayerContainer"><div id="closeLayer"></div></div>
+        </div>
+        
+        <div id="unscrollable">
+            <canvas id="myCanvas"></canvas>
+            
+            <span id="lScale0" class="scaleLabel">10<sup>6</sup></span>
+            <span id="lScale1" class="scaleLabel">10<sup>5</sup></span>
+            <span id="lScale2" class="scaleLabel">10<sup>4</sup></span>
+            <span id="lScale3" class="scaleLabel">10<sup>3</sup></span>
+            <span id="lScale4" class="scaleLabel">10<sup>2</sup></span>
+            <span id="lScale5" class="scaleLabel">10<sup>1</sup></span>
+            <span id="lScale6" class="scaleLabel">10<sup>0</sup></span>
+            <span id="lScale7" class="scaleLabel">10<sup>-1</sup></span>
+            <span id="lScale8" class="scaleLabel">10<sup>-2</sup></span>
+            <span id="lScale9" class="scaleLabel">10<sup>-3</sup></span>
+            <span id="lScale10" class="scaleLabel">10<sup>-4</sup></span>
+            
+            <span id="tScale0" class="scaleLabel">40000</span>
+            <span id="tScale1" class="scaleLabel">20000</span>
+            <span id="tScale2" class="scaleLabel">10000</span>
+            <span id="tScale3" class="scaleLabel">5000</span>
+            <span id="tScale4" class="scaleLabel">2300</span>
+            
+            <span id="rScale0" class="scaleLabel">.001</span>
+            <span id="rScale1" class="scaleLabel">.01</span>
+            <span id="rScale2" class="scaleLabel">.1</span>
+            <span id="rScale3" class="scaleLabel">1</span>
+            <span id="rScale4" class="scaleLabel">10</span>
+            <span id="rScale5" class="scaleLabel">100</span>
+            <span id="rScale6" class="scaleLabel">1000</span>
+            
+            <span id="sunLabel">Sun</span>
+            
+            <span id="MSLabel0" class="MSLabel">M</span>
+            <span id="MSLabel1" class="MSLabel">a</span>
+            <span id="MSLabel2" class="MSLabel">i</span>
+            <span id="MSLabel3" class="MSLabel">n</span>
+            <span id="MSLabel4" class="MSLabel">S</span>
+            <span id="MSLabel5" class="MSLabel">e</span>
+            <span id="MSLabel6" class="MSLabel">q</span>
+            <span id="MSLabel7" class="MSLabel">u</span>
+            <span id="MSLabel8" class="MSLabel">e</span>
+            <span id="MSLabel9" class="MSLabel">n</span>
+            <span id="MSLabel10" class="MSLabel">c</span>
+            <span id="MSLabel11" class="MSLabel">e</span>
+            
+            <span id="lumOutput">Luminosity <span id="currentLum">X.X</span> (L<sub><img src="heliocentricBlue.gif" class="helio" alt="Solar"></sub>)</span>
+            <span id="radiusOutput">Radius <span id="currentRadius">X.X</span> (R<sub><img src="heliocentricBlue.gif" class="helio" alt="Solar"></sub>)</span>
+            <span id="tempOutput">Temperature <span id="currentTemp">X.X</span> (K)</span>
+        </div>
+        
+        <div id="objectives">
+            <h2>Learning Objectives</h2>
+            <p>After reading the background information and working through all exercises in the HR Diagram Simulator, the student will understand...</p>
+            <ul>
+                <li>the importance of the HR Diagram and the significance of the main sequence</li>
+                <li>the diagram axes and their direction of increase</li>
+                <li>that a location on the diagram corresponds to the size of the star and an "effective" radius axis</li>
+                <li>why a bright star in the sky is bright (considering whether they are close, intrinsically luminous, or both)</li>
+                <li>the characteristics of a typical star (by studying nearby stars)</li>
+            </ul>
+        </div>
+        <div id="background">
+            <h2>Background Information</h2>
+            <p>The HR diagram is an astronomer's most important tool for presenting data on stars. It is a graph with some measure of luminosity L (its energy production) on the y-axis and some measure of its surface temperature T on the x-axis. Because of the solar units equation L = R<sup>2</sup>T<sup>4</sup>, specifying a star's L and T determines its radius R.</p>
+            <p>Stars do not exist with parameters corresponding to all locations of the HR Diagram. In fact, 90% of stars are found in a wide band stretching from the lower right corner to the upper left corner known as the main sequence. Stars on the main sequence are fusing hydrogen into helium in their cores and do so for the vast majority of their lives. Stars found above the main sequence are fusing other nuclei in their cores near the ends of their lives.</p>
+            <p>We can rewrite the luminosity equation as <img src="rewrittenLuminosityEquation.jpg" alt="sqrt(L)/(T/T_solar)^2">. This equation indicates that stars are large when L is large and T is small -- the upper right of the HR Diagram. We can picture a "radius axis" running from the lower left to the upper right along which radius increases. (need graphic) Lines of constant radius run perpendicular to this axis and are shown in the simulator.</p>
+        </div>
+        <div id="exercises">
+            <h2>Exercises</h2>
+            <ol>
+                <li>Answer each of the following questions by specifying a location on the HR Diagram.
+                    <ol type="a">
+                        <li>Where are cool stars found?</li>
+                        <li>Where are luminous stars found?</li>
+                        <li>Where are large stars found?</li>
+                    </ol>
+                </li>
+                <li>Find the star at L = 250 L<sub><img src="heliocentricBlue.gif" class="helio" alt="Solar"></sub> and T = 5200K.</li>
+                <li>What is the largest star you can make in this simulator?</li>
+                <li>What is the surface temperature of a star with the same luminosity as the sun and a radius of 5 R<sub><img src="heliocentricBlue.gif" class="helio" alt="Solar"></sub>?</li>
+                <li>What is the size of a star that has the same surface temperature as the sun and a luminosity of 10,000 L<sub><img src="heliocentricBlue.gif" class="helio" alt="Solar"></sub>?</li>
+                <li>What is the luminosity of a star that is the 10 times the size of the sun and a surface temperature of 20000K?  </li>
+                <li>Select the plot entitled <strong><em>closest</em></strong> which plots the nearest 100 stars.  Assuming that our region of space is similar to other regions, what are the characteristics of a typical (the most common type of)  star?</li>
+                <li>When you look out in the night sky and see a bright star -- why does that star appear bright? Realize that there are 3 possible answers: the star is a) very luminous, b) very close, or c) luminous and close.  Select the plot labeled <strong><em>brightest</em></strong>.  You might want to consider your answer to the previous question and also make use of the lot labeled <strong><em>overlap</em></strong> (a star in both groups).</li>
+            </ol>
+        </div>
+        <div id="about">
+            <h2>About</h2>
+            <p>This astronomy "Little Big Picture" was programmed by REU student Nick Robe. It is an early effort of the UNL Astronomy Education Group to provide materials for mobile devices. More astronomy teaching materials can be found on the web at <a href="http://astro.unl.edu">astro.unl.edu</a>.</p>
+            <p>This simulation makes use of the Dojo tooklit available at <a href="http://dojotoolkit.org/index.html">dojotoolkit.org</a>.</p>
+            <p>Background image by P. van de Haar at <a href="http://www.footootjes.nl/Astrophotography_Wide_field/Astrophotography_Wide_field.html">Wide field astrophotography</a>.</p>
+        </div>
+    </body>
+</html>

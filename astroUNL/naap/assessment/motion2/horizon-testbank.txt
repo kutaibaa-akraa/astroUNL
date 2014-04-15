@@ -1,0 +1,402 @@
+qu.1.topic=Horizon as tangent plane@
+
+qu.1.1.mode=Non Permuting Multiple Choice@
+qu.1.1.name=Celestial sphere visible at one instant@
+qu.1.1.editing=useHTML@
+qu.1.1.question=How much of the celestial sphere is visible for an observer at $lat&deg; $ns <i>at any one instance</i>?@
+qu.1.1.algorithm=
+$lat = switch(rint(4),90,60,30,0);
+$ns = switch(rint(2),"N","S");
+@
+qu.1.1.answer= 3@
+qu.1.1.choice.1= none@
+qu.1.1.choice.2= 30%@
+qu.1.1.choice.3= 50%@
+qu.1.1.choice.4= 60%@
+qu.1.1.choice.5= 90%@
+qu.1.1.choice.6= 100%@
+
+qu.1.2.mode=Non Permuting Multiple Choice@
+qu.1.2.name=Celestial sphere visible over 24 hours@
+qu.1.2.editing=useHTML@
+qu.1.2.question=How much of the celestial sphere is visible for an observer at $lat&deg; $ns <i>over the course of one 360&deg; rotation of the earth</i>?@
+qu.1.2.algorithm=
+$num = rint(4);
+$lat = switch($num,90,60,30,0);
+$ns = if(eq($lat,0),"N",switch(rint(2),"N","S"));
+
+$answer = switch($num,3,4,4,5);
+@
+qu.1.2.answer= $answer@
+qu.1.2.choice.1= none@
+qu.1.2.choice.2= less than 50%@
+qu.1.2.choice.3= 50%@
+qu.1.2.choice.4= greater than 50%@
+qu.1.2.choice.5= 100%@
+
+
+
+
+
+qu.2.topic=Horizon Coordinates@
+
+qu.2.1.mode=Blanks@
+qu.2.1.name=Read azimuth@
+qu.2.1.editing=useHTML@
+qu.2.1.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"
+width="300" height="100" id="globe1">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"/>
+  <param name="FlashVars" value="star=1&az=$az&alt=$alt&label=star"/>
+  </object><br/>
+(Click and drag to shift horizon sphere.)</div><br/>
+What is the <b>azimuth</b> of the star above? <1>&deg;@
+qu.2.1.algorithm=
+$q=30;
+$alt = switch(rint(2),(rint(4)+1)*15,-1*rint(5)*15);
+$az = rint(12)*$q;
+
+$x0=$az;
+
+$x1=if(gt($az,$q*0),$q*0,$q*1);
+$x2=if(gt($az,$q*1),$q*1,$q*2);
+$x3=if(gt($az,$q*2),$q*2,$q*3);
+$x4=if(gt($az,$q*3),$q*3,$q*4);
+$x5=if(gt($az,$q*4),$q*4,$q*5);
+$x6=if(gt($az,$q*5),$q*5,$q*6);
+$x7=if(gt($az,$q*6),$q*6,$q*7);
+$x8=if(gt($az,$q*7),$q*7,$q*8);
+$x9=if(gt($az,$q*8),$q*8,$q*9);
+$x10=if(gt($az,$q*9),$q*9,$q*10);
+$x11=if(gt($az,$q*10),$q*10,$q*11);
+
+
+$xa=if(eq($az,0),0,$az);
+@
+qu.2.1.blank.1=$xa,$x1,$x2,$x3,$x4,$x5,$x6,$x7,$x8,$x9,$x10,$x11@
+
+qu.2.2.mode=Blanks@
+qu.2.2.name=Read altitude@
+qu.2.2.editing=useHTML@
+qu.2.2.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"
+width="300" height="300" id="globe2">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"/>
+  <param name="FlashVars" value="star=1&az=$az&alt=$alt&label=star"/>
+  </object><br/>
+(Click and drag to shift horizon sphere.)</div><br/>
+What is the <b>altitude</b> of the star above? <1>&deg;@
+
+qu.2.2.algorithm=
+$alt = switch(rint(2),(rint(3)+1)*30,-1*rint(4)*30);
+$az = rint(12)*30;
+
+$x0=$alt;
+$q=30;
+$q0=-90;
+$x1=if(gt($alt,$q0+$q*0),$q0+$q*0,$q0+$q*1);
+$x2=if(gt($alt,$q0+$q*1),$q0+$q*1,$q0+$q*2);
+$x3=if(gt($alt,$q0+$q*2),$q0+$q*2,$q0+$q*3);
+$x4=if(gt($alt,$q0+$q*3),$q0+$q*3,$q0+$q*4);
+$x5=if(gt($alt,$q0+$q*4),$q0+$q*4,$q0+$q*5);
+$x6=if(gt($alt,$q0+$q*5),$q0+$q*5,$q0+$q*6);
+
+
+$xa=if(eq($x0,0),0,$x0);
+@
+qu.2.2.blank.1=$xa,$x1,$x2,$x3,$x4,$x5@
+
+
+
+
+
+qu.3.topic=Named Features@
+
+qu.3.1.mode=Non Permuting Multiple Choice@
+qu.3.1.name=Horizon coordinate names@
+qu.3.1.editing=useHTML@
+qu.3.1.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"
+width="300" height="300" id="globe3">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"/>
+  <param name="FlashVars" value="coords=1&c1=$alt&c2=$az&label=$label"/>
+  </object><br/>
+(Click and drag to shift horizon sphere.)</div><br/>
+What is the coordinate feature indicated above?@
+
+qu.3.1.algorithm=
+$num = rint(5);
+$label=switch($num,"zenith","nadir","meridian","az","alt");
+$alt = switch(rint(2),(rint(5)+1)*15,-1*(rint(5)+1)*15);
+$az = switch(rint(2),rint(1,11)*15,rint(1,11)*15+180);
+$answer=$num+1;
+@
+qu.3.1.answer= $answer@
+qu.3.1.choice.1= Zenith@
+qu.3.1.choice.2= Nadir@
+qu.3.1.choice.3= Meridian@
+qu.3.1.choice.4= Vertical Circle@
+qu.3.1.choice.5= Circle of constant altitude@
+
+
+
+
+qu.4.topic=Getting latitude@
+
+qu.4.1.mode=Blanks@
+qu.4.1.name=Latitude from the poles@
+qu.4.1.editing=useHTML@
+qu.4.1.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"
+width="300" height="300" id="globe3">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"/>
+  <param name="FlashVars" value="celestial=1&lat=$lat"/>
+  </object><br/>
+(Click and drag to shift horizon sphere.)</div><br/>
+What is the latitude of the observer in the horizon diagram above? <1>&deg; <2>@
+
+qu.4.1.algorithm=
+
+$num1 = rint(2);
+$ns1 = switch($num1,"S","N");
+$ns2 = switch($num1,"N","S");
+
+$num2 = rint(3);
+$x1 = switch($num2,20,45,70);
+$x2 = switch($num2,45,70,20);
+$x3 = switch($num2,70,20,45);
+$x4 = 0;
+$x5 = 90;
+
+$lat = switch($num1,-1*$x1,$x1);
+@
+qu.4.1.blank.1=$x1,$x2,$x3,$x4,$x5@
+qu.4.1.grader.1=menu@
+qu.4.1.blank.2=$ns1,$ns2@
+qu.4.1.grader.2=menu@
+
+qu.4.2.mode=Blanks@
+qu.4.2.name=Angle in the horizon diagram@
+qu.4.2.editing=useHTML@
+qu.4.2.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"
+width="300" height="300" id="globe3">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"/>
+  <param name="FlashVars" value="celestial=1&lat=$lat&label=$label"/>
+  </object><br/>
+(Click and drag to shift horizon sphere.)</div><br/>
+What is the angle the $bob makes with horizon? <1>@
+
+qu.4.2.algorithm=
+
+$num1 = rint(2);
+$ns1 = switch($num1,"S","N");
+$ns2 = switch($num1,"N","S");
+
+$num2 = rint(3);
+$num3 = rint(2);
+
+$x1 = switch($num2,switch($num3,0,90),switch($num3,30,60),switch($num3,60,30),switch($num3,90,0));
+$x2 = switch($num2,switch($num3,30,60),switch($num3,60,30),switch($num3,90,0),switch($num3,0,90));
+$x3 = switch($num2,switch($num3,60,30),switch($num3,90,0),switch($num3,30,60),switch($num3,30,60));
+$x4 = switch($num2,switch($num3,90,0),switch($num3,0,90),switch($num3,0,90),switch($num3,60,30));
+
+$lat = switch($num3,switch($num1,-1*$x1,$x1),switch($num1,-1*(90-$x1),(90-$x1)));
+
+$bob = switch($num3,"indicated pole","celestial equator");
+$label = switch($num3,switch($num1,"scp","ncp"),"ce");
+
+@
+qu.4.2.blank.1=$x1,$x2,$x3,$x4@
+qu.4.2.grader.1=menu@
+
+
+
+
+
+qu.5.topic=Star Trails 1@
+
+qu.5.1.mode=Non Permuting Multiple Choice@
+qu.5.1.name=Determining direction@
+qu.5.1.editing=useHTML@
+qu.5.1.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduSkyMotion.swf"
+width="387" height="236" id="startrails">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduSkyMotion.swf"/>
+  <param name="FlashVars" value="initState=running&showZodiac=false&lat=$lat&az=$az"/>
+  </object></div><br/>
+What direction is this observer, who is in the $ns hemisphere, facing?@
+
+qu.5.1.algorithm=
+$num1 = rint(2);
+$lat = switch($num1,40,-40);
+$ns = switch($num1,"northern","southern");
+
+$num2 = rint(4);
+$az = switch($num2,0,90,180,270);
+$answer = $num2+1;
+@
+qu.5.1.answer= $answer@
+qu.5.1.choice.1= North@
+qu.5.1.choice.2= East@
+qu.5.1.choice.3= South@
+qu.5.1.choice.4= West@
+
+
+
+
+
+qu.6.topic=Star Trails 2@
+
+qu.6.1.mode=Non Permuting Multiple Choice@
+qu.6.1.name=Determining latitude@
+qu.6.1.editing=useHTML@
+qu.6.1.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduSkyMotion.swf"
+width="387" height="236" id="startrails">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduSkyMotion.swf"/>
+  <param name="FlashVars" value="initState=running&showZodiac=false&lat=$lat&az=$az"/>
+  </object></div><br/>
+An observer is facting $dir. Where is this observer? (Ignore terrain depicted in the horizon sphere.)@
+
+qu.6.1.algorithm=
+$num1 = rint(5);
+$lat = switch($num1,90,40,0,-40,-90);
+
+$num2 = rint(4);
+$az = switch($num2,0,90,180,270);
+$dir = switch($num2,"north","east","south","west");
+
+$answer = switch($num1,1,2,3,4,5);
+
+@
+qu.6.1.answer= $answer@
+qu.6.1.choice.1= The north pole@
+qu.6.1.choice.2= A mid northern latitude@
+qu.6.1.choice.3= The equator@
+qu.6.1.choice.4= A mid southern latitude@
+qu.6.1.choice.5= The south pole@
+
+
+
+
+
+qu.7.topic=Declination Ranges 1@
+
+qu.7.1.mode=Non Permuting Multiple Choice@
+qu.7.1.name=For a star@
+qu.7.1.editing=useHTML@
+qu.7.1.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"
+width="300" height="300" id="globe3">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduHorizon.swf"/>
+  <param name="FlashVars" value="celestial=1&lat=$lat&star=2&dec=$dec&ra=$ra&label=star"/>
+  </object><br/>
+(Click and drag to shift horizon sphere.)</div><br/>
+What kind of star is depicted above?@
+
+qu.7.1.algorithm=
+$num1 = rint(2);
+$lat = switch($num1,30,60);
+$num2 = rint(3);
+$answer=$num2+1;
+$ra=10+rint(13);
+$dec1=90-$lat;
+$dec2=-$dec1;
+$dec=switch($num2,$dec1+$lat/2,switch(rint(2),$dec2+2*(90-$lat)/3,$dec2+4*(90-$lat)/3),$dec2-$lat/2);
+@
+qu.7.1.answer=$answer@
+qu.7.1.choice.1=Circumpolar@
+qu.7.1.choice.2=Rise and Set@
+qu.7.1.choice.3=Never-rise@
+
+qu.7.2.mode=Non Permuting Multiple Choice@
+qu.7.2.name=For a band@
+qu.7.2.editing=useHTML@
+qu.7.2.question=
+<div style="text-align: center;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/motion2/eduDecRanges.swf"
+width="300" height="300" id="globe4">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/motion2/eduDecRanges.swf"/>
+  <param name="FlashVars" value="lat=$lat&type=$type"/>
+  </object><br/>
+(Click and drag to shift horizon sphere.)</div><br/>
+What region is indicated by the pinkish region above?@
+
+qu.7.2.algorithm=
+
+$lat = rint(20,70)*switch(rint(2),-1,1);
+$type = rint(3);
+$answer= switch($type,3,2,1);
+
+@
+qu.7.2.answer=$answer@
+qu.7.2.choice.1=Circumpolar@
+qu.7.2.choice.2=Rise and Set@
+qu.7.2.choice.3=Never-rise@
+
+
+
+
+
+qu.8.topic=Declination Ranges 2@
+
+qu.8.1.mode=Multiple Choice@
+qu.8.1.name=Just numbers@
+qu.8.1.editing=useHTML@
+qu.8.1.question=What is the <em>$type</em> declination range for an observer at $lat2&deg; $ns?@
+qu.8.1.algorithm=
+
+$num1 = rint(3);
+$type = switch($num1,"circumpolar","rise and set","never-rise");
+
+$lat = switch(rint(2),rint(9)*10,(rint(8)+1)*(-10) );
+$lat2 = if(eq($lat2,0),"0",abs($lat));
+$num2 = if(lt($lat,0),0,1);
+$ns = switch($num2,"S","N");
+
+
+$xa = 90;
+$xb = 90-abs($lat);
+$xc = -90+abs($lat);
+$xd = -90;
+$xe = 0;
+
+$answer=switch($num1,switch($num2,3,1),2,switch($num2,1,3));
+@
+qu.8.1.answer=$answer@
+qu.8.1.choice.1=$xb&deg;..$xa&deg;@
+qu.8.1.choice.2=$xc&deg;..$xb&deg;@
+qu.8.1.choice.3=$xd&deg;..$xc&deg;@
+qu.8.1.choice.4=$xe&deg;..$xb&deg;@
+qu.8.1.choice.5=$xc&deg;..$xe&deg;@
+
+
+qu.8.2.mode=Multiple Choice@
+qu.8.2.name=Predominate type for latitude@
+qu.8.2.editing=useHTML@
+qu.8.2.question=An observer at $lat2&deg; $ns will see predominately what type of star?@
+qu.8.2.algorithm=
+
+$num1 = rint(2);
+
+$lat = switch($num1,switch(rint(6),90,85,80,-80,-85,-90),switch(rint(7),15,10,5,0,-5,-10,-15));
+$lat2 = if(eq($lat2,0),"0",abs($lat));
+$num2 = if(lt($lat,0),0,1);
+$ns = switch($num2,"S","N");
+
+
+$answer=$num1+1;
+@
+qu.8.2.answer=$answer@
+qu.8.2.choice.1=circumpolar@
+qu.8.2.choice.2=rise and set@
+qu.8.2.choice.3=never-rise@

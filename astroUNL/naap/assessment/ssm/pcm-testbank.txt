@@ -1,0 +1,408 @@
+qu.1.topic=Definitions of Sidereal and Synodic Periods@
+
+qu.1.1.mode=Multiple Choice@
+qu.1.1.editing=useHTML@
+qu.1.1.question=A planet is aligned directly between the Sun and a distant star.  The time it
+take the planet to revolve around the Sun and return to the same alignment between the Sun and
+the distant star is@
+qu.1.1.answer=1@
+qu.1.1.choice.1=the planet's sidereal period@
+qu.1.1.choice.2=the Earth's sidereal period@
+qu.1.1.choice.3=the planet's synodic period@
+qu.1.1.choice.4=the Earth's synodic period@
+
+qu.1.2.mode=Multiple Choice@
+qu.1.2.editing=useHTML@
+qu.1.2.question=The planet Mars is seen directly over the south point of the horizon at <em>exactly</em>
+midnight (that is, it is directly opposite the sun at midnight). The time interval until the next instance of this occurrence is@
+qu.1.2.answer=3@
+qu.1.2.choice.1=the sidereal period of Mars@
+qu.1.2.choice.2=the sidereal period of the Earth@
+qu.1.2.choice.3=the synodic period of Mars@
+qu.1.2.choice.4=the synodic period of the Earth@
+qu.1.2.choice.5=the rotational  period of the Earth@
+
+qu.1.3.mode=Multiple Choice@
+qu.1.3.editing=useHTML@
+qu.1.3.question=Regnook the Arcturian peers out of his flying saucer window down upon the
+plane of our solar system and sees the Sun, the Earth, and Jupiter exactly aligned.  The time Regnook
+would have to wait until the next time these planets align is@
+qu.1.3.answer=3@
+qu.1.3.choice.1=the sidereal period of Jupiter@
+qu.1.3.choice.2=the sidereal period of the Earth@
+qu.1.3.choice.3=the synodic period of Jupiter@
+qu.1.3.choice.4=the synodic period of the Earth@
+qu.1.3.choice.5=the sidereal period of the Sun@
+
+qu.1.4.mode=Multiple Choice@
+qu.1.4.editing=useHTML@
+qu.1.4.question=Querron the Vegan peers out of his flying saucer window down upon the plane
+of our solar system and sees the Sun, the Earth, and Jupiter exactly aligned.  The time Querron would
+have to wait until the Earth returns to the same spot it now occupies is@
+qu.1.4.answer=2@
+qu.1.4.choice.1=the sidereal period of Jupiter@
+qu.1.4.choice.2=the sidereal period of the Earth@
+qu.1.4.choice.3=the synodic period of Jupiter@
+qu.1.4.choice.4=the synodic period of the Earth@
+qu.1.4.choice.5=the rotational  period of the Earth@
+
+
+
+qu.2.topic=Elongation Definitions@
+
+qu.2.1.mode=Multiple Choice@
+qu.2.1.editing=useHTML@
+qu.2.1.question=When an inferior planet is on the far side of the Sun at an elongation of 0&deg;,
+the planet is said to be at@
+qu.2.1.answer=3@
+qu.2.1.choice.1=greatest elongation@
+qu.2.1.choice.2=inferior conjunction@
+qu.2.1.choice.3=superior conjunction@
+qu.2.1.choice.4=quadrature@
+qu.2.1.choice.5=opposition@
+
+qu.2.2.mode=Multiple Choice@
+qu.2.2.editing=useHTML@
+qu.2.2.question=When an inferior planet is on the near side of the Sun at an elongation of 0&deg;,
+the planet is said to be at@
+qu.2.2.answer=2@
+qu.2.2.choice.1=greatest elongation@
+qu.2.2.choice.2=inferior conjunction@
+qu.2.2.choice.3=superior conjunction@
+qu.2.2.choice.4=quadrature@
+qu.2.2.choice.5=opposition@
+
+qu.2.3.mode=Multiple Choice@
+qu.2.3.editing=useHTML@
+qu.2.3.question=When a superior planet is on the far side of the Sun at an elongation of 0&deg;,
+the planet is said to be at@
+qu.2.3.answer=3@
+qu.2.3.choice.1=aphelion@
+qu.2.3.choice.2=perihelion@
+qu.2.3.choice.3=conjunction@
+qu.2.3.choice.4=quadrature@
+qu.2.3.choice.5=opposition@
+
+qu.2.4.mode=Multiple Choice@
+qu.2.4.editing=useHTML@
+qu.2.4.question=When an inferior planet is as far from the Sun (in angular seperation) as it
+ever gets, the planet is said to be at@
+qu.2.4.answer=1@
+qu.2.4.choice.1=greatest elongation@
+qu.2.4.choice.2=inferior conjunction@
+qu.2.4.choice.3=superior conjunction@
+qu.2.4.choice.4=quadrature@
+qu.2.4.choice.5=opposition@
+
+qu.2.5.mode=Multiple Choice@
+qu.2.5.editing=useHTML@
+qu.2.5.question=When a superior planet is at an elongation of 180&deg;, the planet is said to be
+at@
+qu.2.5.answer=5@
+qu.2.5.choice.1=greatest elongation@
+qu.2.5.choice.2=inferior conjunction@
+qu.2.5.choice.3=superior conjunction@
+qu.2.5.choice.4=quadrature@
+qu.2.5.choice.5=opposition@
+
+
+
+qu.3.topic=Historical Questions@
+
+qu.3.1.mode=Multiple Choice@
+qu.3.1.editing=useHTML@
+qu.3.1.question=Ptolemy introduced _________ to help explain retrograde motion.@
+qu.3.1.answer=1@
+qu.3.1.choice.1=epicycles@
+qu.3.1.choice.2=circular orbits@
+qu.3.1.choice.3=ellipses@
+qu.3.1.choice.4=parabolas@
+qu.3.1.choice.5=hyperbolas@
+
+qu.3.2.mode=Multiple Choice@
+qu.3.2.editing=useHTML@
+qu.3.2.question=Ptolemy believed in a  _________ universe.@
+qu.3.2.answer=2@
+qu.3.2.choice.1=heliocentric (sun-centered)@
+qu.3.2.choice.2=geocentric (earth-centered)@
+
+qu.3.3.mode=Multiple Choice@
+qu.3.3.editing=useHTML@
+qu.3.3.question=Copernicus believed in a  _________ universe.@
+qu.3.3.answer=1@
+qu.3.3.choice.1=heliocentric (sun-centered)@
+qu.3.3.choice.2=geocentric (earth-centered)@
+
+
+
+qu.4.topic=Questions about Elongation Configurations@
+
+qu.4.1.mode=Multiple Choice@
+qu.4.1.editing=useHTML@
+qu.4.1.question=The best configuration in which to observe an inferior planet is at@
+qu.4.1.answer=1@
+qu.4.1.choice.1=greatest elongation@
+qu.4.1.choice.2=inferior conjunction@
+qu.4.1.choice.3=superior conjunction@
+qu.4.1.choice.4=quadrature@
+qu.4.1.choice.5=opposition@
+
+qu.4.2.mode=Multiple Choice@
+qu.4.2.editing=useHTML@
+qu.4.2.question=The best configuration in which to observe a superior planet is at@
+qu.4.2.answer=5@
+qu.4.2.choice.1=greatest elongation@
+qu.4.2.choice.2=inferior conjunction@
+qu.4.2.choice.3=superior conjunction@
+qu.4.2.choice.4=quadrature@
+qu.4.2.choice.5=opposition@
+
+qu.4.3.mode=Multiple Choice@
+qu.4.3.editing=useHTML@
+qu.4.3.question=Which of the following configurations has the largest value of elongation?@
+qu.4.3.answer=4@
+qu.4.3.choice.1=Mercury at superior conjunction@
+qu.4.3.choice.2=Mercury at greatest elongation@
+qu.4.3.choice.3=Venus at superior conjunction@
+qu.4.3.choice.4=Venus at greatest elongation@
+qu.4.3.choice.5=Mars at conjunction@
+
+qu.4.4.mode=Multiple Choice@
+qu.4.4.editing=useHTML@
+qu.4.4.question=Which of the following configurations has the smallest value of elongation?@
+qu.4.4.answer=1@
+qu.4.4.choice.1=Mercury at greatest elongation@
+qu.4.4.choice.2=Venus at greatest elongation@
+qu.4.4.choice.3=Mars at quadrature@
+qu.4.4.choice.4=Jupiter at quadrature@
+qu.4.4.choice.5=Saturn at opposition@
+
+
+
+qu.5.topic=Descriptive Elongation Determination@
+
+qu.5.1.mode=Multiple Choice@
+qu.5.1.editing=useHTML@
+qu.5.1.question=When Venus is directly between the Earth and the Sun, it is at @
+qu.5.1.answer=1@
+qu.5.1.choice.1=inferior conjunction@
+qu.5.1.choice.2=opposition@
+qu.5.1.choice.3=quadrature@
+qu.5.1.choice.4=greatest elongation@
+qu.5.1.choice.5=superior conjunction@
+
+qu.5.2.mode=Multiple Choice@
+qu.5.2.editing=useHTML@
+qu.5.2.question=When Venus is directly on the far side of  the Sun, it is at @
+qu.5.2.answer=5@
+qu.5.2.choice.1=inferior conjunction@
+qu.5.2.choice.2=opposition@
+qu.5.2.choice.3=quadrature@
+qu.5.2.choice.4=greatest elongation@
+qu.5.2.choice.5=superior conjunction@
+
+qu.5.3.mode=Multiple Choice@
+qu.5.3.editing=useHTML@
+qu.5.3.question=When Mars is seen directly overhead at midnight, it is at @
+qu.5.3.answer=2@
+qu.5.3.choice.1=inferior conjunction@
+qu.5.3.choice.2=opposition@
+qu.5.3.choice.3=quadrature@
+qu.5.3.choice.4=greatest elongation@
+qu.5.3.choice.5=superior conjunction@
+
+qu.5.4.mode=Multiple Choice@
+qu.5.4.editing=useHTML@
+qu.5.4.question=When Mars is seen on the eastern horizon at midnight, it is near @
+qu.5.4.answer=3@
+qu.5.4.choice.1=inferior conjunction@
+qu.5.4.choice.2=opposition@
+qu.5.4.choice.3=quadrature@
+qu.5.4.choice.4=greatest elongation@
+qu.5.4.choice.5=superior conjunction@
+
+qu.5.5.mode=Multiple Choice@
+qu.5.5.editing=useHTML@
+qu.5.5.question=When Jupiter is seen on the western horizon at midnight, it is near @
+qu.5.5.answer=3@
+qu.5.5.choice.1=inferior conjunction@
+qu.5.5.choice.2=opposition@
+qu.5.5.choice.3=quadrature@
+qu.5.5.choice.4=greatest elongation@
+qu.5.5.choice.5=superior conjunction@
+
+
+
+qu.6.topic=Inferior Configuration Diagrams@
+
+qu.6.1.mode=Multiple Choice@
+qu.6.1.editing=useHTML@
+qu.6.1.question=<img src="http://physics.unl.edu/directory/lee/edu/astapps/cop/config5.gif"><br>
+In the diagram above, the planet is in what elongation configuration?@
+qu.6.1.answer=4@
+qu.6.1.choice.1=inferior conjunction@
+qu.6.1.choice.2=opposition@
+qu.6.1.choice.3=quadrature@
+qu.6.1.choice.4=greatest elongation@
+qu.6.1.choice.5=conjunction@
+
+qu.6.2.mode=Multiple Choice@
+qu.6.2.editing=useHTML@
+qu.6.2.question=<img src="http://physics.unl.edu/directory/lee/edu/astapps/cop/config6.gif"><br>
+In the diagram above, the planet is in what elongation configuration?@
+qu.6.2.answer=5@
+qu.6.2.choice.1=inferior conjunction@
+qu.6.2.choice.2=opposition@
+qu.6.2.choice.3=quadrature@
+qu.6.2.choice.4=greatest elongation@
+qu.6.2.choice.5=superior conjunction@
+
+
+
+qu.7.topic=Superior Configuration Diagrams@
+
+qu.7.1.mode=Multiple Choice@
+qu.7.1.editing=useHTML@
+qu.7.1.question=<img src="http://physics.unl.edu/directory/lee/edu/astapps/cop/config1.gif"><br>
+In the diagram above, the planet is in what elongation configuration?@
+qu.7.1.answer=2@
+qu.7.1.choice.1=inferior conjunction@
+qu.7.1.choice.2=opposition@
+qu.7.1.choice.3=quadrature@
+qu.7.1.choice.4=greatest elongation@
+qu.7.1.choice.5=superior conjunction@
+
+qu.7.2.mode=Multiple Choice@
+qu.7.2.editing=useHTML@
+qu.7.2.question=<img src="http://physics.unl.edu/directory/lee/astapps/cop/config2.gif"><br>
+In the diagram above, the planet is in what elongation configuration?@
+qu.7.2.answer=4@
+qu.7.2.choice.1=inferior conjunction@
+qu.7.2.choice.2=opposition@
+qu.7.2.choice.3=quadrature@
+qu.7.2.choice.4=greatest elongation@
+qu.7.2.choice.5=superior conjunction@
+
+qu.7.3.mode=Multiple Choice@
+qu.7.3.editing=useHTML@
+qu.7.3.question=<img src="http://physics.unl.edu/directory/lee/edu/astapps/cop/config3.gif"><br>
+In the diagram above, the planet is in what elongation configuration?@
+qu.7.3.answer=1@
+qu.7.3.choice.1=conjunction@
+qu.7.3.choice.2=opposition@
+qu.7.3.choice.3=quadrature@
+qu.7.3.choice.4=greatest elongation@
+qu.7.3.choice.5=inferior conjunction@
+
+qu.7.4.mode=Multiple Choice@
+qu.7.4.editing=useHTML@
+qu.7.4.question=<img src="http://physics.unl.edu/directory/lee/edu/astapps/cop/config4.gif"><br>
+In the diagram above, the planet is in what elongation configuration?@
+qu.7.4.answer=3@
+qu.7.4.choice.1=inferior conjunction@
+qu.7.4.choice.2=opposition@
+qu.7.4.choice.3=quadrature@
+qu.7.4.choice.4=greatest elongation@
+qu.7.4.choice.5=conjunction@
+
+qu.7.5.mode=Multiple Choice@
+qu.7.5.editing=useHTML@
+qu.7.5.question=<img src="http://physics.unl.edu/directory/lee/edu/astapps/cop/config7.gif"><br>
+In the diagram above, the planet is in what elongation configuration?@
+qu.7.5.answer=3@
+qu.7.5.choice.1=inferior conjunction@
+qu.7.5.choice.2=opposition@
+qu.7.5.choice.3=quadrature@
+qu.7.5.choice.4=greatest elongation@
+qu.7.5.choice.5=conjunction@
+
+qu.7.6.mode=Multiple Choice@
+qu.7.6.editing=useHTML@
+qu.7.6.question=<img src="http://physics.unl.edu/directory/lee/edu/astapps/cop/config8.gif"><br>
+In th diagram above, the planet is in what elongation configuration?@
+qu.7.6.answer=1@
+qu.7.6.choice.1=inferior conjunction@
+qu.7.6.choice.2=opposition@
+qu.7.6.choice.3=quadrature@
+qu.7.6.choice.4=greatest elongation@
+qu.7.6.choice.5=superior conjunction@
+
+
+
+qu.8.topic=Sidereal and Synodic Periods@
+
+qu.8.1.mode=Multiple Choice@
+qu.8.1.editing=useHTML@
+qu.8.1.question=If a new planet was discovered orbiting the Sun far beyond the orbit of Pluto, it
+would have a synodic period very close to@
+qu.8.1.answer=2@
+qu.8.1.choice.1=its own sidereal period@
+qu.8.1.choice.2=the sidereal period of the Earth@
+qu.8.1.choice.3=the sidereal period of Pluto@
+qu.8.1.choice.4=the sidereal period of Mercury@
+qu.8.1.choice.5=the synodic period of Mercury@
+
+qu.8.2.mode=Multiple Choice@
+qu.8.2.editing=useHTML@
+qu.8.2.question=If a new planet was discovered orbiting the Sun well inside the orbit of Mercury,
+it would have a synodic period close to@
+qu.8.2.answer=1@
+qu.8.2.choice.1=its own sidereal period@
+qu.8.2.choice.2=the sidereal period of the Earth@
+qu.8.2.choice.3=the sidereal period of Pluto@
+qu.8.2.choice.4=the sidereal period of Mercury@
+qu.8.2.choice.5=the synodic period of Mercury@
+
+qu.8.3.mode=Multiple Choice@
+qu.8.3.editing=useHTML@
+qu.8.3.question=If a new planet was discovered orbiting the Sun just outside the orbit of the
+Earth, it would have a synodic period that is@
+qu.8.3.answer=1@
+qu.8.3.choice.1=very large@
+qu.8.3.choice.2=very small@
+qu.8.3.choice.3=equal to the sidereal period of the Earth@
+qu.8.3.choice.4=equal to the synodic period of the Earth@
+qu.8.3.choice.5=equal to its sidereal period@
+
+qu.8.4.mode=Multiple Choice@
+qu.8.4.editing=useHTML@
+qu.8.4.question=Which of the following is the largest?@
+qu.8.4.answer=1@
+qu.8.4.choice.1=the synodic period of Mars@
+qu.8.4.choice.2=the synodic period of Jupiter@
+qu.8.4.choice.3=the synodic period of Saturn@
+qu.8.4.choice.4=the synodic period of Uranus@
+qu.8.4.choice.5=the synodic period of Pluto@
+
+qu.8.5.mode=Multiple Choice@
+qu.8.5.editing=useHTML@
+qu.8.5.question=Which of the following is the largest?@
+qu.8.5.answer=5@
+qu.8.5.choice.1=the sidereal period of Mars@
+qu.8.5.choice.2=the sidereal period of Jupiter@
+qu.8.5.choice.3=the sidereal period of Saturn@
+qu.8.5.choice.4=the sidereal period of Uranus@
+qu.8.5.choice.5=the sidereal period of Pluto@
+
+qu.8.6.mode=Multiple Choice@
+qu.8.6.editing=useHTML@
+qu.8.6.question=If you lived on Mercury, the planet with the largest synodic period would be?@
+qu.8.6.answer=1@
+qu.8.6.choice.1=Venus@
+qu.8.6.choice.2=Earth@
+qu.8.6.choice.3=Mars@
+qu.8.6.choice.4=Jupiter@
+qu.8.6.choice.5=Saturn@
+
+qu.8.7.mode=Multiple Choice@
+qu.8.7.editing=useHTML@
+qu.8.7.question=The planet with the shortest period of revolution is@
+qu.8.7.answer=2@
+qu.8.7.choice.1=Venus@
+qu.8.7.choice.2=Mercury@
+qu.8.7.choice.3=Pluto@
+qu.8.7.choice.4=Jupiter@
+qu.8.7.choice.5=all planets have the same period of revolution@
+
+
+

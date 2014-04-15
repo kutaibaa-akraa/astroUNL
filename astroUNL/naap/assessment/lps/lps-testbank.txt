@@ -1,0 +1,409 @@
+qu.1.topic=Identify Eight Phases@
+
+qu.1.1.mode=Multiple Choice@
+qu.1.1.editing=useHTML@
+qu.1.1.question=<div><img style="float: right; padding-left: 1em;" src="http://astro.unl.edu/naap/assessment/lps/phase$phase.png"/>What is the phase of the moon depicted to the right?<br style="clear: both;"/></div>@
+qu.1.1.algorithm=
+$num=rint(7);
+$phase=switch($num,2,3,4,6,7,8);
+$answer=switch($num,1,2,3,4,5,6);
+@
+qu.1.1.answer=$answer@
+qu.1.1.choice.1=waxing crescent@
+qu.1.1.choice.2=first quarter@
+qu.1.1.choice.3=waxing gibbous@
+qu.1.1.choice.4=waning gibbous@
+qu.1.1.choice.5=third quarter@
+qu.1.1.choice.6=waning crescent@
+
+qu.1.2.mode=Multiple Choice@
+qu.1.2.editing=useHTML@
+qu.1.2.question=<div><img style="float: right; padding-left: 1em;" src="http://astro.unl.edu/naap/assessment/lps/phase$phase.jpg"/>What is the phase of the moon depicted to the right?<br style="clear: both;"/></div>@
+qu.1.2.algorithm=
+$num=rint(7);
+$phase=switch($num,'2r','3r','4r','6r','7r','8r');
+$answer=switch($num,1,2,3,4,5,6);
+@
+qu.1.2.answer=$answer@
+qu.1.2.choice.1=waxing crescent@
+qu.1.2.choice.2=first quarter@
+qu.1.2.choice.3=waxing gibbous@
+qu.1.2.choice.4=waning gibbous@
+qu.1.2.choice.5=third quarter@
+qu.1.2.choice.6=waning crescent@
+
+qu.2.topic=Verbal Descriptions@
+
+qu.2.1.mode=Multiple Choice@
+qu.2.1.editing=useHTML@
+qu.2.1.question=If a moon is between $illum1 and $illum2 illuminated it is a&hellip;@
+qu.2.1.algorithm=
+$num=rint(2);
+$illum1=switch($num,'0%','50%');
+$illum2=switch($num,'50%','100%');
+$answer=switch($num,1,2);
+@
+qu.2.1.answer=$answer@
+qu.2.1.choice.1=crescent moon.@
+qu.2.1.choice.2=gibbous moon.@
+qu.2.1.choice.3=new moon.@
+qu.2.1.choice.4=full moon.@
+
+qu.2.2.mode=Multiple Choice@
+qu.2.2.editing=useHTML@
+qu.2.2.question=If the moon is illuminated on the $phase-hand side, it is&hellip;@
+qu.2.2.algorithm=
+$num=rint(2);
+$phase=switch($num,'right','left');
+$answer=switch($num,1,2);
+@
+qu.2.2.answer=$answer@
+qu.2.2.choice.1=waxing.@
+qu.2.2.choice.2=waning.@
+
+qu.2.3.mode=Multiple Choice@
+qu.2.3.editing=useHTML@
+qu.2.3.question=The phases of the moon depicted in the animation below are&hellip;
+<div style="width: 100%; text-align: center;">
+<object
+type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/lps/waxing.swf"
+width="200" height="120" id="terminology">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/lps/waxing.swf"/>
+  <param name="FlashVars" value="questionMode=type$type"/>
+</object></div>@
+qu.2.3.algorithm=
+$num=rint(2);
+$type=switch($num,1,3);
+$answer=$num+1;
+@
+qu.2.3.answer=$answer@
+qu.2.3.choice.1=waxing.@
+qu.2.3.choice.2=waning.@
+
+qu.3.topic=Earth-Sun-Moon Geometry@
+
+qu.3.1.mode=Non Permuting Multiple Choice@
+qu.3.1.editing=useHTML@
+qu.3.1.question=During a $phase moon, what percent of the moon's entire surface (irrespective of how much we can see) is illuminated by the sun?@
+qu.3.1.algorithm=
+$phase=switch(rint(2),'new','full');
+@
+qu.3.1.answer=3@
+qu.3.1.choice.1=0%.@
+qu.3.1.choice.2=25%.@
+qu.3.1.choice.3=50%.@
+qu.3.1.choice.4=75%.@
+qu.3.1.choice.5=100%.@
+
+qu.3.2.mode=Non Permuting Multiple Choice@
+qu.3.2.editing=useHTML@
+qu.3.2.question=During a $phase moon, how much of the face of the moon that we see is illuminated by the sun?@
+qu.3.2.algorithm=
+$phase=switch(rint(2),'first quarter','third quarter');
+@
+qu.3.2.answer=3@
+qu.3.2.choice.1=0%.@
+qu.3.2.choice.2=25%.@
+qu.3.2.choice.3=50%.@
+qu.3.2.choice.4=75%.@
+qu.3.2.choice.5=100%.@
+
+qu.3.3.mode=Multiple Choice@
+qu.3.3.editing=useHTML@
+qu.3.3.question=What is the phase of the moon depicted below?
+<div style="width: 100%; text-align: center;">
+<img src="http://astro.unl.edu/naap/assessment/lps/moon_orbit$phase.png"/></div>@
+qu.3.3.algorithm=
+$num=rint(8);
+$phase=switch($num,'1','1x','3','3x','5','5x','7','7x');
+$answer=switch($num,1,1,2,2,3,3,4,4);
+@
+qu.3.3.answer=$answer@
+qu.3.3.choice.1=new@
+qu.3.3.choice.2=first quarter@
+qu.3.3.choice.3=full@
+qu.3.3.choice.4=third quarter@
+
+qu.3.4.mode=Multiple Choice@
+qu.3.4.editing=useHTML@
+qu.3.4.question=What is the phase of the moon depicted below?<div style="width: 100%; text-align: center;"><img src="http://astro.unl.edu/naap/assessment/lps/moon_orbit$phase.png"/></div>@
+qu.3.4.algorithm=
+$num=rint(8);
+$phase=switch($num,'2','2x','4','4x','6','6x','8','8x');
+$answer=switch($num,1,1,2,2,3,3,4,4);
+@
+qu.3.4.answer=$answer@
+qu.3.4.choice.1=<img src="http://astro.unl.edu/naap/assessment/lps/phase2.png"/>@
+qu.3.4.choice.2=<img src="http://astro.unl.edu/naap/assessment/lps/phase4.png"/>@
+qu.3.4.choice.3=<img src="http://astro.unl.edu/naap/assessment/lps/phase6.png"/>@
+qu.3.4.choice.4=<img src="http://astro.unl.edu/naap/assessment/lps/phase8.png"/>@
+
+qu.4.topic=Rising/Meridian/Setting Times@
+
+qu.4.1.mode=Non Permuting Multiple Choice@
+qu.4.1.editing=useHTML@
+qu.4.1.question=What time of day is the $phase moon highest in the sky?@
+qu.4.1.algorithm=
+$num=rint(4);
+$phase=switch($num,'full','third quarter','new','first quarter');
+$answer=$num+1;
+@
+qu.4.1.answer=$answer@
+qu.4.1.choice.1=12 AM@
+qu.4.1.choice.2=6 AM@
+qu.4.1.choice.3=12 PM@
+qu.4.1.choice.4=6 PM@
+
+qu.4.2.mode=Non Permuting Multiple Choice@
+qu.4.2.editing=useHTML@
+qu.4.2.question=If the moon is highest in the sky at 12 AM&hellip;@
+qu.4.2.answer=2@
+qu.4.2.choice.1=it rose at about 6AM and will set at about 6PM.@
+qu.4.2.choice.2=it rose at about 6PM and will set at about 6AM.@
+qu.4.2.choice.3=it did not rise earlier, it was always in the observer's sky that day.@
+qu.4.2.choice.4=it rose rose earlier at 12PM and will set the following 12PM.@
+
+qu.4.3.mode=Multiple Choice@
+qu.4.3.editing=useHTML@
+qu.4.3.question=It is $time and an observer sees the moon at its highest point in the sky, what phase moon is being observed?@
+qu.4.3.algorithm=
+$num=rint(4);
+$time=switch($num,'3 AM','9 AM','3 PM','9 PM');
+$answer=$num+1;
+@
+qu.4.3.answer=$answer@
+qu.4.3.choice.1=waning gibbous@
+qu.4.3.choice.2=waning crescent@
+qu.4.3.choice.3=waxing crescent@
+qu.4.3.choice.4=waxing gibbous@
+
+qu.5.topic=Basic Skills@
+
+qu.5.1.mode=Non Permuting Multiple Choice@
+qu.5.1.editing=useHTML@
+qu.5.1.question=What time of day is depicted in the figure below?
+<div style="width: 100%; text-align: center; padding-top: 1em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/lps/moon_sun.swf" width="400" height="400">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/lps/moon_sun.swf"/>
+  <param name="FlashVars" value="sunAngle=$SA&moonAngle=$MA&viewerAzimuth=$AZ&viewerAltitude=$AL">
+  <img src="http://astro.unl.edu/naap/assessment/lps/sun$time.png"/>
+</object>
+</div>@
+qu.5.1.algorithm=
+$num=rint(4);
+$SA=switch($num,'180','90','0','270');
+$MA=$SA;
+$AZ=$switch($num,'160','130','160','210');
+$AL=20;
+$time=switch($num,'5','7','1','3');
+$answer=$num+1;
+@
+qu.5.1.answer=$answer@
+qu.5.1.choice.1=12 AM@
+qu.5.1.choice.2=6 AM@
+qu.5.1.choice.3=12 PM@
+qu.5.1.choice.4=6 PM@
+
+qu.5.2.mode=Non Permuting Multiple Choice@
+qu.5.2.editing=useHTML@
+qu.5.2.question=Is the moon currently visible to the observer?
+<div style="width: 100%; text-align: center; padding-top: 1em;">
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/lps/moon_sun.swf" width="400" height="400">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/lps/moon_sun.swf"/>
+  <param name="FlashVars" value="sunAngle=$SA&moonAngle=$MA&viewerAzimuth=$AZ&viewerAltitude=$AL">
+  <img src="http://astro.unl.edu/naap/assessment/lps/horizon$phase.png"/>
+</object>
+</div>@
+qu.5.2.algorithm=
+$num=rint(3);
+$num2=rint(2);
+$phase=switch($num,'4','5','6');
+$SA=switch($num2,'0','180');
+$MA=135+$num*45;
+$AZ=225-$num*45;
+$AL=10;
+@
+qu.5.2.answer=2@
+qu.5.2.choice.1=yes@
+qu.5.2.choice.2=no@
+
+qu.5.3.mode=Non Permuting Multiple Choice@
+qu.5.3.editing=useHTML@
+qu.5.3.question=If it is $time and a $phase moon for a particular observer, a second observer on the opposite side of the earth&hellip;@
+qu.5.3.algorithm=
+$num = rint(2);
+$time=switch($num,'noon','midnight');
+$phase=switch($num,'new','full');
+@
+qu.5.3.answer=3@
+qu.5.3.choice.1=will see a full moon.@
+qu.5.3.choice.2=will see a new moon.@
+qu.5.3.choice.3=won't see any moon in the sky at all.@
+
+qu.5.4.mode=Multiple Choice@
+qu.5.4.editing=useHTML@
+qu.5.4.question=When viewed from above the earth's North Pole, which of the following is a correct time ordering of the moon's position?
+<div style="width: 100%; text-align: center; padding-top: 1em;"><img src="http://astro.unl.edu/naap/assessment/lps/order1.png"/></div>@
+qu.5.4.answer=3@
+qu.5.4.choice.1=A,B,C,D@
+qu.5.4.choice.2=A,C,B,D@
+qu.5.4.choice.3=D,C,B,A@
+qu.5.4.choice.4=C,A,D,B@
+
+qu.5.5.mode=Multiple Choice@
+qu.5.5.editing=useHTML@
+qu.5.5.question=When viewed from above the earth's North Pole, which of the following is a correct time ordering of the moon's position?
+<div style="width: 100%; text-align: center; padding-top: 1em;"><img src="http://astro.unl.edu/naap/assessment/lps/order2.png"/></div>@
+qu.5.5.answer=4@
+qu.5.5.choice.1=B,C,D,A@
+qu.5.5.choice.2=C,B,D,A@
+qu.5.5.choice.3=D,A,B,C@
+qu.5.5.choice.4=A,D,C,B@
+
+qu.6.topic=Time Between Phases@
+
+qu.6.1.mode=Non Permuting Multiple Choice@
+qu.6.1.editing=useHTML@
+qu.6.1.question=Which of the following best estimate the time period between new moon and $phase?@
+qu.6.1.algorithm=
+$num=rint(2);
+$phase=switch($num,'new moon','first quarter');
+$answer=switch($num,4,1);
+@
+qu.6.1.answer=$answer@
+qu.6.1.choice.1=7 days@
+qu.6.1.choice.2=14 days@
+qu.6.1.choice.3=28 days@
+qu.6.1.choice.4=30 days@
+
+qu.6.2.mode=Non Permuting Multiple Choice@
+qu.6.2.editing=useHTML@
+qu.6.2.question=During the course of an evening&hellip;@
+qu.6.2.answer=1@
+qu.6.2.choice.1=the moon basically stays at the same phase.@
+qu.6.2.choice.2=the moon will go through 2 phases.@
+qu.6.2.choice.3=the moon will go through 3 phases.@
+qu.6.2.choice.4=the moon will go through all 8 phases.@
+
+qu.6.3.mode=Non Permuting Multiple Choice@
+qu.6.3.editing=useHTML@
+qu.6.3.question=Approximately how much time has elapsed between moon 1 and moon 2 in the figure below?
+<div style="width: 100%; text-align: center; padding-top: 1em;"><img src="http://astro.unl.edu/naap/assessment/lps/timelapse$phase.png"/></div>@
+qu.6.3.algorithm=
+$num=rint(3);
+$phase=switch($num,'1','2','3');
+$answer=switch($num,4,3,6);
+@
+qu.6.3.answer=$answer@
+qu.6.3.choice.1=3 hours@
+qu.6.3.choice.2=6 hours@
+qu.6.3.choice.3=1 day@
+qu.6.3.choice.4=4 days@
+qu.6.3.choice.5=7 days@
+qu.6.3.choice.6=14 days@
+
+qu.6.4.mode=Non Permuting Multiple Choice@
+qu.6.4.editing=useHTML@
+qu.6.4.question=Approximately how much time has elapsed between moon 1 and moon 2 in the figure below?
+<div style="width: 100%; text-align: center; padding-top: 1em;"><img src="http://astro.unl.edu/naap/assessment/lps/timelapse$phase.png"/></div>@
+qu.6.4.algorithm=
+$num=rint(2);
+$phase=switch($num,'4','5');
+$answer=switch($num,2,1);
+@
+qu.6.4.answer=$answer@
+qu.6.4.choice.1=3 hours@
+qu.6.4.choice.2=6 hours@
+qu.6.4.choice.3=1 day@
+qu.6.4.choice.4=4 days@
+qu.6.4.choice.5=7 days@
+qu.6.4.choice.6=14 days@
+
+qu.6.5.mode=Non Permuting Multiple Choice@
+qu.6.5.editing=useHTML@
+qu.6.5.question=Relative to a new moon at noon, what $text the moon's position $time?
+<div style="width: 100%; text-align: center; padding-top: 1em;"><img src="http://astro.unl.edu/naap/assessment/lps/timelapse6.png"/></div>@
+qu.6.5.algorithm=
+$num=rint(4);
+$text=switch($num,'was','was','will be','will be');
+$time=switch($num,'3 days earlier','1 day earlier','1 day hence','3 days hence');
+$answer=switch($num,1,2,4,5);
+@
+qu.6.5.answer=$answer@
+qu.6.5.choice.1=A@
+qu.6.5.choice.2=B@
+qu.6.5.choice.3=C@
+qu.6.5.choice.4=D@
+qu.6.5.choice.5=E@
+
+qu.6.6.mode=Non Permuting Multiple Choice@
+qu.6.6.editing=useHTML@
+qu.6.6.question=Relative to a full moon at midnight, what $text the moon's position at $time?
+<div style="width: 100%; text-align: center; padding-top: 1em;"><img src="http://astro.unl.edu/naap/assessment/lps/timelapse7.png"/></div>@
+qu.6.6.algorithm=
+$num=rint(4);
+$text=switch($num,'was','was','will be','will be');
+$time=switch($num,'9 PM','11 PM','1 AM','3 AM');
+$answer=switch($num,5,4,2,1);
+@
+qu.6.6.answer=$answer@
+qu.6.6.choice.1=A@
+qu.6.6.choice.2=B@
+qu.6.6.choice.3=C@
+qu.6.6.choice.4=D@
+qu.6.6.choice.5=E@
+
+qu.7.topic=Eclipses and the Dark Side@
+
+qu.7.1.mode=Non Permuting Multiple Choice@
+qu.7.1.editing=useHTML@
+qu.7.1.question=Over the course of a month, about how much of the moon's surface can be photographed?@
+qu.7.1.answer=2@
+qu.7.1.choice.1=25%@
+qu.7.1.choice.2=50%@
+qu.7.1.choice.3=75%@
+qu.7.1.choice.4=100%@
+
+qu.7.2.mode=Non Permuting Multiple Choice@
+qu.7.2.editing=useHTML@
+qu.7.2.question=For a $eclipse eclipse (the $body is obscured from view), which phase is necessary?@
+qu.7.2.algorithm=
+$num=rint(2);
+$eclipse=switch($num,'solar','lunar');
+$body=switch($num,'sun','moon');
+$answer=switch($num,1,3);
+@
+qu.7.2.answer=$answer@
+qu.7.2.choice.1=new moon@
+qu.7.2.choice.2=first quarter@
+qu.7.2.choice.3=full moon@
+qu.7.2.choice.4=third quarter@
+
+qu.7.3.mode=Non Permuting Multiple Choice@
+qu.7.3.editing=useHTML@
+qu.7.3.question=What kind of eclipse is possible during a $phase moon?@
+qu.7.3.algorithm=
+$num=rint(4);
+$phase=switch($num,'full','new','first quarter','third quarter');
+$answer=switch($num,1,2,3,3);
+@
+qu.7.3.answer=$answer@
+qu.7.3.choice.1=lunar (moon is obscured from view)@
+qu.7.3.choice.2=solar (sun is obscured from view)@
+qu.7.3.choice.3=no eclipse possible@
+
+qu.7.4.mode=Non Permuting Multiple Choice@
+qu.7.4.editing=useHTML@
+qu.7.4.question=The &#8220;dark side&#8221; of the moon is&hellip;?@
+qu.7.4.answer=2@
+qu.7.4.choice.1=always dark because it always faces away from the sun.@
+qu.7.4.choice.2=is fully illuminated during a new moon.@
+qu.7.4.choice.3=is a popular misconception &ndash; 100% of the moon's surface is visible from earth.@
+
+qu.7.5.mode=Non Permuting Multiple Choice@
+qu.7.5.editing=useHTML@
+qu.7.5.question=The &#8220;dark side&#8221; of the moon arise because&hellip;?@
+qu.7.5.answer=3@
+qu.7.5.choice.1=it is always dark, never being illuminated by the sun.@
+qu.7.5.choice.2=of a popular misconception that we can see only about 50% of the moon's surface from earth.@
+qu.7.5.choice.3=the moon rotates once in the time it takes the moon to make one (sidereal) revolution.@

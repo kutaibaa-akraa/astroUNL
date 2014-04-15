@@ -1,0 +1,84 @@
+body{
+margin:0px;
+background-image:url("starField.jpg");
+background-position:center;
+font:20px arial;
+}
+
+#buttonContainer{
+position:absolute;
+top:0px;
+right:0px;
+z-index:3;
+}
+
+#plotButton, #infoButton, #closeLayerContainer{
+float:right;
+margin-top:5px;
+margin-right:5px;
+background-color:transparent !important;
+}
+
+#unscrollable{
+-moz-user-select: none; /* mozilla browsers */
+-khtml-user-select: none; /* webkit browsers */
+position:absolute;
+top:0px;
+bottom:0px;
+left:0px;
+right:0px;
+}
+
+.scaleLabel{
+position:absolute;
+font-size:15px;
+}
+
+img.helio{
+width:10px;
+height:10px;
+}
+
+#lumOutput, #tempOutput, #radiusOutput, .MSLabel, #sunLabel{
+position:absolute;
+}
+
+#objectives, #background, #exercises, #about{
+padding:10px;
+position:absolute;
+top:10px;
+left:10px;
+right:10px;
+background-color:black;
+border:2px solid;
+border-color:inherit;
+z-index:2;
+display:none;
+}
+
+#closeLayerContainer{
+display:none;
+}
+
+.dijitReset, .dijitPopup{
+background-color:inherit !important;
+color:inherit !important;
+border-color:inherit !important;
+font-size:inherit !important;
+margin:0px;
+}
+
+.dijitPopup{
+background-color:black !important;
+}
+
+canvas{
+position:absolute;
+top:0px;
+left:0px;
+z-index:-1;
+}
+
+#tempOutput{
+bottom:2px;
+}

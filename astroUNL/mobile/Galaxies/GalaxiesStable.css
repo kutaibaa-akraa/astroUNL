@@ -1,0 +1,91 @@
+body{
+margin:0px;
+background-color:black;
+font:20px arial;
+}
+
+#buttonContainer{
+position:absolute;
+top:0px;
+right:0px;
+z-index:3;
+}
+
+#centerButtonContainer, #infoButton, #closeLayerContainer{
+float:right;
+margin-top:5px;
+margin-right:5px;
+background-color:transparent !important;
+}
+
+/*make buttons and menus transparent
+and uniform text and border color*/
+.dijitReset, .dijitPopup{
+background-color:inherit !important;
+color:inherit !important;
+border-color:inherit !important;
+font-size:inherit !important;
+margin:0px;
+}
+
+/*make menus black background*/
+.dijitPopup{
+background-color:black !important;
+}
+
+#closeLayerContainer{
+display:none;
+}
+
+#unscrollable{
+-moz-user-select: none; /* mozilla browsers */
+-khtml-user-select: none; /* webkit browsers */
+position:absolute;
+top:0px;
+bottom:0px;
+left:0px;
+right:0px;
+overflow:hidden;
+}
+
+canvas{
+position:absolute;
+top:0px;
+left:0px;
+z-index:1;
+}
+
+img{
+position:absolute;
+width:100px;
+height:100px;
+}
+
+img.info{
+position:static;
+width:auto;
+height:auto;
+}
+
+#selected{
+border:2px solid red;
+border-radius:50px;
+-webkit-border-radius:50px;
+}
+
+#objectives, #background, #exercises, #about{
+padding:10px;
+position:absolute;
+top:10px;
+left:10px;
+right:10px;
+background-color:black;
+border:2px solid;
+border-color:inherit;
+z-index:2;
+display:none;
+}
+
+ol.a {
+list-style-type: lower-alpha;
+}

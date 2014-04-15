@@ -1,0 +1,482 @@
+qu.1.topic=Light - Proportionality@
+
+qu.1.1.mode=Non Permuting Multiple Choice@
+qu.1.1.editing=useHTML@
+qu.1.1.question=<p>How is the <b>energy</b> of a photon related to the photon's <b>$term</b>?</p>@
+qu.1.1.algorithm=
+$num = rint(2);
+$term = switch($num,"frequency","wavelength");
+@
+qu.1.1.answer=${$num+1}@
+qu.1.1.choice.1=directly proportional@
+qu.1.1.choice.2=inversely proportional@
+qu.1.1.choice.3=none of the above@
+qu.1.1.comment=<p>More energetic photons and higher frequencies and longer wavelengths.</p>@
+
+qu.1.2.mode=Non Permuting Multiple Choice@
+qu.1.2.editing=useHTML@
+qu.1.2.question=<p>How does the <b>speed</b> of a photon change when its <b>$term1</b> is <b>$change1</b>?</p>@
+qu.1.2.algorithm=
+$num1 = rint(2);
+$term1 = switch($num1,"frequency","wavelength");
+$term2 = switch($num1,"wavelength","frequency");
+$num2 = rint(2);
+$change1 = switch($num2,"increased","decreased");
+$change2 = switch($num2,"decreased","increased");
+@
+qu.1.2.answer=3@
+qu.1.2.choice.1=the speed increases@
+qu.1.2.choice.2=the speed decreases@
+qu.1.2.choice.3=the speed does not change@
+qu.1.2.comment=<p>While c = &lambda; &fnof;, the speed remains constant. So when the $term1 is $change1 the $term2 is $change2.</p>@
+
+qu.2.topic=Nature of Light@
+
+qu.2.1.mode=Multiple Choice@
+qu.2.1.name=Light as a Wave@
+qu.2.1.editing=useHTML@
+qu.2.1.question=<p>When talking about light as a <i>wave</i>, which of the following is true?</p>@
+qu.2.1.answer=1@
+qu.2.1.choice.1=Light is a combination of an electric <i>and</i> magnetic field waves.@
+qu.2.1.choice.2=Light is waving electric field lines, but not magnetic in nature.@
+qu.2.1.choice.3=Light is waving magnetic field lines, but not electric in nature@
+qu.2.1.choice.4=Light should not be described as a wave &ndash; it doesn't act like a wave.@
+qu.2.1.comment=<p>Light is a combination of interacting electric and magnetic field lines &ndash; moving in a wave pattern.</p>@
+
+qu.2.2.mode=Multiple Choice@
+qu.2.2.name=Speed of Light@
+qu.2.2.editing=useHTML@
+qu.2.2.question=<p>Which of the following is closest to the speed of light in a vacuum?</p>@
+qu.2.2.answer=1@
+qu.2.2.choice.1=3.00 &times; 10<sup>8</sup> m/s@
+qu.2.2.choice.2=3.00 &times; 10<sup>5</sup> m/s@
+qu.2.2.choice.3=186,000 m/s@
+qu.2.2.choice.4=1.86 &times; 10<sup>5</sup> m/s@
+qu.2.2.choice.5=1.86 &times; 10<sup>8</sup> m/s@
+qu.2.2.comment=<p>The speed of light is exactly 299,792,458 m/s which means 3.00 &times; 10<sup>8</sup> m/s is the closest value.</p>@
+
+qu.2.3.mode=Multiple Choice@
+qu.2.3.name=Light as a Particle@
+qu.2.3.editing=useHTML@
+qu.2.3.question=<p>What is a &ldquo;particle&rdquo; of light called?</p>@
+qu.2.3.answer=1@
+qu.2.3.choice.1=photon@
+qu.2.3.choice.2=wavicle@
+qu.2.3.choice.3=lepton@
+qu.2.3.choice.4=baryon@
+qu.2.3.choice.5=phonon@
+qu.2.3.comment=<p>Photon refers to light when it is demonstrating discrete particle behavior.</p>@
+
+qu.2.4.mode=Non Permuting Multiple Choice@
+qu.2.4.name=What is light@
+qu.2.4.editing=useHTML@
+qu.2.4.question=Light is most properly thought of as&hellip;@
+qu.2.4.answer=4@
+qu.2.4.choice.1=a wave.@
+qu.2.4.choice.2=a particle (photon).@
+qu.2.4.choice.3=both a wave and a particle at the same time (wavicle).@
+qu.2.4.choice.4=either a wave or a particle &ndash; depending on the nature of the question &ldquo;asked&rdquo; it by the observer.@
+qu.2.4.comment=<p>Light shows both wave and particle properties, but never at the same time.</p>@
+
+qu.3.topic=Atomic Basics@
+
+qu.3.1.mode=Non Permuting Multiple Choice@
+qu.3.1.editing=useHTML@
+qu.3.1.question=<p>$term has what kind of charge?</p>@
+qu.3.1.algorithm=
+$num = rint(3);
+$term = switch($num,"A proton","An electron","A neutron");
+@
+qu.3.1.answer=${$num+1}@
+qu.3.1.choice.1=positive@
+qu.3.1.choice.2=negative@
+qu.3.1.choice.3=neutral@
+qu.3.1.comment=The proton is the positively charged particle, the electron the negatively charged particle, and the neutron the neutral particle.@
+
+qu.3.2.mode=Non Permuting Multiple Choice@
+qu.3.2.editing=useHTML@
+qu.3.2.question=<p>What kind of particle has a $term charge?</p>@
+qu.3.2.algorithm=
+$num = rint(3);
+$term = switch($num,"positive","negative","neutral");
+@
+qu.3.2.answer=${$num+1}@
+qu.3.2.choice.1=proton@
+qu.3.2.choice.2=electron@
+qu.3.2.choice.3=neutron@
+qu.3.2.comment=The proton is the positively charged particle, the electron the negatively charged particle, and the neutron the neutral particle.@
+
+qu.3.3.mode=Non Permuting Multiple Selection@
+qu.3.3.editing=useHTML@
+qu.3.3.question=<p>Which kind of particle are found at the $term of an atom (select all that apply)?</p>@
+qu.3.3.algorithm=
+$num = rint(2);
+$term = switch($num,"center","outer edges");
+$ans = switch($num,"1,3","2");
+@
+qu.3.3.answer=$ans@
+qu.3.3.choice.1=proton@
+qu.3.3.choice.2=electron@
+qu.3.3.choice.3=neutron@
+qu.3.3.comment=The nucleous or center of an atom is made of protons and neutrons. The electrons spend most of their time in the outer regions of the atom.@
+
+qu.4.topic=Bohr vs. Quantum Model@
+
+qu.4.1.mode=Multiple Selection@
+qu.4.1.editing=useHTML@
+qu.4.1.question=<p>Select all the terms which apply to or are consistent with the <b>$term</b> model.</p>@
+qu.4.1.algorithm=
+$num = rint(2);
+$term = switch($num,"quantum","Bohr");
+$ans = switch($num,"2,3","1,3");
+@
+qu.4.1.answer=$ans@
+qu.4.1.choice.1=electrons move around the nucleus in fixed distance "orbits"@
+qu.4.1.choice.2=electrons can be found anywhere inside an "electron cloud" around the atom@
+qu.4.1.choice.3=electrons can only have certain discrete binding energies@
+qu.4.1.choice.4=electrons can exist around the atom with any particular energy@
+qu.4.1.comment=The electron cloud refers to the quantum model while fixed orbitals are the Bohr model. Both models have discrete binding energies and so they can only have certain energies.@
+
+qu.5.topic=Orbitals@
+
+qu.5.1.mode=Non Permuting Multiple Choice@
+qu.5.1.editing=useHTML@
+qu.5.1.question=<p>The $term state refers to which number orbital?</p>@
+qu.5.1.algorithm=
+$num = rint(3);
+$term = switch($num,"ground","1st excited","2nd excited");
+@
+qu.5.1.answer=${$num+2}@
+qu.5.1.choice.1=0th orbital@
+qu.5.1.choice.2=1st orbital@
+qu.5.1.choice.3=2nd orbital@
+qu.5.1.choice.4=3rd orbital@
+qu.5.1.choice.5=4th orbital@
+qu.5.1.choice.6=5th orbital@
+qu.5.1.comment=There is no 0th orbital. The ground state is the 1st orbital and the 1st excited state the second orbital and so on.@
+
+qu.5.2.mode=Non Permuting Multiple Choice@
+qu.5.2.editing=useHTML@
+qu.5.2.question=<p>In the equation <math><mi>E</mi> <mo>=</mo> <mo>-</mo> <mfrac><msub><mi>E</mi><mn>0</mn></msub><msup><mi>n</mi><mn>2</mn></msup></mfrac></math> what does $term refer to?</p>@
+qu.5.2.algorithm=
+$num = rint(3);
+$term = switch($num,"<math><mi>E</mi></math>","<math><msub><mi>E</mi><mn>0</mn></msub></math>","<math><mi>n</mi></math>");
+@
+qu.5.2.answer=${$num+1}@
+qu.5.2.choice.1=The binding energy of the orbital.@
+qu.5.2.choice.2=A constant, which for Hydrogen is 13.6 eV.@
+qu.5.2.choice.3=The orbital number.@
+qu.5.2.choice.4=None of the above.@
+qu.5.2.comment=<math><mi>E</mi></math> is the binding energy of a particular electron, <math><msub><mi>E</mi><mn>0</mn></msub></math> is the binding energy of the ground state (independent of where the electron is) and is 13.6 eV for H, <math><mi>n</mi></math> refers to which orbital the electron is in.@ 
+
+
+
+
+
+qu.6.topic=Rydberg Formula@
+
+qu.6.1.mode=Numeric@
+qu.6.1.editing=useHTML@
+qu.6.1.question=<p>The Rydberg formula is <math display="block"><mi>E</mi> <mo>=</mo> <msub><mi>E</mi><mn>0</mn></msub> <mfenced><mrow><mfrac><mn>1</mn><msubsup><mi>n</mi><mn>1</mn><mn>2</mn></msubsup></mfrac> <mo>&minus;</mo> <mfrac><mn>1</mn><msubsup><mi>n</mi><mn>2</mn><mn>2</mn></msubsup></mfrac></mrow></mfenced></math>, where <math><msub><mi>E</mi><mn>0</mn></msub> <mo>=</mo> <mn>13.6</mn><mtext>eV</mtext></math>. What is the energy of the photon emitted if <math><msub><mi>n</mi><mn>1</mn></msub> <mo>=</mo> <mn>$num1</mn></math> and <math><msub><mi>n</mi><mn>2</mn></msub> <mo>=</mo> <mn>$num2</mn></math>?</p>@
+qu.6.1.algorithm=
+$num1 = rint(3)+1;
+$num2 = rint(4)+2;
+$ans=decimal(1,13.6*(1/($num1*$num1)-1/($num2*$num2)));
+condition:lt($num1,$num2);
+@
+qu.6.1.answer.num=$ans@
+qu.6.1.answer.units=@
+qu.6.1.showUnits=false@
+qu.6.1.grading=toler_abs@
+qu.6.1.err=0.2@
+qu.6.1.comment=<p>Note that the &plusmn; indicates the range of values that will be accepted as correct. That is, anything between ${$ans-0.2} and ${$ans+0.2} is considered correct.</p>@
+
+qu.7.topic=Transitions@
+
+qu.7.1.mode=Non Permuting Multiple Choice@
+qu.7.1.name=Transitions with Numbers@
+qu.7.1.editing=useHTML@
+qu.7.1.question=<p>An electron in the $term1 orbital has a binding energy of -$energy1 eV. The next highest orbital has a binding energy of -$energy2 eV. What happens if a photon of $photon eV "hits" the atom?</p>@
+qu.7.1.algorithm=
+$num = rint(4)+1;
+$term1 = switch($num-1,"1st","2nd","3rd","4th");
+$term2 = switch($num-1,"2nd","3rd","4th","5th");
+$energy1 = decimal(1,13.6/($num*$num));
+$energy2 = decimal(1,13.6/( ($num+1)*($num+1) ));
+$rand = rint(3);
+$opt2 = $energy1 - $energy2;
+$opt1 = decimal(1,rand(0,$opt2));
+$opt3 = decimal(1,rand($energy1,$energy1*1.5));
+$photon = switch($rand,$opt1,$opt2,$opt3);
+@
+qu.7.1.answer=${$rand+1}@
+qu.7.1.choice.1=It will pass through the atom without affecting the electron.@
+qu.7.1.choice.2=It will excite the atom to the $term2 orbital.@
+qu.7.1.choice.3=It will ionize the atom.@
+qu.7.1.choice.4=None of the above.@
+qu.7.1.comment=Only when an photon has the right energy, does it excite an electron. If it has enough it will ionize the electron.@ 
+
+qu.7.2.mode=Non Permuting Multiple Choice@
+qu.7.2.name=Transitions descriptively@
+qu.7.2.editing=useHTML@
+qu.7.2.question=<p>When an electron moves from a <i>$term1</i> orbital to a <i>$term2</i> orbital, then&hellip;</p>@
+qu.7.2.algorithm=
+$num = rint(2);
+$term1 = switch($num,"higher","lower");
+$term2 = switch($num,"lower","higher");
+$answer = $num+1;
+@
+qu.7.2.answer=$answer@
+qu.7.2.choice.1=a photon is emitted with energy equal to the difference in energy between the two orbitals.@
+qu.7.2.choice.2=a photon was absorbed where the photon had energy equal to the difference in energy between the two orbitals.@
+qu.7.2.choice.3=neither of the options above@
+qu.7.2.comment=To move from a lower state to a higher state requires energy input (absorbing a photon). To move from a higher state to a lower state requires energy be given off (emitting a photon).@
+
+
+qu.7.3.mode=Non Permuting Multiple Choice@
+qu.7.3.name=Ionizing@
+qu.7.3.editing=useHTML@
+qu.7.3.question=<p>Which is easier to ionize, an electron in the ground state or an excited electron?</p>@
+qu.7.3.answer=2@
+qu.7.3.choice.1=the electron in the ground state@
+qu.7.3.choice.2=the electron in the excited state@
+qu.7.3.choice.3=both are equally easy to ionize@
+qu.7.3.comment=Electrons in the ground state are more bound to the atom than excited electrons are and so take more energetic photons to ionize them.@
+
+
+
+qu.8.topic=Thermal Distribution@
+
+qu.8.1.mode=Non Permuting Multiple Choice@
+qu.8.1.editing=useHTML@
+qu.8.1.question=<p>Given a low density cloud of Hydrogen atoms, what happens when the temperature of the cloud is increased?</p>@
+qu.8.1.answer=1@
+qu.8.1.choice.1=The number of electrons in the excited states increases.@
+qu.8.1.choice.2=The Hydrogen atoms move faster but the number of electrons in each orbital stays basically the same.@
+qu.8.1.choice.3=None of the above.@
+
+
+qu.9.topic=Wave Pictures@
+
+qu.9.1.mode=Multiple Choice@
+qu.9.1.name=Energy@
+qu.9.1.editing=useHTML@
+qu.9.1.question=<p>Which wavelength of light below would have the <b>$term</b> energy?</p>@
+qu.9.1.algorithm=
+$wave1 = rint(5,11)*4;
+$wave2 = rint(15,21)*4;
+$wave3 = rint(25,31)*4;
+$wave4 = rint(35,41)*4;
+
+$num = rint(2);
+$term = switch($num,"most","least");
+$answer = switch($num,1,4);
+@
+qu.9.1.answer=$answer@
+qu.9.1.choice.1=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=25&wavelength=$wave1"/>
+</object>
+@
+qu.9.1.choice.2=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=25&wavelength=$wave2"/>
+</object>
+@
+qu.9.1.choice.3=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=25&wavelength=$wave3"/>
+</object>
+@
+qu.9.1.choice.4=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=25&wavelength=$wave4"/>
+</object>
+@
+qu.9.1.comment=<p>Higher frequencies mean more energetic waves.</p>@
+
+
+qu.9.2.mode=Multiple Choice@
+qu.9.2.name=Wavelength@
+qu.9.2.editing=useHTML@
+qu.9.2.question=<p>Which wavelength of light below has the <b>$term</b> wavelength?</p>@
+qu.9.2.algorithm=
+$wave1 = rint(5,11)*4;
+$wave2 = rint(15,21)*4;
+$wave3 = rint(25,31)*4;
+$wave4 = rint(35,41)*4;
+
+$num = rint(2);
+$term = switch($num,"shortest","longest");
+$answer = switch($num,1,4);
+@
+qu.9.2.answer=$answer@
+qu.9.2.choice.1=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=${rint(2,7)*5}&wavelength=$wave1"/>
+</object>
+@
+qu.9.2.choice.2=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=${rint(2,7)*5}&wavelength=$wave2"/>
+</object>
+@
+qu.9.2.choice.3=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=${rint(2,7)*5}&wavelength=$wave3"/>
+</object>
+@
+qu.9.2.choice.4=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=${rint(2,7)*5}&wavelength=$wave4"/>
+</object>
+@
+
+
+qu.9.3.mode=Multiple Choice@
+qu.9.3.name=Frequency@
+qu.9.3.editing=useHTML@
+qu.9.3.question=<p>Which wavelength of light below has the <b>$term</b> frequency?</p>@
+qu.9.3.algorithm=
+$wave1 = rint(5,11)*4;
+$wave2 = rint(15,21)*4;
+$wave3 = rint(25,31)*4;
+$wave4 = rint(35,41)*4;
+
+$num = rint(2);
+$term = switch($num,"highest","lowest");
+$answer = switch($num,1,4);
+@
+qu.9.3.answer=$answer@
+qu.9.3.choice.1=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=${rint(2,7)*5}&wavelength=$wave1"/>
+</object>
+@
+qu.9.3.choice.2=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=${rint(2,7)*5}&wavelength=$wave2"/>
+</object>
+@
+qu.9.3.choice.3=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=${rint(2,7)*5}&wavelength=$wave3"/>
+</object>
+@
+qu.9.3.choice.4=
+<object type="application/x-shockwave-flash" width="200" height="60"
+data="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/sinusoid.swf"/>
+<param name="FlashVars" value="showAxis=0&amplitude=${rint(2,7)*5}&wavelength=$wave4"/>
+</object>
+@
+
+qu.10.topic=Energy and Transition Series@
+
+qu.10.1.mode=Non Permuting Multiple Choice@
+qu.10.1.name=Light Type@
+qu.10.1.editing=useHTML@
+qu.10.1.question=<p>Which type of light below is <b>$term</b> energetic than visible light?</p>@
+qu.10.1.algorithm=
+$num = rint(2);
+$term = switch($num,"more","less");
+$answer = switch($num,1,2);
+@
+qu.10.1.answer=$answer@
+qu.10.1.choice.1=ultraviolet light@
+qu.10.1.choice.2=infrared light@
+qu.10.1.choice.3=both infrared and ultraviolet are more energetic than visible light@
+qu.10.1.choice.4=both infrared and ultraviolet are less energetic than visible light@
+qu.10.1.comment=Infrared light is less energetic than visible light while ultraviolet light is more energetic than visible light.@
+
+qu.10.2.mode=Non Permuting Multiple Choice@
+qu.10.2.name=Series and Energy@
+qu.10.2.editing=useHTML@
+qu.10.2.question=<p>Most $term transitions involve photons of which type?</p>@
+qu.10.2.algorithm=
+$num = rint(3);
+$term = switch($num,"Lyman","Balmer","Paschen");
+$answer = $num+1;
+@
+qu.10.2.answer=$answer@
+qu.10.2.choice.1=Ultraviolet@
+qu.10.2.choice.2=Visible@
+qu.10.2.choice.3=Infrared@
+qu.10.2.choice.4=None of the Above@
+qu.10.2.comment=Lyman transitions involve ultraviolet light. Balmer transitions involve visible light. Paschen transition involve infrared light.@
+
+qu.11.topic=Energy Ranges@
+
+qu.11.1.mode=Multiple Choice@
+qu.11.1.name=Ranges@
+qu.11.1.editing=useHTML@
+qu.11.1.question=<p>An electron is in the $nth orbital and has a binding energy of $E1 eV. The binding energy of the next orbital is $E2 eV. What range of energies will $action?</p>@
+qu.11.1.algorithm=
+$n = rint(3)+1;
+$nth = switch($n-1,"1st","2nd","3rd");
+$E1 = decimal(1,-13.6/($n*$n)); 
+$E2 = decimal(1,-13.6/(($n+1)*($n+1)));
+
+$E4 = decimal(1,-1*$E1+$E2);
+$E5 = decimal(1,-1*$E1);
+
+$num = rint(3);
+$action = switch($num,"&ldquo;miss&rdquo; the electron","potentially excite the electron to the next level","ionize the electron");
+$answer = $num+1;
+@
+qu.11.1.answer=$answer@
+qu.11.1.choice.1=0 eV to $E4 eV@
+qu.11.1.choice.2=$E4 to $E5 eV@
+qu.11.1.choice.3=&gt;$E5 eV@
+qu.11.1.choice.4=0 eV to $E5 eV@
+
+
+qu.12.topic=Energy Diagrams@
+
+qu.12.1.mode=Multiple Choice@
+qu.12.1.name=Absorbed or Emitted@
+qu.12.1.editing=useHTML@
+qu.12.1.question=<div style="float: right;"><object type="application/x-shockwave-flash" width="150" height="250"
+data="http://astro.unl.edu/naap/assessment/hydrogen/eduEnergyLevels.swf">
+<param name="movie" value="http://astro.unl.edu/naap/assessment/hydrogen/eduEnergyLevels.swf"/>
+<param name="FlashVars" value="start1=$n1&end1=$n2"/>
+</object></div>
+What event can be associated with the transition shown in the figure?
+@
+qu.12.1.algorithm=
+$nA = rint(7)+1;
+$nB = rint(3)+1;
+condition:not(eq($nA,$nB));
+
+$num = rint(2);
+$n1 = switch($num,$nA,$nB);
+$n2 = switch($num,$nB,$nA);
+
+$answer = if(lt($n1,$n2),1,2);
+@
+qu.12.1.answer=$answer@
+qu.12.1.choice.1=a photon was absorbed@
+qu.12.1.choice.2=a photon was emitted@
+

@@ -1,0 +1,316 @@
+qu.1.topic=General Overview@
+
+qu.1.1.mode=Multiple Choice@
+qu.1.1.editing=useHTML@
+qu.1.1.question=Which of the following is not part of Kepler's contribution to planetary orbits?@
+qu.1.1.answer=4@
+qu.1.1.choice.1=shapes of the orbit@
+qu.1.1.choice.2=speeds of planets in their orbits@
+qu.1.1.choice.3=orbital period@
+qu.1.1.choice.4=gravity@
+
+
+
+qu.2.topic=Components of an Ellipse@
+
+qu.2.1.mode=Multiple Choice@
+qu.2.1.editing=useHTML@
+qu.2.1.question=Rank the following 4 ellipses below in order of $order ellipticity.
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img style="margin: 1em auto;" src="http://astro.unl.edu/naap/assessment/pos/ellipseorder.png"/></div>@
+qu.2.1.algorithm=
+$num=rint(2);
+$order=switch($num,"increasing","decreasing");
+$answer=switch($num,2,3);
+@
+qu.2.1.answer=$answer@
+qu.2.1.choice.1=A,B,C,D@
+qu.2.1.choice.2=B,A,D,C@
+qu.2.1.choice.3=C,D,A,B@
+qu.2.1.choice.4=D,C,B,A@
+
+
+qu.2.2.mode=Non Permuting Multiple Choice@
+qu.2.2.editing=useHTML@
+qu.2.2.question=In the figure below, which letter corresponds to the $variable?
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img src="http://astro.unl.edu/naap/assessment/pos/ellipsediagram.png"/></div>@
+qu.2.2.algorithm=
+$num=rint(3);
+$variable=switch($num,"distance from focus to center","semimajor axis", "semiminor axis");
+$answer=switch($num,2,3,1);
+@
+qu.2.2.answer=$answer@
+qu.2.2.choice.1=X@
+qu.2.2.choice.2=Y@
+qu.2.2.choice.3=Z@
+
+qu.2.3.mode=Non Permuting Multiple Choice@
+qu.2.3.editing=useHTML@
+qu.2.3.question=Which point or points in the figure below is a focus of the ellipse?
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img src="http://astro.unl.edu/naap/assessment/pos/ellipsefocus.png"/></div>@
+qu.2.3.answer=3@
+qu.2.3.choice.1=A,E@
+qu.2.3.choice.2=C@
+qu.2.3.choice.3=B,D@
+qu.2.3.choice.4=B,C,D@
+qu.2.3.choice.5=A,C,E@
+
+qu.3.topic=Planetary Orbits are Ellipses@
+
+qu.3.1.mode=Non Permuting Multiple Choice@
+qu.3.1.editing=useHTML@
+qu.3.1.question=Which of the following looks most like the orbit of $planet?@
+qu.3.1.algorithm=
+$num=rint(4);
+$planet=switch($num,"Mercury","Venus","Earth","Pluto");
+$answer=switch($num,2,1,1,2);
+@
+qu.3.1.answer=$answer@
+qu.3.1.choice.1=<img src="http://astro.unl.edu/naap/assessment/pos/orbit1.png"/>@
+qu.3.1.choice.2=<img src="http://astro.unl.edu/naap/assessment/pos/orbit2.png"/>@
+qu.3.1.choice.3=<img src="http://astro.unl.edu/naap/assessment/pos/orbit3.png"/>@
+qu.3.1.choice.4=<img src="http://astro.unl.edu/naap/assessment/pos/orbit4.png"/>@
+
+qu.3.2.mode=Multiple Choice@
+qu.3.2.editing=useHTML@
+qu.3.2.question=The center of $planet's orbit (e=$ecc) is&hellip;@
+qu.3.2.algorithm=
+$num=rint(9);
+$planet=switch($num,"Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune","Pluto");
+$ecc = switch($num,"0.21","0.01","0.02","0.09","0.05","0.06","0.05","0.01","0,25");
+@
+qu.3.2.answer=2@
+qu.3.2.choice.1=exactly at the center of the sun.@
+qu.3.2.choice.2=near the sun's center.@
+qu.3.2.choice.3=about half-way between the sun and the planet.@
+qu.3.2.choice.4=close to the planet.@
+
+qu.3.3.mode=Multiple Choice@
+qu.3.3.editing=useHTML@
+qu.3.3.question=In an orbit, a planet is&hellip;@
+qu.3.3.answer=4@
+qu.3.3.choice.1=always the same distance from the sun.@
+qu.3.3.choice.2=always moving closer to the sun.@
+qu.3.3.choice.3=always moving further from the sun.@
+qu.3.3.choice.4=sometimes moving closer and sometimes moving further from the sun.@
+
+qu.4.topic=Orbitals speeds@
+
+qu.4.1.mode=Non Permuting Multiple Choice@
+qu.4.1.editing=useHTML@
+qu.4.1.question=At which point or points is the planet slowing down?
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img style="margin: 1em auto;" src="http://astro.unl.edu/naap/assessment/pos/planets1a.png"/>
+<br/>(Planets shown here are orbiting counter-clockwise.)</div>@
+qu.4.1.answer=2@
+qu.4.1.choice.1=A,E@
+qu.4.1.choice.2=B,C,D@
+qu.4.1.choice.3=D@
+qu.4.1.choice.4=A,B,C,D,E@
+qu.4.1.choice.5=none of the points (the planet is moving at constant speed).@
+
+qu.4.2.mode=Multiple Choice@
+qu.4.2.editing=useHTML@
+qu.4.2.question=The speed of a planet over the course of its entire orbit is&hellip;@
+qu.4.2.answer=4@
+qu.4.2.choice.1=constant.@
+qu.4.2.choice.2=always speeding up, but barely noticeable.@
+qu.4.2.choice.3=always slowing down, but barely noticeable.@
+qu.4.2.choice.4=sometimes speeding up and sometimes slowing down.@
+
+qu.5.topic=Second Law@
+
+qu.5.1.mode=Multiple Choice@
+qu.5.1.editing=useHTML@
+qu.5.1.question=The areas in regions A and B are equal in size. Which of the following statements are true?
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img style="margin: 1em auto;" src="http://astro.unl.edu/naap/assessment/pos/planets2a.png"/>
+</div>@
+qu.5.1.answer=2@
+qu.5.1.choice.1=The orbital path length subtended by region A is longer than that given by region B. Therefore it will take the planet longer to move through region A.@
+qu.5.1.choice.2=The planet will cover the distances subtended by regions A and B in equal amounts of time because the planet moves faster through region A than region B.@
+qu.5.1.choice.3=The planet will take longer to move through region B because it is moving slower in region B than it is in region A.@
+
+qu.5.2.mode=Multiple Choice@
+qu.5.2.editing=useHTML@
+qu.5.2.question=With respect to the figure above, which of the following statements is true? Note carefully the sizes of areas A and B.
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img style="margin: 1em auto;" src="http://astro.unl.edu/naap/assessment/pos/planets3a.png"/>
+</div>@
+qu.5.2.answer=2@
+qu.5.2.choice.1=The planet will cover regions A and B is the same amount of time because of Kepler's 2<sup>nd</sup> Law.@
+qu.5.2.choice.2=The planet will cover region A in a faster amount of time than region B, because A has less area.@
+qu.5.2.choice.3=The planet will take longer to move through region A because it is moving slower in region A than it is in region B.@
+
+qu.6.topic=Third Law@
+
+qu.6.1.mode=Non Permuting Multiple Choice@
+qu.6.1.editing=useHTML@
+qu.6.1.question=If a planet has an orbital radius four times earth's, what will its period be?
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img style="margin: 1em auto;" src="http://astro.unl.edu/naap/assessment/pos/plot.png"/></div>@
+qu.6.1.answer=4@
+qu.6.1.choice.1=half as large@
+qu.6.1.choice.2=the same@
+qu.6.1.choice.3=four times as much@
+qu.6.1.choice.4=eight times as much@
+qu.6.1.choice.5=none of the above@
+
+qu.6.2.mode=Non Permuting Multiple Choice@
+qu.6.2.editing=useHTML@
+qu.6.2.question=If a planet's orbital period is twice the earth's orbital period, what will its average orbital radius be?
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img style="margin: 1em auto;" src="http://astro.unl.edu/naap/assessment/pos/plot.png"/></div>@
+qu.6.2.answer=5@
+qu.6.2.choice.1=half as large@
+qu.6.2.choice.2=the same@
+qu.6.2.choice.3=four times as much@
+qu.6.2.choice.4=eight times as much@
+qu.6.2.choice.5=none of the above@
+
+qu.6.3.mode=Multiple Choice@
+qu.6.3.editing=useHTML@
+qu.6.3.question=Using the graph, a planet with a semimajor axis of $num AU will have a period of about&hellip;
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img style="margin: 1em auto;" src="http://astro.unl.edu/naap/assessment/pos/plot.png"/></div>@
+qu.6.3.algorithm=
+$num=rint(5,11);
+$ans1=decimal(1,$num^(2/3));
+$ans2=$num;
+$ans3=decimal(1,$num^(1.5));
+$ans4=$num^2;
+@
+qu.6.3.answer=3@
+qu.6.3.choice.1=$ans1 years.@
+qu.6.3.choice.2=$ans2 years.@
+qu.6.3.choice.3=$ans3 years.@
+qu.6.3.choice.4=$ans4 years.@
+
+qu.6.4.mode=Multiple Choice@
+qu.6.4.editing=useHTML@
+qu.6.4.question=Using the graph, a planet with a period of $num years will have a semimajor axis of about&hellip;
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img style="margin: 1em auto;" src="http://astro.unl.edu/naap/assessment/pos/plot.png"/></div>@
+qu.6.4.algorithm=
+$num=rint(2,9)*5;
+$ans1=decimal(1,$num^(2/3));
+$ans2=$num;
+$ans3=decimal(1,$num^(1.5));
+$ans4=decimal(1,$num^(1/3));
+@
+qu.6.4.answer=1@
+qu.6.4.choice.1=$ans1 AU.@
+qu.6.4.choice.2=$ans2 AU.@
+qu.6.4.choice.3=$ans3 AU.@
+qu.6.4.choice.4=$ans4 AU.@
+
+qu.7.topic=Period and Eccentricity Independence@
+
+qu.7.1.mode=Multiple Choice@
+qu.7.1.editing=useHTML@
+qu.7.1.question=The orbital period of $planet is&hellip;@
+qu.7.1.algorithm=
+$num=rint(5);
+$planet=switch($num,"Mars","Jupiter","Saturn","Uranus","Neptune","Pluto");
+@
+qu.7.1.answer=1@
+qu.7.1.choice.1=longer that earth's orbital period because it is farther from the sun.@
+qu.7.1.choice.2=shorter that earth's orbital period because it is farther from the sun.@
+qu.7.1.choice.3=longer than the earth's orbital period because its orbit is less circular.@
+qu.7.1.choice.4=shorter than the earth's orbital period because its orbit is more circular.@
+
+qu.7.2.mode=Non Permuting Multiple Choice@
+qu.7.2.editing=useHTML@
+qu.7.2.question=Which of the following significantly influence the orbital period of $planet?@
+qu.7.2.algorithm=
+$num=rint(9);
+$planet=switch($num,"Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune","Pluto");
+@
+qu.7.2.answer=2@
+qu.7.2.choice.1=the shape of $planet's orbit (not its size)@
+qu.7.2.choice.2=the average sun&ndash;$planet distance@
+qu.7.2.choice.3=both of the above@
+qu.7.2.choice.4=neither of the above@
+
+qu.7.3.mode=Non Permuting Multiple Choice@
+qu.7.3.editing=useHTML@
+qu.7.3.question=Which of the follow semimajor axes could correspond to an eccentricity of $num?@
+qu.7.3.algorithm=
+$temp=rint(7);
+$num=$temp*0.05;
+$ans1=if(eq($num,0),0.5,$num);
+$ans3=if(eq($temp^2,1),$temp^2+0.5,if(eq($temp,0),2.5,$temp^2));
+$temp2=rint(2,26);
+$ans4=if(eq($temp,$temp2),$temp+1,$temp2);
+@
+qu.7.3.answer=5@
+qu.7.3.choice.1=$ans1 AU@
+qu.7.3.choice.2=1 AU@
+qu.7.3.choice.3=$ans3 AU@
+qu.7.3.choice.4=$ans4 AU@
+qu.7.3.choice.5=all of the choices are physically possible@
+
+qu.8.topic=Acceleration@
+
+qu.8.1.mode=Multiple Choice@
+qu.8.1.editing=useHTML@
+qu.8.1.question=Planet's orbit the sun because&hellip;@
+qu.8.1.answer=3@
+qu.8.1.choice.1=magnetic fields alternate pulling and pushing the planets.@
+qu.8.1.choice.2=the solar wind balances the inward pull of gravity.@
+qu.8.1.choice.3=a planet's velocity is constantly redirected by the the sun's gravitational pull.@
+qu.8.1.choice.4=planets naturally move in circles.@
+
+qu.8.2.mode=Multiple Choice@
+qu.8.2.editing=useHTML@
+qu.8.2.question=The acceleration of a planet is&hellip;@
+qu.8.2.answer=3@
+qu.8.2.choice.1=directly opposite the planet's motion if it is slowing down.@
+qu.8.2.choice.2=in the same direction of the planet's motion if it is speeding up.@
+qu.8.2.choice.3=always towards the sun.@
+qu.8.2.choice.4=always away from the sun.@
+
+qu.8.3.mode=Non Permuting Multiple Choice@
+qu.8.3.editing=useHTML@
+qu.8.3.question=If the arrows depicted in the picture represent acceleration, which planet or planets is shown correctly?
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img src="http://astro.unl.edu/naap/assessment/pos/planets_arrows.png"/>
+<br/>(Planets can be orbiting either clockwise or counterclockwise.)</div>@
+qu.8.3.answer=2@
+qu.8.3.choice.1=A@
+qu.8.3.choice.2=C@
+qu.8.3.choice.3=D@
+qu.8.3.choice.4=A,D@
+qu.8.3.choice.5=B,E@
+
+qu.9.topic=Velocity is Tangent to Orbit@
+
+qu.9.1.mode=Non Permuting Multiple Choice@
+qu.9.1.editing=useHTML@
+qu.9.1.question=If the arrows depicted in the picture represent velocity, which planet or planets is shown correctly?
+<div style="width: 100%; padding-top: 1em; text-align: center;"><img src="http://astro.unl.edu/naap/assessment/pos/planets_arrows.png"/>
+<br/>(Planets can be orbiting either clockwise or counterclockwise.)</div>@
+qu.9.1.answer=4@
+qu.9.1.choice.1=A@
+qu.9.1.choice.2=C@
+qu.9.1.choice.3=D@
+qu.9.1.choice.4=B,E@
+
+qu.10.topic=Advanced Questions@
+qu.10.1.mode=Non Permuting Multiple Choice@
+qu.10.1.editing=useHTML@
+qu.10.1.question=If the planet has a semimajor axis of $dist and an eccentricity of $ecc, how far is the planet at $helion? (Hint: drawing a labelled picture will probably help significantly.)@
+qu.10.1.algorithm=
+$dist=rint(2,10);
+$ecc=rint(1,4)*0.1;
+$ecc0=$ecc*100;
+$ecc1=(1-$ecc)*100;
+$ecc2=(1+$ecc)*100;
+$ans1=decimal(2,$dist*$ecc);
+$ans2=decimal(2,$dist*(1-$ecc));
+$ans3=decimal(2,$dist-$ecc);
+$ans4=decimal(2,$dist+$ecc);
+$ans5=decimal(2,$dist*(1+$ecc));
+$ans6=decimal(2,$dist/$ecc);
+$num=rint(2);
+$helion=switch($num,"aphelion","perihelion");
+$answer=switch($num,5,2);
+@
+qu.10.1.answer=$answer@
+qu.10.1.choice.1=at $ecc0% of $dist AU ($ans1 AU)@
+qu.10.1.choice.2=at $ecc1% of $dist AU ($ans2 AU)@
+qu.10.1.choice.3=at $ans3 AU@
+qu.10.1.choice.4=at $ans4 AU@
+qu.10.1.choice.5=at $ecc2% of $dist AU ($ans5 AU)@
+

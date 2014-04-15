@@ -1,0 +1,379 @@
+qu.1.topic=Relating B-V and Temperature@
+
+qu.1.1.mode=Non Permuting Multiple Choice@
+qu.1.1.editing=useHTML@
+qu.1.1.question=How does the color of a star compare to the sun if it is significantly $temp than the sun?@
+qu.1.1.algorithm=
+$num=rint(2);
+$temp=switch($num,"hotter","colder");
+$answer=switch($num,1,2);
+@
+qu.1.1.answer=$answer@
+qu.1.1.choice.1=blue@
+qu.1.1.choice.2=redder@
+qu.1.1.choice.3=basically the same color@
+
+qu.1.2.mode=Non Permuting Multiple Choice@
+qu.1.2.editing=useHTML@
+qu.1.2.question=If a star is $temp than the sun, how does the temperature of the star compare to the sun?@
+qu.1.2.algorithm=
+$num=rint(2);
+$temp=switch($num,"bluer","redder");
+$answer=switch($num,1,2);
+@
+qu.1.2.answer=$answer@
+qu.1.2.choice.1=higher temperature@
+qu.1.2.choice.2=colder temperature@
+qu.1.2.choice.3=basically the same temperature@
+
+
+qu.2.topic=UBVR Central Wavelengths@
+
+qu.2.1.mode=Non Permuting Multiple Choice@
+qu.2.1.editing=useHTML@
+qu.2.1.question=What is the central wavelength of $filter filter?@
+qu.2.1.algorithm=
+$num=rint(4);
+$filter=switch($num,"an ultraviolet","a blue","a visible (green)","a red");
+$answer=switch($num,1,2,3,4);
+@
+qu.2.1.answer=$answer@
+qu.2.1.choice.1=350 nm@
+qu.2.1.choice.2=440 nm@
+qu.2.1.choice.3=530 nm@
+qu.2.1.choice.4=600 nm@
+qu.2.1.choice.5=750 nm@
+
+qu.2.2.mode=Non Permuting Multiple Choice@
+qu.2.2.editing=useHTML@
+qu.2.2.question=Which of the following filter would have a central wavelength of $peak?@
+qu.2.2.algorithm=
+$num=rint(4);
+$peak=switch($num,"350 nm","440 nm","530 nm","600 nm","750 nm");
+$answer=switch($num,1,2,3,4);
+@
+qu.2.2.answer=$answer@
+qu.2.2.choice.1=ultraviolet@
+qu.2.2.choice.2=blue@
+qu.2.2.choice.3=visible (green)@
+qu.2.2.choice.4=red@
+qu.2.2.choice.5=infrared@
+
+
+qu.3.topic=Geometry of Spectra@
+
+qu.3.1.mode=Multiple Choice@
+qu.3.1.editing=useHTML@
+qu.3.1.question=
+<img style="width:356px;" src="http://astro.unl.edu/naap/assessment/blackbody/spectra.gif"/><br/>
+Above is a hot blackbody source represented by the lightbulb. The cloud is a cool, low density gas. What type of spectra would an observer looking from the perspective labeled $perspective see?@
+qu.3.1.algorithm=
+$num=rint(3);
+$perspective=switch($num,"#1","#2","#3");
+$answer=switch($num,1,2,3);
+@
+qu.3.1.answer=$answer@
+qu.3.1.choice.1=continuous@
+qu.3.1.choice.2=absorption@
+qu.3.1.choice.3=emission@
+
+qu.3.2.mode=Non Permuting Multiple Choice@
+qu.3.2.editing=useHTML@
+qu.3.2.question=
+<img style="width:356px;" src="http://astro.unl.edu/naap/assessment/blackbody/spectra.gif"/><br/>
+Above is a hot blackbody source represented by the lightbulb. The cloud is a cool, low density gas. Which observer will see $spectra spectrum?@
+
+qu.3.2.algorithm=
+$num=rint(3);
+$spectra=switch($num,"a continuous","an absorption","an emission");
+$answer=switch($num,1,2,3);
+@
+qu.3.2.answer=$answer@
+qu.3.2.choice.1=#1@
+qu.3.2.choice.2=#2@
+qu.3.2.choice.3=#3@
+
+
+qu.4.topic=Wien/Stefan-Boltzmann Laws@
+
+qu.4.1.mode=Multiple Choice@
+qu.4.1.editing=useHTML@
+qu.4.1.question=
+<div style="text-align: center;">
+<img style="width:300px;" src="http://astro.unl.edu/naap/assessment/blackbody/10kcurve.png"/></div><br/>
+The blackbody curve for an object at T = 10000 K is shown in the figure. If the temperature is $dir to $temp&hellip;@
+qu.4.1.algorithm=
+$num=rint(2);
+$dir=switch($num,"raised","lowered");
+$temp=switch($num,"12500 K","7500 K");
+$answer=switch($num,1,4);
+@
+qu.4.1.answer=$answer@
+qu.4.1.choice.1=the area under the curve increases and the peak shifts to the left.@
+qu.4.1.choice.2=the area under the curve increases and the peak shifts to the right.@
+qu.4.1.choice.3=the area under the curve decreases and the peak shifts to the left.@
+qu.4.1.choice.4=the area under the curve decreases and the peak shifts to the right.@
+
+qu.4.2.mode=Multiple Choice@
+qu.4.2.editing=useHTML@
+qu.4.2.question=
+<div style="text-align: center;">
+<img style="width:300px;" src="http://astro.unl.edu/naap/assessment/blackbody/10kcurve.png"/></div><br/>
+The blackbody curve for an object at T = 10000 K is shown in the figure. If the temperature is $dir to $temp&hellip;@
+qu.4.2.algorithm=
+$num=rint(2);
+$dir=switch($num,"raised","lowered");
+$dir2=switch($num,"increases","decreases");
+$dir3=switch($num,"doubles","is halved");
+$temp=switch($num,"20000 K","5000 K");
+$answer=switch($num,4,3);
+@
+qu.4.2.answer=$answer@
+qu.4.2.choice.1=the area under the curve $dir3 and the peak wavelength doubles.@
+qu.4.2.choice.2=the area under the curve $dir3 and the peak wavelength is halved.@
+qu.4.2.choice.3=the area under the curve $dir2 by a factor of 16 and the peak wavelength doubles.@
+qu.4.2.choice.4=the area under the curve $dir2 by a factor of 16 and the peak wavelength is halved.@
+
+qu.5.topic=Distributions and Filters@
+
+qu.5.1.mode=Multiple Choice@
+qu.5.1.editing=useHTML@
+qu.5.1.name=Missing Output@
+qu.5.1.question=
+<table style="margin: 0 auto;">
+<tr><th>Source<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input"/>
+</object></th>
+<th style="font-size: 2em;"><br/>+</th>
+<th>Filter<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="filter=$filter"/>
+</object></th>
+<th style="font-size: 2em;"><br/>&rarr;</th>
+<th>Output<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+</object></th>
+</tr>
+</table>
+Which output below goes with the setup above?@
+qu.5.1.algorithm=
+$input=rint(7);
+$filter=rint(10);
+$num1=rint(9)+1;
+$num2=rint(9)+1;
+$filter1=if(gt($filter+$num1,9),$filter+$num1-10,$filter+$num1);
+$filter2=if(gt($filter+$num2,9),$filter+$num2-10,$filter+$num2);
+condition:not(eq($num1,$num2));
+@
+qu.5.1.answer=1@
+qu.5.1.choice.1=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input&filter=$filter"/>
+</object>@
+qu.5.1.choice.2=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input&filter=$filter1"/>
+</object>@
+qu.5.1.choice.3=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input&filter=$filter2"/>
+</object>@
+
+qu.5.2.mode=Multiple Choice@
+qu.5.2.editing=useHTML@
+qu.5.2.name=Missing Filter@
+qu.5.2.question=
+<table style="margin: 0 auto;">
+<tr><th>Source<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input"/>
+</object></th>
+<th style="font-size: 2em;"><br/>+</th>
+<th>Filter<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+</object></th>
+<th style="font-size: 2em;"><br/>&rarr;</th>
+<th>Output<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input&filter=$filter"/>
+</object></th>
+</tr>
+</table>
+Which filter below goes with the above setup?@
+qu.5.2.algorithm=
+$input=rint(7);
+$filter=rint(10);
+$num1=rint(9)+1;
+$num2=rint(9)+1;
+$filter1=if(gt($filter+$num1,9),$filter+$num1-10,$filter+$num1);
+$filter2=if(gt($filter+$num2,9),$filter+$num2-10,$filter+$num2);
+condition:not(eq($num1,$num2));
+@
+qu.5.2.answer=1@
+qu.5.2.choice.1=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="filter=$filter"/>
+</object>@
+qu.5.2.choice.2=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="filter=$filter1"/>
+</object>@
+qu.5.2.choice.3=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="filter=$filter2"/>
+</object>@
+
+
+qu.5.3.mode=Multiple Choice@
+qu.5.3.editing=useHTML@
+qu.5.3.name=Missing Input@
+qu.5.3.question=
+<table style="margin: 0 auto;">
+<tr><th>Source<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+</object></th>
+<th style="font-size: 2em;"><br/>+</th>
+<th>Filter<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="filter=$filter"/>
+</object></th>
+<th style="font-size: 2em;"><br/>&rarr;</th>
+<th>Output<br/>
+<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input&filter=$filter"/>
+</object></th>
+</tr>
+</table>
+Which source below goes with the above setup?@
+qu.5.3.algorithm=
+$input=rint(7);
+$filter=rint(10);
+$num1=rint(6)+1;
+$num2=rint(6)+1;
+$input1=if(gt($input+$num1,6),$input+$num1-7,$input+$num1);
+$input2=if(gt($input+$num2,6),$input+$num2-7,$input+$num2);
+condition:not(eq($num1,$num2));
+@
+qu.5.3.answer=1@
+qu.5.3.choice.1=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input"/>
+</object>@
+qu.5.3.choice.2=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input1"/>
+</object>@
+qu.5.3.choice.3=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input2"/>
+</object>@
+
+qu.6.topic=Identify Blackbody Curve@
+
+qu.6.1.mode=Multiple Choice@
+qu.6.1.editing=useHTML@
+qu.6.1.question=Which of the following is a blackbody curve?@
+qu.6.1.algorithm=
+$input1=rint(6)+1;
+$input2=rint(6)+1;
+$input3=rint(6)+1;
+condition:not(eq($input1,$input2));
+condition:not(eq($input2,$input3));
+condition:not(eq($input3,$input1));
+@
+
+qu.6.1.answer=1@
+qu.6.1.choice.1=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=0"/>
+</object>@
+qu.6.1.choice.2=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input1"/>
+</object>@
+qu.6.1.choice.3=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input2"/>
+</object>@
+qu.6.1.choice.4=<object type="application/x-shockwave-flash" data="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"
+width="80" height="100">
+  <param name="movie" value="http://astro.unl.edu/naap/assessment/blackbody/eduDistribution.swf"/>
+  <param name="FlashVars" value="input=$input3"/>
+</object>@
+
+qu.7.topic=Misc Questions@
+
+qu.7.1.mode=Multiple Choice@
+qu.7.1.editing=useHTML@
+qu.7.1.question=Which of the following is <em>NOT</em> an example of a filter?@
+qu.7.1.answer=1@
+qu.7.1.choice.1=a measuring cup for cooking@
+qu.7.1.choice.2=suit and tie required for entrance into a restaurant@
+qu.7.1.choice.3=parole board for convicted felons@
+qu.7.1.choice.4=language censor for public broadcast television@
+
+qu.7.2.mode=Multiple Choice@
+qu.7.2.editing=useHTML@
+qu.7.2.question=To get a good response, that is a strong measurement, from a very cool star, what kind of filters would be most useful?@
+qu.7.2.answer=1@
+qu.7.2.choice.1=a filter which lets red light pass through@
+qu.7.2.choice.2=a filter which lets green light pass through@
+qu.7.2.choice.3=a filter which lets blue light pass through@
+qu.7.2.choice.4=a filter which lets ultraviolet light pass through@
+
+
+qu.8.topic=Light Basics@
+
+qu.8.1.mode=Non Permuting Multiple Choice@
+qu.8.1.editing=useHTML@
+qu.8.1.question=Which of the following is <em>not</em> part of the electromagnetic spectrum?@
+qu.8.1.answer=5@
+qu.8.1.choice.1=the light from an incandescent light bulb@
+qu.8.1.choice.2=the radiation produced in a microwave oven@
+qu.8.1.choice.3=the heat from the heating coils in a conventional oven@
+qu.8.1.choice.4=the radiation used to take an x-ray of bones@
+qu.8.1.choice.5=all of the above are part of the electromagnetic spectrum@
+qu.8.1.choice.6=none of the above are part of the electromagnetic spectrum@
+
+qu.8.2.mode=Multiple Choice@
+qu.8.2.editing=useHTML@
+qu.8.2.question=Which term describes how much energy per unit time a light source emits (from the observer's perspective)?@
+qu.8.2.answer=5@
+qu.8.2.choice.1=wavelength@
+qu.8.2.choice.2=color@
+qu.8.2.choice.3=frequency@
+qu.8.2.choice.4=blackbody@
+qu.8.2.choice.5=intensity@
+
+

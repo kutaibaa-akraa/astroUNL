@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Module Specification Document for the ClassAction Project-->
+<!DOCTYPE ModuleSpecification [
+	<!ELEMENT ModuleSpecification (Questions, Animations, Images, Outlines, Tables)>
+	<!ATTLIST ModuleSpecification
+          id CDATA #REQUIRED>
+	<!ELEMENT ModuleName (#PCDATA)>
+	<!ELEMENT Questions (Question+)>
+	<!ELEMENT Question (#PCDATA)>
+	<!ELEMENT Animations (Animation*)>
+	<!ELEMENT Animation (#PCDATA)>
+	<!ELEMENT Images (Image*)>
+	<!ELEMENT Image (#PCDATA)>
+	<!ELEMENT Outlines (Outline*)>
+	<!ELEMENT Outline (#PCDATA)>
+	<!ELEMENT Tables (Table*)>
+	<!ELEMENT Table (#PCDATA)>
+]>
+<ModuleSpecification id="Jovian Planets">
+  <Questions>
+    <Question>ca_jovianplanets_shepherdmoons</Question>
+    <Question>ca_jovianplanets_jupeclipseseasons</Question>
+    <Question>ca_jovianplanets_enceladus</Question>
+  </Questions>
+  <Animations>
+  </Animations>
+  <Images>
+  </Images>
+  <Outlines/>
+  <Tables>
+  </Tables>
+</ModuleSpecification>
+
+

@@ -1,0 +1,98 @@
+body{
+margin:0px;
+background-image:url("starField.jpg");
+font:20px arial;
+}
+
+#unscrollable{
+position:absolute;
+top:0px;
+bottom:0px;
+left:0px;
+right:0px;
+}
+
+canvas{
+position:absolute;
+z-index:-1;
+}
+
+#equationContainer{
+margin-top:8px;
+margin-left:8px;
+}
+
+img.helio{
+width:10px;
+height:10px;
+}
+
+#buttonContainer{
+position:absolute;
+top:0px;
+right:0px;
+z-index:2;
+}
+
+#closeLayerContainer{
+display:none;
+}
+
+#closeLayerContainer, #presetButton, #infoButton{
+margin-top:5px;
+margin-right:5px;
+float:right;
+background-color:transparent !important;
+}
+
+.dijitReset, .dijitPopup{
+background-color:inherit !important;
+color:inherit !important;
+border-color:inherit !important;
+font-size:inherit !important;
+margin:0px;
+}
+
+.dijitPopup{
+background-color:black !important;
+}
+
+div.sliderStuffContainer{
+height:75px;
+width:99%;
+position:absolute;
+}
+
+#radiusContainer{
+bottom:75px;
+}
+
+#tempContainer{
+bottom:0px;
+}
+
+.snapContainer{
+position:relative;
+width:100%;
+}
+
+.dijitButtonNode{
+padding:0px !important;
+}
+
+.snap{
+position:absolute;
+top:5px;
+}
+
+#objectives, #background, #exercises, #about{
+padding:10px;
+position:absolute;
+top:10px;
+left:10px;
+right:10px;
+background-color:black;
+border:2px solid green;
+z-index:1;
+display:none;
+}
